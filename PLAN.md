@@ -17,7 +17,7 @@ pastelería danesa; el tiempo y el GPS de comida y actividades». Hecha esa mism
 | 3 | Textos a mano: portada, Navidad, 6 zonas, comer, panaderías, tiendas, hoteles, transporte, práctico | ✅ 19-oct |
 | 4 | Fotos (zonas y platos), mapa, tiempo, iconos, portada para WhatsApp | ✅ 19-oct |
 | 5 | Revisión ejecutando (`revisar.mjs`, `probar-cerca.mjs`, capturas móvil y escritorio) | ✅ 19-oct |
-| 6 | Publicar en Pages y comprobar la web desplegada | ver resumen |
+| 6 | Publicar en Pages y comprobar la web desplegada (`revisar.mjs` contra la URL publicada: todo correcto) | ✅ 19-oct |
 | 7 | Adil la mira en el iPhone y dice qué cambiar | ⏳ |
 | 8 | Repaso de horarios a finales de noviembre (Tivoli, mercadillos de Nyhavn y Højbro, Cascanueces) | ⏳ |
 
@@ -48,3 +48,28 @@ pastelería danesa; el tiempo y el GPS de comida y actividades». Hecha esa mism
 - Torre de Christiansborg: una web la da abierta y otra «cerrada hasta nuevo aviso».
 - Fotos sin buena candidata en Commons (van sin foto): stegt flæsk, tarteletter, julefrokost y alguna más.
 - Portar aquí lo de Lyon que no se usó (audioguías) solo si Adil lo pide.
+
+## Resumen para Adil (noche del 19-oct-2026)
+
+🔴 **La guía está publicada en https://iaadileli.github.io/copenhague/** y pasa la revisión ejecutándola
+(en local y en la web publicada: recursos, enlaces, Booking con fechas 4→8 dic, buscador, modo oscuro,
+móvil a 390 px, sin errores de JavaScript). El «¿qué tengo cerca?» lo probé con el GPS simulado en Nyhavn
+y los cinco filtros. Falta que la abras tú en el iPhone. 🔴
+
+Qué tiene: Navidad (Tivoli con horario de cada día, el mercadillo de Nytorv con pista de hielo gratis,
+el Cascanueces, la luz de cada día), 6 zonas con 44 planes, 43 restaurantes, 33 panaderías y cafés y 47
+tiendas raras (123 fichas en total), 33 platos para probar (28 con foto), la tabla de quién abre cada
+uno de los cinco días, la ruta del kanelsnegl, 16 hoteles con precio de Booking por noche y el total de
+las 4 noches, transporte (City Pass, metro 24 h) y Copenhagen Card con la cuenta de si compensa.
+
+🔴 **Avísales de dos cosas ya:** los hoteles están caros y escasos para esas fechas (tres ya sin
+habitaciones a 19-oct), así que conviene que reserven pronto y con cancelación gratis; y Schønnemann (el
+smørrebrød más famoso) dice que en Navidad solo le quedan mesas de lunes a miércoles. 🔴
+
+🔴 **La tienda de las pinzas:** no hay ninguna que venda SOLO pinzas. Casi seguro es **Pico Copenhagen**
+(Grønnegade 36, la original de 2004); en la misma calle está **Sui Ava**, la otra candidata. Las dos
+abren los cinco días. 🔴
+
+Arreglos de esta noche que valen para las otras guías: `tiempo.py` daba el amanecer y el anochecer una
+hora mal si el viaje cruza el cambio de hora, y la línea «Máximas de X a Y» mezclaba la mínima con la
+máxima (en Lyon también estaba). El GPS con filtros es nuevo y se puede portar.
