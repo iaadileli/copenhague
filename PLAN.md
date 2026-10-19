@@ -57,7 +57,7 @@ móvil a 390 px, sin errores de JavaScript). El «¿qué tengo cerca?» lo prob�
 y los cinco filtros. Falta que la abras tú en el iPhone. 🔴
 
 Qué tiene: Navidad (Tivoli con horario de cada día, el mercadillo de Nytorv con pista de hielo gratis,
-el Cascanueces, la luz de cada día), 6 zonas con 44 planes, 43 restaurantes, 33 panaderías y cafés y 47
+el Cascanueces, la luz de cada día), 6 zonas con 44 planes, 39 restaurantes, 36 panaderías y cafés y 48
 tiendas raras (123 fichas en total), 33 platos para probar (28 con foto), la tabla de quién abre cada
 uno de los cinco días, la ruta del kanelsnegl, 16 hoteles con precio de Booking por noche y el total de
 las 4 noches, transporte (City Pass, metro 24 h) y Copenhagen Card con la cuenta de si compensa.

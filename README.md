@@ -14,7 +14,7 @@ Publicada en → https://iaadileli.github.io/copenhague/
   cada día (sale el sol a las 8:20 y se pone a las 15:40).
 - **Tiendas raras** (`#tiendas`) con la **tienda de las pinzas**: Pico Copenhagen y Sui Ava, las dos en
   Grønnegade. 48 tiendas con ficha en sus zonas.
-- **Comer**: 43 restaurantes, 35 panaderías y cafés; nota de 1 a 3 estrellas; tabla de **quién abre cada
+- **Comer**: 39 restaurantes, 36 panaderías y cafés; nota de 1 a 3 estrellas; tabla de **quién abre cada
   uno de los cinco días** (`e-abre.html`, sacada sola de los horarios con `curado.abre`) y la de las
   panaderías con la franja horaria de cada día; julefrokost; «qué hay que probar» con foto.
 - **«¿Qué tengo cerca?» con filtros**: comida, café y dulce, tiendas o planes (los cuatro van en
