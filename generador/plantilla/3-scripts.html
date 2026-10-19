@@ -1,0 +1,922 @@
+<script>
+  function toggleMenuInfo(e){
+    e.stopPropagation();
+    var p=document.getElementById('menuInfo'), b=document.getElementById('menuBtn');
+    var abierto=p.classList.toggle('abierto');
+    b.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+  }
+  function cerrarMenuInfo(){
+    var p=document.getElementById('menuInfo'), b=document.getElementById('menuBtn');
+    p.classList.remove('abierto');
+    b.setAttribute('aria-expanded','false');
+  }
+  // cerrar al hacer clic fuera del panel o al pulsar Escape
+  document.addEventListener('click', function(e){
+    var p=document.getElementById('menuInfo'), b=document.getElementById('menuBtn');
+    if(p.classList.contains('abierto') && !p.contains(e.target) && !b.contains(e.target)) cerrarMenuInfo();
+  });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') cerrarMenuInfo(); });
+
+  // ---- Guardar la web para verla sin conexión ----
+  var elEstado = document.getElementById('estadoOffline');
+  var elBoton  = document.getElementById('btnGuardar');
+
+  function esWeb(){ return location.protocol === 'https:' || location.hostname === 'localhost'; }
+
+  if (!esWeb()) {
+    if (elBoton) elBoton.style.display = 'none';
+    if (elEstado) elEstado.textContent = 'Esta es la copia descargada: ya funciona sin conexión.';
+  } else if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js', {updateViaCache: 'none'}).then(function(reg){
+      // Avisar cuando haya una versión nueva, en vez de obligar a borrar la caché a mano.
+      function vigila(sw){
+        if (!sw) return;
+        sw.addEventListener('statechange', function(){
+          if (sw.state === 'installed' && navigator.serviceWorker.controller) avisaNueva(reg);
+        });
+      }
+      if (reg.waiting && navigator.serviceWorker.controller) avisaNueva(reg);
+      vigila(reg.installing);
+      reg.addEventListener('updatefound', function(){ vigila(reg.installing); });
+
+      // Comprobar si hay novedades al volver a la pestaña, no sólo al cargar
+      var ultima = Date.now();
+      document.addEventListener('visibilitychange', function(){
+        if (document.visibilityState === 'visible' && Date.now() - ultima > 60000) {
+          ultima = Date.now();
+          reg.update().catch(function(){});
+        }
+      });
+    }).catch(function(){});
+    if (window.caches) {
+      caches.match('img/portada.jpg', {ignoreSearch:true}).then(function(hit){
+        if (hit && elEstado) {
+          elEstado.textContent = '✓ Ya está guardada en este dispositivo.';
+          if (elBoton) elBoton.textContent = '🔄 Volver a guardar (actualizar)';
+        }
+      }).catch(function(){});
+    }
+    navigator.serviceWorker.addEventListener('message', function(e){
+      if (!e.data || !elEstado) return;
+      if (e.data.tipo === 'PROGRESO') {
+        elEstado.textContent = 'Guardando… ' + e.data.hechos + ' de ' + e.data.total;
+      } else if (e.data.tipo === 'LISTO') {
+        elEstado.textContent = '✓ Guardada. Ya podéis abrirla en modo avión.';
+        if (elBoton) { elBoton.disabled = false; elBoton.textContent = '🔄 Volver a guardar (actualizar)'; }
+      }
+    });
+  } else {
+    if (elBoton) elBoton.style.display = 'none';
+    if (elEstado) elEstado.textContent = 'Este navegador no permite guardar la web; usad la descarga en ZIP.';
+  }
+
+  // por si al botón se le olvida el onclick en el HTML: sin esto, el guardado
+  // sin conexión no hace absolutamente nada y nadie se entera hasta el avión
+  if (elBoton && !elBoton.getAttribute('onclick')) {
+    elBoton.addEventListener('click', function(){ guardarOffline(); });
+  }
+
+  function guardarOffline(){
+    if (!('serviceWorker' in navigator)) return;
+    elBoton.disabled = true;
+    elEstado.textContent = 'Preparando la descarga…';
+    navigator.serviceWorker.ready.then(function(reg){
+      var sw = reg.active || navigator.serviceWorker.controller;
+      if (sw) { sw.postMessage({tipo:'GUARDAR'}); }
+      else { elEstado.textContent = 'Recargad la página e intentadlo otra vez.'; elBoton.disabled = false; }
+    });
+  }
+
+</script>
+
+<script src="sitios.js"></script>
+<script>
+/* ---------- AVISO DE VERSIÓN NUEVA ---------- */
+function avisaNueva(reg){
+  if (document.getElementById('nuevaVersion')) return;
+  var b = document.createElement('div');
+  b.id = 'nuevaVersion';
+  b.setAttribute('role', 'dialog');
+  b.setAttribute('aria-modal', 'true');
+  b.setAttribute('aria-labelledby', 'nvTit');
+  b.innerHTML =
+    '<div class="nv-caja">' +
+      '<div class="nv-ico" aria-hidden="true">\u2728</div>' +
+      '<h3 id="nvTit">Hay una versi\u00f3n nueva de la gu\u00eda</h3>' +
+      '<p>Se ha cambiado algo desde la \u00faltima vez que la abriste. Al actualizar se borra ' +
+      'la copia guardada en el m\u00f3vil y se descarga la nueva, con los cambios.</p>' +
+      '<div class="nv-botones">' +
+        '<button id="nvOk">Actualizar ahora</button>' +
+        '<button id="nvNo">Ahora no</button>' +
+      '</div>' +
+    '</div>';
+  document.body.appendChild(b);
+  requestAnimationFrame(function(){ b.classList.add('visible'); });
+
+  var ok = document.getElementById('nvOk');
+  ok.focus();
+  function cerrar(){ b.classList.remove('visible'); setTimeout(function(){ b.remove(); }, 220); }
+  document.getElementById('nvNo').onclick = cerrar;
+  b.addEventListener('click', function(e){ if (e.target === b) cerrar(); });
+  document.addEventListener('keydown', function esc(e){
+    if (e.key === 'Escape' && document.getElementById('nuevaVersion')) { cerrar(); document.removeEventListener('keydown', esc); }
+  });
+
+  ok.onclick = function(){
+    ok.textContent = 'Actualizando\u2026';
+    ok.disabled = true;
+    if (reg && reg.waiting) reg.waiting.postMessage({tipo: 'ACTIVAR_YA'});
+    function recarga(){ location.reload(); }
+    // se borra la copia guardada para que no quede nada de la versi\u00f3n vieja.
+    // Sin conexi\u00f3n NO se borra: se quedar\u00edan sin gu\u00eda hasta volver a tener datos.
+    if (window.caches && caches.keys && navigator.onLine !== false) {
+      caches.keys()
+        .then(function(ks){ return Promise.all(ks.map(function(k){ return caches.delete(k); })); })
+        .then(function(){ setTimeout(recarga, 300); })
+        .catch(function(){ setTimeout(recarga, 300); });
+    } else {
+      setTimeout(recarga, 400);
+    }
+  };
+}
+</script>
+<script>
+/* ---------- AUDIOGUÍA ---------- */
+(function(){
+  if (typeof AUDIOS === 'undefined') return;
+
+  var au = document.getElementById('plAudio'), pl = document.getElementById('player');
+  var elTit = document.getElementById('plTit'), elProg = document.getElementById('plProg');
+  var elAhora = document.getElementById('plAhora'), elTotal = document.getElementById('plTotal');
+  var btPlay = document.getElementById('plPlay'), btVel = document.getElementById('plVel');
+  var actual = null, velocidades = [1, 1.25, 1.5, 0.85], iVel = 0;
+
+  function mmss(s){ s = Math.max(0, Math.round(s || 0)); return Math.floor(s/60) + ':' + String(s%60).padStart(2,'0'); }
+
+  /* Iconos: trazo simple, heredan el color del tipo.
+     cápsula = una pastilla · audioguía = libro que suena · historia = ondas que cuentan algo */
+  var SVG = {
+    capsula: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">'
+           + '<rect x="1.7" y="8.2" width="20.6" height="7.6" rx="3.8" transform="rotate(-45 12 12)"/>'
+           + '<line x1="9.2" y1="9.2" x2="14.8" y2="14.8"/></svg>',
+    guia:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'
+           + '<path d="M4 4.6h6.4a1.6 1.6 0 0 1 1.6 1.6v13a1.6 1.6 0 0 0-1.6-1.6H4z"/>'
+           + '<line x1="6.4" y1="4.6" x2="6.4" y2="17.6"/>'
+           + '<path d="M15.4 9.6a3.6 3.6 0 0 1 0 4.8"/>'
+           + '<path d="M18.4 7.2a7.4 7.4 0 0 1 0 9.6"/></svg>',
+    fondo:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">'
+           + '<circle cx="6.2" cy="12" r="1.7" fill="currentColor" stroke="none"/>'
+           + '<path d="M10.4 8.6a4.8 4.8 0 0 1 0 6.8"/>'
+           + '<path d="M14 6.2a9 9 0 0 1 0 11.6"/>'
+           + '<path d="M17.6 3.8a13.2 13.2 0 0 1 0 16.4"/></svg>',
+    bajar:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'
+           + '<path d="M12 3.5v11"/><path d="M7.5 10.5 12 15l4.5-4.5"/><path d="M4.5 19.5h15"/></svg>'
+  };
+  var TXT = {capsula:'cápsula', guia:'audioguía', fondo:'historia'};
+
+  function sonar(p){
+    if (actual === p.id && !au.paused) { au.pause(); return; }
+    if (actual === p.id) { au.play(); return; }
+    actual = p.id;
+    au.src = 'audio/' + p.id + '.mp3';
+    au.playbackRate = velocidades[iVel];
+    au.play().catch(function(){});
+    elTit.textContent = p.t;
+    elTotal.textContent = mmss(p.d);
+    pl.classList.add('visible');
+    marcar();
+  }
+
+  function marcar(){
+    document.querySelectorAll('.pista').forEach(function(b){
+      b.classList.toggle('sonando', b.dataset.id === actual && !au.paused);
+    });
+    btPlay.textContent = au.paused ? '▶' : '⏸';
+  }
+
+  au.addEventListener('timeupdate', function(){
+    if (!au.duration) return;
+    elProg.style.width = (au.currentTime / au.duration * 100) + '%';
+    elAhora.textContent = mmss(au.currentTime);
+    elTotal.textContent = mmss(au.duration);
+  });
+  au.addEventListener('play', marcar);
+  au.addEventListener('pause', marcar);
+  au.addEventListener('ended', function(){ elProg.style.width = '0'; marcar(); });
+
+  btPlay.onclick = function(){ au.paused ? au.play() : au.pause(); };
+  document.getElementById('plX').onclick = function(){ au.pause(); pl.classList.remove('visible'); };
+  btVel.onclick = function(){
+    iVel = (iVel + 1) % velocidades.length;
+    au.playbackRate = velocidades[iVel];
+    btVel.textContent = velocidades[iVel] + '×';
+  };
+  document.getElementById('plBarra').onclick = function(e){
+    if (!au.duration) return;
+    var r = this.getBoundingClientRect();
+    au.currentTime = (e.clientX - r.left) / r.width * au.duration;
+  };
+
+  /* --- lista de pistas --- */
+  var ORDEN = {capsula:0, guia:1, fondo:2};
+  function lista(pistas){
+    var d = document.createElement('div');
+    d.className = 'pistas';
+    pistas.slice().sort(function(a,b){ return (ORDEN[a.k]-ORDEN[b.k]) || a.id.localeCompare(b.id); })
+      .forEach(function(p){
+        var b = document.createElement('button');
+        b.className = 'pista k-' + p.k;
+        b.dataset.id = p.id;
+        b.innerHTML = '<span class="ico">' + SVG[p.k] + '</span><span class="txt">' +
+                      '<span class="nom">' + p.t + '</span>' +
+                      '<span class="meta">' + TXT[p.k] + ' · ' + mmss(p.d) + ' · ' + p.mb.toFixed(1) + ' MB</span>' +
+                      '</span>';
+        b.onclick = function(){ sonar(p); };
+        d.appendChild(b);
+      });
+    return d;
+  }
+
+  function botonBajar(pistas, texto){
+    var b = document.createElement('button');
+    b.className = 'btn-bajar sans';
+    var mb = pistas.reduce(function(a,p){ return a + p.mb; }, 0);
+    b.innerHTML = SVG.bajar + '<span>' + texto.replace('{n}', pistas.length).replace('{mb}', mb.toFixed(0)) + '</span>';
+    b.onclick = function(){ guardar(b, pistas); };
+    return b;
+  }
+
+  /* --- 1) bloque "para el tren", en la sección de la ruta --- */
+  var avion = AUDIOS.filter(function(p){ return p.s === 'tren'; });
+  var host = document.getElementById('ruta');
+  if (avion.length && host) {
+    var caja = document.createElement('div');
+    caja.className = 'audioguia sans';
+    caja.innerHTML = '<div class="cab">🎧 Audioguía · para el tren</div>' +
+      '<div class="expl">Escúchalos antes de llegar: con esto entiendes casi todo lo que vas a ver. ' +
+      'Los demás están repartidos por los días, cada uno donde toca.</div>';
+    caja.appendChild(lista(avion));
+    caja.appendChild(botonBajar(avion, 'Guardar estos {n} audios en el móvil ({mb} MB)'));
+    host.appendChild(caja);
+  }
+
+  /* --- 2) las demás pistas, dentro de la pastilla de su día --- */
+  document.querySelectorAll('[data-dia]').forEach(function(dia){
+    var pistas = AUDIOS.filter(function(p){ return p.s === dia.dataset.dia; });
+    if (!pistas.length) return;
+    var caja = document.createElement('div');
+    caja.className = 'audios-dia sans';
+    caja.innerHTML = '<div class="tit">' + SVG.guia + 'Para escuchar este día</div>';
+    caja.appendChild(lista(pistas));
+    dia.appendChild(caja);
+  });
+
+  /* --- 3) al final de cada etapa, guardar todos sus audios de una vez --- */
+  document.querySelectorAll('section.etapa-sec').forEach(function(sec){
+    var suyas = AUDIOS.filter(function(p){ return p.s.indexOf(sec.id + '-') === 0; });
+    if (!suyas.length) return;
+    var b = botonBajar(suyas, 'Guardar los {n} audios de esta etapa en el móvil ({mb} MB)');
+    b.classList.add('bajar-etapa');
+    var ultimo = sec.querySelector('.dias') || sec;
+    ultimo.appendChild(b);
+  });
+
+  /* --- descarga mediante el service worker --- */
+  function guardar(boton, pistas){
+    var rutas = pistas.map(function(p){ return 'audio/' + p.id + '.mp3'; });
+    var texto = boton.querySelector('span:last-child');
+    boton.disabled = true;
+    if (!('caches' in window)) { texto.textContent = 'Tu navegador no permite guardarlos'; return; }
+    var hechos = 0;
+    caches.open('nerja2026-v1').then(function(c){
+      return rutas.reduce(function(cadena, r){
+        return cadena.then(function(){
+          return c.add(new Request(r, {cache: 'reload'})).catch(function(){}).then(function(){
+            hechos++;
+            texto.textContent = 'Guardando… ' + hechos + ' de ' + rutas.length;
+          });
+        });
+      }, Promise.resolve());
+    }).then(function(){
+      texto.textContent = '✓ Guardados · funcionan sin conexión';
+    }).catch(function(){
+      texto.textContent = 'No se han podido guardar. Inténtalo con wifi.';
+      boton.disabled = false;
+    });
+  }
+})();
+</script>
+<script>
+/* ---------- HOY: lo que toca según la fecha ---------- */
+(function(){
+  var host = document.getElementById('hoy');
+  if (!host) return;
+
+  var dias = [].slice.call(document.querySelectorAll('[data-fecha]'));
+  if (!dias.length) return;
+
+  var MESES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto',
+               'septiembre','octubre','noviembre','diciembre'];
+  var SEMANA = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+
+  function iso(d){ return d.toISOString().slice(0,10); }
+  function deIso(s){ var p = s.split('-'); return new Date(+p[0], +p[1]-1, +p[2]); }
+  function bonita(d){ return SEMANA[d.getDay()] + ' ' + d.getDate() + ' de ' + MESES[d.getMonth()]; }
+  function mmss(s){ return Math.floor(s/60) + ':' + String(Math.round(s)%60).padStart(2,'0'); }
+
+  // en los días de traslado hay dos bloques con la misma fecha: si no se quitan
+  // los repetidos, indexOf devuelve siempre el primero y las flechas ‹ › se quedan
+  // clavadas en ese día sin poder pasar al siguiente.
+  var fechas = dias.map(function(d){ return d.dataset.fecha; }).sort()
+                   .filter(function(f, n, todas){ return f !== todas[n-1]; });
+  var PRIMERA = fechas[0], ULTIMA = fechas[fechas.length-1];
+
+  // día que se está mostrando: hoy, o el que el usuario elija con las flechas
+  var elegido = null;
+
+  function bloquesDe(fecha){
+    return dias.filter(function(d){ return d.dataset.fecha === fecha; });
+  }
+
+  function seccionDe(bloque){
+    var s = bloque.closest('section.etapa-sec');
+    return s ? {id: s.id, titulo: (s.querySelector('h2')||{}).textContent || ''} : null;
+  }
+
+  function pinta(fecha){
+    var bloques = bloquesDe(fecha);
+    if (!bloques.length) { host.innerHTML = ''; return; }
+
+    var d = deIso(fecha);
+    var numero = bloques[0].querySelector('h4').textContent.match(/Día\s+(\d+)/);
+    // en los días de traslado hay dos bloques: se sale de uno y se duerme en el otro.
+    // El título los muestra encadenados y la comida y el hotel son los del destino.
+    var secs = bloques.map(seccionDe).filter(Boolean);
+    var sec = secs[secs.length - 1];
+    var nombres = [], vistos = {};
+    secs.forEach(function(x){
+      var n = x.titulo.split('—')[0].trim();
+      if (!vistos[n]) { vistos[n] = 1; nombres.push(n); }
+    });
+    var esHoy = fecha === iso(new Date());
+
+    // plan: el texto de todos los bloques de esa fecha
+    var plan = bloques.map(function(b){
+      var titulo = b.querySelector('h4').cloneNode(true);
+      var f = titulo.querySelector('.fecha'); if (f) f.remove();
+      // el madrugador y los avisos se pintan aparte, en su propia caja. Si no se
+      // excluyen aquí, sus párrafos salen otra vez dentro del texto del día.
+      var ps = [].slice.call(b.querySelectorAll('p')).filter(function(p){
+        return !p.closest('.madrugador, .tip');
+      }).map(function(p){ return p.innerHTML; }).join(' ');
+      // los avisos del día (.tip) llevan lo importante: horarios raros, planes B, timos
+      var tip = b.querySelector('.tip');
+      var mad = b.querySelector('.madrugador');
+      return '<p style="margin-bottom:8px"><b>' + titulo.textContent.trim() + '</b> — ' + ps + '</p>' +
+             (mad ? '<div class="hoy-tip hoy-mad">' + mad.innerHTML + '</div>' : '') +
+             (tip ? '<div class="hoy-tip">' + tip.innerHTML + '</div>' : '');
+    }).join('');
+
+    // audios de esos días
+    var audios = [];
+    if (typeof AUDIOS !== 'undefined') {
+      bloques.forEach(function(b){
+        AUDIOS.filter(function(p){ return p.s === b.dataset.dia; }).forEach(function(p){ audios.push(p); });
+      });
+    }
+
+    // comida y hotel de la etapa
+    var comer = sec ? document.querySelector('#' + sec.id + ' .comer') : null;
+    // Por si alguna sección se queda sin lista propia: se busca una hermana
+    // con el mismo nombre base y se usa la suya.
+    if (sec && (!comer || !comer.querySelector('.sitios li'))) {
+      var raiz = sec.id.replace(/\d+$/, '');
+      var hermana = [].slice.call(document.querySelectorAll('section.etapa-sec')).filter(function(x){
+        return x.id !== sec.id && x.id.replace(/\d+$/, '') === raiz && x.querySelector('.comer .sitios li');
+      })[0];
+      if (hermana) comer = hermana.querySelector('.comer');
+    }
+    var sitios = comer ? [].slice.call(comer.querySelectorAll('.sitios li')).slice(0,3) : [];
+
+    var h = '<div class="hoy-caja' + (esHoy ? '' : ' hoy-caja') + '">';
+    h += '<div class="hoy-cab"><span class="hoy-eti">' + (esHoy ? '● Hoy' : 'Día del viaje') + '</span>';
+    h += '<span class="hoy-fecha">' + bonita(d) + '</span></div>';
+    h += '<h2>' + (numero ? 'Día ' + numero[1] + ' · ' : '') + nombres.join(' → ') + '</h2>';
+    h += '<div class="hoy-plan">' + plan + '</div>';
+
+    h += '<div class="hoy-rejilla">';
+    if (audios.length) {
+      h += '<div class="hoy-tarjeta"><h4>🎧 Para escuchar hoy</h4>';
+      audios.forEach(function(p){
+        h += '<button class="hoy-audio" data-audio="' + p.id + '"><span class="ic">▶</span>' +
+             '<span>' + p.t + '</span><span class="du">' + mmss(p.d) + '</span></button>';
+      });
+      h += '</div>';
+    }
+    if (sitios.length) {
+      h += '<div class="hoy-tarjeta"><h4>🍜 Dónde comer por aquí</h4><ul>';
+      sitios.forEach(function(li){
+        var n = li.querySelector('.nombre'), a = li.querySelector('a');
+        if (n && a) h += '<li><a href="' + a.href + '" target="_blank" rel="noopener">' + n.textContent + '</a></li>';
+      });
+      var secComer = comer ? comer.closest('section') : sec;
+      h += '</ul><a href="#' + (secComer ? secComer.id : '') + '" style="font-size:.84rem">ver los ' +
+           (comer ? comer.querySelectorAll('.sitios li').length : 0) + ' sitios →</a></div>';
+    }
+    h += '</div>';
+
+    h += '<div class="hoy-pie">';
+    if (sec) h += '<a class="hoy-btn" href="#' + sec.id + '">Ver la etapa completa</a>';
+    h += '<a class="hoy-btn ghost" href="#hoteles">Mi hotel</a>';
+    h += '<div class="hoy-nav"><button id="hoyAnt" title="Día anterior">‹</button>' +
+         (esHoy ? '' : '<button id="hoyVolver" title="Volver a hoy" style="width:auto;padding:0 12px;font-size:.82rem">hoy</button>') +
+         '<button id="hoySig" title="Día siguiente">›</button></div>';
+    h += '</div></div>';
+
+    host.innerHTML = h;
+
+    // reproducir con el reproductor de la audioguía
+    host.querySelectorAll('[data-audio]').forEach(function(b){
+      b.onclick = function(){
+        var real = document.querySelector('.pista[data-id="' + b.dataset.audio + '"]');
+        if (real) real.click();
+      };
+    });
+    var i = fechas.indexOf(fecha);
+    var ant = host.querySelector('#hoyAnt'), sig = host.querySelector('#hoySig'), vol = host.querySelector('#hoyVolver');
+    if (ant) ant.onclick = function(){ elegido = fechas[Math.max(0, i-1)]; pinta(elegido); };
+    if (sig) sig.onclick = function(){ elegido = fechas[Math.min(fechas.length-1, i+1)]; pinta(elegido); };
+    if (vol) vol.onclick = function(){ elegido = null; arranca(); };
+  }
+
+  function cuentaAtras(dias_faltan){
+    host.innerHTML =
+      '<div class="hoy-caja hoy-cuenta">' +
+        '<div class="hoy-cab"><span class="hoy-eti">Cuenta atrás</span></div>' +
+        '<h2>' + (dias_faltan === 1 ? 'Mañana salís' : 'Faltan ' + dias_faltan + ' días') + '</h2>' +
+        '<div class="hoy-plan">Cuando empiece el viaje, aquí aparecerá automáticamente el plan del día, ' +
+        'los audios que tocan y dónde comer cerca.</div>' +
+        '<div class="hoy-pie"><button class="hoy-btn" id="hoyVerPrimero">Ver el primer día</button></div>' +
+      '</div>';
+    host.querySelector('#hoyVerPrimero').onclick = function(){ elegido = PRIMERA; pinta(PRIMERA); };
+  }
+
+  function arranca(){
+    var hoy = iso(new Date());
+    if (elegido) return pinta(elegido);
+    if (hoy < PRIMERA) {
+      var faltan = Math.round((deIso(PRIMERA) - deIso(hoy)) / 86400000);
+      return cuentaAtras(faltan);
+    }
+    if (hoy > ULTIMA) {
+      host.innerHTML = '<div class="hoy-caja hoy-cuenta"><div class="hoy-cab">' +
+        '<span class="hoy-eti">El viaje terminó</span></div><h2>Ya estáis de vuelta</h2>' +
+        '<div class="hoy-plan">Aquí queda todo por si queréis recordarlo.</div></div>';
+      return;
+    }
+    pinta(hoy);
+  }
+
+  arranca();
+})();
+</script>
+<script>
+/* ---------- BUSCADOR, VOLVER ARRIBA Y TEMA ---------- */
+(function(){
+  /* --- índice de todo lo buscable: días, sitios de comida, hoteles y secciones --- */
+  var indice = [];
+  function anota(el, titulo, contexto, ancla){
+    var t = (titulo||'').replace(/\s+/g,' ').trim();
+    if (t) indice.push({t: t, c: contexto, a: ancla, el: el});
+  }
+  document.querySelectorAll('section.etapa-sec').forEach(function(sec){
+    var h2 = sec.querySelector('h2');
+    anota(sec, h2 ? h2.textContent : sec.id, 'etapa', '#' + sec.id);
+    sec.querySelectorAll('[data-dia] h4').forEach(function(h4){
+      var c = h4.cloneNode(true), f = c.querySelector('.fecha'); if (f) f.remove();
+      anota(h4, c.textContent, (h2?h2.textContent.split('—')[0].trim():''), '#' + sec.id);
+    });
+    sec.querySelectorAll('.sitios .nombre').forEach(function(n){
+      anota(n, n.textContent, 'comer en ' + (h2?h2.textContent.split('—')[0].trim():''), '#' + sec.id);
+    });
+    sec.querySelectorAll('.plato').forEach(function(p){
+      anota(p, p.textContent, 'plato de ' + (h2?h2.textContent.split('—')[0].trim():''), '#' + sec.id);
+    });
+  });
+  document.querySelectorAll('.hotel').forEach(function(a){ anota(a, a.textContent, 'hotel', '#hoteles'); });
+  document.querySelectorAll('#practico h4, #comer h3, .bcard h4').forEach(function(h){
+    var s = h.closest('section');
+    anota(h, h.textContent, 'guía práctica', '#' + (s ? s.id : ''));
+  });
+  if (typeof AUDIOS !== 'undefined')
+    AUDIOS.forEach(function(p){ indice.push({t: p.t, c: 'audio', a: '#' + p.s, audio: p.id}); });
+
+  function normaliza(s){
+    return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
+  }
+  var normalizado = indice.map(function(x){ return normaliza(x.t + ' ' + x.c); });
+
+  var caja = document.getElementById('buscar');
+  var lista = document.getElementById('resultados');
+  if (caja && lista) {
+    caja.addEventListener('input', function(){
+      var q = normaliza(caja.value.trim());
+      if (q.length < 2) { lista.classList.remove('abierto'); return; }
+      var hits = [];
+      for (var i = 0; i < indice.length && hits.length < 12; i++)
+        if (normalizado[i].indexOf(q) !== -1) hits.push(indice[i]);
+      lista.innerHTML = hits.length
+        ? hits.map(function(x){
+            return '<a href="' + x.a + '" data-i="' + indice.indexOf(x) + '">' + x.t +
+                   '<small>' + x.c + '</small></a>'; }).join('')
+        : '<div class="vacio">Nada con «' + caja.value + '»</div>';
+      lista.classList.add('abierto');
+      lista.querySelectorAll('a').forEach(function(a){
+        a.onclick = function(e){
+          var x = indice[+a.dataset.i];
+          lista.classList.remove('abierto'); caja.value = '';
+          if (x.audio) {
+            e.preventDefault();
+            var b = document.querySelector('.pista[data-id="' + x.audio + '"]');
+            if (b) { b.scrollIntoView({block:'center'}); b.click(); }
+          } else if (x.el) {
+            e.preventDefault();
+            x.el.scrollIntoView({block:'center', behavior:'smooth'});
+            x.el.style.transition = 'background .3s';
+            var previo = x.el.style.background;
+            x.el.style.background = '#ffe9b0';
+            setTimeout(function(){ x.el.style.background = previo; }, 1400);
+          }
+        };
+      });
+    });
+    document.addEventListener('click', function(e){
+      if (!e.target.closest('.buscador')) lista.classList.remove('abierto');
+    });
+    caja.addEventListener('keydown', function(e){ if (e.key === 'Escape') { caja.value=''; lista.classList.remove('abierto'); } });
+  }
+
+  /* --- tema claro / oscuro --- */
+  var btn = document.getElementById('tema');
+  function aplica(t){
+    document.documentElement.setAttribute('data-tema', t);
+    if (btn) { btn.textContent = t === 'oscuro' ? '☀' : '☾';
+               btn.setAttribute('aria-label', t === 'oscuro' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'); }
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', t === 'oscuro' ? '#17140f' : '#946307');
+  }
+  var guardado = null;
+  try { guardado = localStorage.getItem('tema'); } catch(e){}
+  aplica(guardado || (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'oscuro' : 'claro'));
+  var btnMenu = document.getElementById('temaMenu');
+  if (btnMenu) btnMenu.onclick = function(){
+    var nuevo = document.documentElement.getAttribute('data-tema') === 'oscuro' ? 'claro' : 'oscuro';
+    aplica(nuevo);
+    btnMenu.textContent = nuevo === 'oscuro' ? '☀ Modo claro' : '☾ Modo oscuro';
+    try { localStorage.setItem('tema', nuevo); } catch(e){}
+  };
+  if (btn) btn.onclick = function(){
+    var nuevo = document.documentElement.getAttribute('data-tema') === 'oscuro' ? 'claro' : 'oscuro';
+    aplica(nuevo);
+    try { localStorage.setItem('tema', nuevo); } catch(e){}
+  };
+})();
+</script>
+<script>
+/* ---------- MARCAR SITIOS COMO PROBADOS ---------- */
+(function(){
+  var CLAVE = 'cph-hechos';
+  var hechos = {};
+  try { hechos = JSON.parse(localStorage.getItem(CLAVE) || '{}'); } catch(e){}
+  function guarda(){ try { localStorage.setItem(CLAVE, JSON.stringify(hechos)); } catch(e){} }
+
+  function id(li){
+    var n = li.querySelector('.nombre');
+    return n ? n.textContent.trim().toLowerCase().replace(/\s+/g,'-') : null;
+  }
+
+  document.querySelectorAll('.sitios li').forEach(function(li){
+    var k = id(li); if (!k) return;
+    var b = document.createElement('button');
+    b.className = 'marcar';
+    b.type = 'button';
+    function pinta(){
+      var ok = !!hechos[k];
+      li.classList.toggle('hecho', ok);
+      b.textContent = ok ? '✓ probado' : '＋ marcar';
+      b.setAttribute('aria-pressed', ok ? 'true' : 'false');
+      b.title = ok ? 'Quitar la marca' : 'Marcar como probado';
+    }
+    b.onclick = function(){
+      if (hechos[k]) delete hechos[k]; else hechos[k] = 1;
+      guarda(); pinta(); cuenta();
+    };
+    li.appendChild(b);
+    pinta();
+  });
+
+  // contador por etapa
+  function cuenta(){
+    document.querySelectorAll('.comer').forEach(function(c){
+      var lis = c.querySelectorAll('.sitios li');
+      var ok = c.querySelectorAll('.sitios li.hecho').length;
+      var e = c.querySelector('.contador-probados');
+      if (!e) {
+        e = document.createElement('div');
+        e.className = 'contador-probados sans';
+        var ul = c.querySelector('.sitios');
+        if (ul) ul.parentNode.insertBefore(e, ul.nextSibling);
+      }
+      e.textContent = ok ? '🍜 Habéis probado ' + ok + ' de ' + lis.length : '';
+    });
+  }
+  cuenta();
+})();
+</script>
+<script>
+/* ---------- FRASES: escuchar y enseñar ---------- */
+(function(){
+  var lista = document.querySelectorAll('[data-frase]');
+  if (!lista.length) return;
+
+  var audio = new Audio();
+  var sonando = null;
+  function suena(id, boton){
+    if (sonando) sonando.classList.remove('sonando');
+    audio.src = 'audio/frases/' + id + '.mp3';
+    audio.play().catch(function(){});
+    if (boton) { boton.classList.add('sonando'); sonando = boton; }
+  }
+  audio.addEventListener('ended', function(){ if (sonando) sonando.classList.remove('sonando'); });
+
+  // pantalla para enseñar la frase a alguien
+  var panel = document.createElement('div');
+  panel.id = 'enseñar';
+  panel.innerHTML = '<button class="cerrar" aria-label="Cerrar">✕</button>' +
+    '<div class="th" lang="th"></div><div class="es"></div><div class="fon"></div>' +
+    '<button class="oir">▶ Que lo oiga</button>';
+  document.body.appendChild(panel);
+  var actual = null;
+  panel.querySelector('.cerrar').onclick = function(){ panel.classList.remove('abierto'); };
+  panel.querySelector('.oir').onclick = function(){ if (actual) suena(actual, null); };
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') panel.classList.remove('abierto');
+  });
+
+  lista.forEach(function(li){
+    var id = li.dataset.frase;
+    var play = li.querySelector('.fr-play');
+    var ver = li.querySelector('.fr-ver');
+    if (play) play.onclick = function(){ suena(id, play); };
+    if (ver) ver.onclick = function(){
+      actual = id;
+      panel.querySelector('.th').textContent = li.dataset.th;
+      panel.querySelector('.es').textContent = li.querySelector('.fr-es').textContent;
+      panel.querySelector('.fon').textContent = li.querySelector('.fr-fon').textContent;
+      panel.classList.add('abierto');
+    };
+  });
+})();
+</script>
+<script>
+/* ---------- ETAPAS: desplegable en móvil en vez de scroll lateral ---------- */
+(function(){
+  var wrap = document.querySelector('nav .wrap');
+  if (!wrap) return;
+  var enlaces = [].slice.call(wrap.querySelectorAll('a'));
+  if (!enlaces.length) return;
+
+  var sel = document.createElement('select');
+  sel.className = 'etapas-sel sans';
+  sel.setAttribute('aria-label', 'Ir a una zona de la guía');
+  sel.innerHTML = '<option value="">Ir a una zona…</option>' +
+    enlaces.map(function(a){
+      return '<option value="' + a.getAttribute('href') + '">' + a.textContent.trim() + '</option>';
+    }).join('');
+  sel.onchange = function(){
+    if (!sel.value) return;
+    var d = document.querySelector(sel.value);
+    if (d) d.scrollIntoView({behavior:'smooth', block:'start'});
+    sel.selectedIndex = 0;
+  };
+  wrap.parentNode.insertBefore(sel, wrap);
+})();
+/* ---------- ACCESO RÁPIDO: un solo botón en vez de tres ---------- */
+(function(){
+  // fuera los flotantes antiguos, que competían por la misma esquina
+  ['arriba','irhoy'].forEach(function(id){
+    var v = document.getElementById(id); if (v) v.remove();
+  });
+
+  var ACCESOS = [
+    {ic:'📍', t:'Cerca',    a:'cerca'},
+    {ic:'🍽️', t:'Comer',    a:'#comer'},
+    {ic:'🛍️', t:'Tiendas',  a:'#tiendas'},
+    {ic:'🏨', t:'Hoteles',  a:'#hoteles'},
+    {ic:'↑',  t:'Arriba',   a:'top'}
+  ];
+
+  var caja = document.createElement('div');
+  caja.id = 'rapido';
+  caja.innerHTML =
+    '<div class="rap-lista">' +
+      ACCESOS.map(function(x){
+        return '<button class="rap-item" data-a="' + x.a + '">' +
+               '<span class="rap-t">' + x.t + '</span>' +
+               '<span class="rap-ic">' + x.ic + '</span></button>';
+      }).join('') +
+    '</div>' +
+    '<button class="rap-btn" aria-label="Accesos rápidos" aria-expanded="false">⚡</button>';
+  document.body.appendChild(caja);
+
+  var btn = caja.querySelector('.rap-btn');
+  function abre(v){
+    caja.classList.toggle('abierto', v);
+    btn.setAttribute('aria-expanded', v ? 'true' : 'false');
+    btn.textContent = v ? '✕' : '⚡';
+  }
+  btn.onclick = function(e){ e.stopPropagation(); abre(!caja.classList.contains('abierto')); };
+  document.addEventListener('click', function(){ abre(false); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') abre(false); });
+
+  caja.querySelectorAll('.rap-item').forEach(function(b){
+    b.onclick = function(e){
+      e.stopPropagation();
+      abre(false);
+      if (b.dataset.a === 'cerca') return window.abrirCerca && window.abrirCerca();
+      if (b.dataset.a === 'top') return window.scrollTo({top:0, behavior:'smooth'});
+      var destino = document.querySelector(b.dataset.a);
+      if (destino) destino.scrollIntoView({behavior:'smooth', block:'start'});
+    };
+  });
+
+  // aparece al bajar; en lo alto de la página estorba
+  var previo = 0;
+  window.addEventListener('scroll', function(){
+    var y = window.scrollY;
+    if ((y > 500) !== (previo > 500)) {
+      caja.classList.toggle('visible', y > 500);
+      if (y <= 500) abre(false);
+    }
+    previo = y;
+  }, {passive:true});
+})();
+
+/* ---------- FILTRO DE PLATOS ---------- */
+(function(){
+  var botones = document.querySelectorAll('.fp');
+  if (!botones.length) return;
+  var tarjetas = document.querySelectorAll('.plato-card');
+  botones.forEach(function(b){
+    b.onclick = function(){
+      botones.forEach(function(x){ x.classList.remove('activo'); });
+      b.classList.add('activo');
+      var f = b.dataset.f.toLowerCase();
+      tarjetas.forEach(function(t){
+        var etapas = (t.dataset.etapas || '').toLowerCase();
+        t.classList.toggle('oculto', !!f && etapas.indexOf(f) === -1 && etapas.indexOf('todo el viaje') === -1);
+      });
+    };
+  });
+})();
+</script>
+<script>
+/* ---------- ¿QUÉ TENGO CERCA? ---------- */
+(function(){
+  if (typeof SITIOS === 'undefined') return;
+
+  var SELLO = {smorre:'smørrebrød', pan:'panadería', cafe:'café', tienda:'tienda curiosa', pinzas:'¡las pinzas!',
+               navidad:'Navidad', capricho:'el capricho', amigo:'lo recomienda quien ha estado',
+               leyenda:'lleva décadas abierto', local:'donde come la gente de aquí',
+               barato:'muy barato', cena:'la comida buena', '':''};
+
+  var panel = document.createElement('div');
+  panel.id = 'cerca';
+  panel.innerHTML =
+    '<div class="cerca-caja">' +
+      '<button class="cerca-x" aria-label="Cerrar">✕</button>' +
+      '<h3>¿Qué tengo cerca?</h3>' +
+      '<div class="cerca-filtros">' +
+        '<button data-c="" class="activo">Todo</button>' +
+        '<button data-c="comer">🍽️ Comer</button>' +
+        '<button data-c="pan">🥐 Café y dulce</button>' +
+        '<button data-c="tienda">🛍️ Tiendas</button>' +
+        '<button data-c="plan">📍 Planes</button>' +
+      '</div>' +
+      '<div class="cerca-estado">Buscando dónde estás…</div>' +
+      '<div class="cerca-lista"></div>' +
+    '</div>';
+  document.body.appendChild(panel);
+
+  var estado = panel.querySelector('.cerca-estado');
+  var lista = panel.querySelector('.cerca-lista');
+  panel.querySelector('.cerca-x').onclick = cerrar;
+  panel.onclick = function(e){ if (e.target === panel) cerrar(); };
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') cerrar(); });
+  function cerrar(){ panel.classList.remove('abierto'); }
+
+  // filtro por tipo de sitio: se recuerda la última posición para no volver a pedir el GPS
+  var filtro = '', ultima = null;
+  panel.querySelectorAll('.cerca-filtros button').forEach(function(b){
+    b.onclick = function(){
+      panel.querySelectorAll('.cerca-filtros button').forEach(function(x){ x.classList.remove('activo'); });
+      b.classList.add('activo');
+      filtro = b.dataset.c;
+      if (ultima) pinta(ultima[0], ultima[1]);
+    };
+  });
+
+  function km(la1, lo1, la2, lo2){
+    var R = 6371, r = Math.PI/180;
+    var dla = (la2-la1)*r, dlo = (lo2-lo1)*r;
+    var a = Math.sin(dla/2)*Math.sin(dla/2) +
+            Math.cos(la1*r)*Math.cos(la2*r)*Math.sin(dlo/2)*Math.sin(dlo/2);
+    return 2*R*Math.asin(Math.sqrt(a));
+  }
+  function distancia(d){
+    return d < 1 ? Math.round(d*1000) + ' m' : d.toFixed(1).replace('.',',') + ' km';
+  }
+  function andando(d){
+    var min = Math.round(d*1000/75);
+    return min <= 25 ? ' · ' + min + ' min andando' : '';
+  }
+
+  function pinta(lat, lon){
+    ultima = [lat, lon];
+    var cerca = SITIOS.filter(function(s){ return !filtro || s.c === filtro; }).map(function(s){
+      var d = km(lat, lon, s.la, s.lo);
+      // los de posición aproximada llevan la coordenada del barrio, no la del local:
+      // se penalizan al ordenar para que no adelanten a los que sí están situados
+      return {s: s, d: d, orden: s.ap ? d + 0.6 : d};
+    }).sort(function(a,b){ return a.orden - b.orden; });
+
+    // la zona en la que se está sale de TODOS los sitios, no de los del filtro:
+    // si no, con «Café y dulce» en Nyhavn decía «estás en el centro»
+    var todos = SITIOS.map(function(s){ return {s: s, d: km(lat, lon, s.la, s.lo)}; })
+                      .sort(function(a,b){ return a.d - b.d; });
+    var enEtapa = todos.length && todos[0].d < 60 ? todos[0].s.e : null;
+    var top = cerca.filter(function(x){ return x.d < 80; }).slice(0, 12);
+
+    if (!top.length) {
+      estado.innerHTML = 'Estás lejos de todo lo que hay en la guía. ' +
+        '¿Seguro que ya estáis en Copenhague?';
+      lista.innerHTML = '';
+      return;
+    }
+    estado.innerHTML = 'Estás en <b>' + enEtapa + '</b>. Lo más cercano de la guía:';
+    lista.innerHTML = top.map(function(x){
+      var s = x.s;
+      var url = 'https://www.google.com/maps/search/?api=1&query=' + s.q;
+      return '<a class="cerca-item" href="' + url + '" target="_blank" rel="noopener">' +
+        '<span class="cerca-d' + (s.ap ? ' aprox' : '') + '">' +
+          (s.ap ? 'por aquí' : distancia(x.d)) + '</span>' +
+        '<span class="cerca-n">' + s.n +
+          (s.r ? '<span class="nota n' + s.r + '">' + '★★★'.slice(0, s.r) + '</span>' : '') +
+          (s.s ? '<span class="cerca-sello k-' + s.s + '">' + SELLO[s.s] + '</span>' : '') +
+        '<small>' + s.z + (s.ap ? ' · no tengo su punto exacto' : andando(x.d)) + '</small></span></a>';
+    }).join('');
+  }
+
+  function abrir(){
+    panel.classList.add('abierto');
+    lista.innerHTML = '';
+    if (!navigator.geolocation) {
+      estado.innerHTML = 'Este navegador no puede darme tu posición.'; return;
+    }
+    estado.innerHTML = 'Buscando dónde estás…';
+    navigator.geolocation.getCurrentPosition(
+      function(p){ pinta(p.coords.latitude, p.coords.longitude); },
+      function(err){
+        estado.innerHTML = err.code === 1
+          ? 'Has denegado el permiso de ubicación. Actívalo en los ajustes del navegador y vuelve a intentarlo.'
+          : 'No he podido saber dónde estás. Prueba a salir a la calle: dentro de un edificio el GPS falla.';
+      },
+      {enableHighAccuracy: true, timeout: 12000, maximumAge: 60000}
+    );
+  }
+
+  // se abre desde el acceso rápido y desde la sección de comida
+  window.abrirCerca = abrir;
+})();
+
+/* ---------- LOS CONTADORES DE SITIOS, AL DÍA ---------- */
+(function(){
+  document.querySelectorAll('.ir-etapa').forEach(function(a){
+    var sec = document.querySelector(a.getAttribute('href'));
+    if (!sec) return;
+    var n = sec.querySelectorAll('.sitios li').length;
+    var etq = a.querySelector('span');
+    if (etq) etq.textContent = n + (n === 1 ? ' sitio' : ' sitios');
+  });
+  var total = document.querySelectorAll('.sitios li').length;
+  document.querySelectorAll('[data-total-sitios]').forEach(function(e){ e.textContent = total; });
+})();
+</script>
+
+
+
+
+
+
+
+</body>

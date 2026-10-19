@@ -1,0 +1,514 @@
+[
+  {
+    "clave": "smorrebrod",
+    "nombre_danes": "Smørrebrød",
+    "nombre_es": "Bocadillo abierto danés",
+    "grupo": "smorrebrod",
+    "que_es": "Rebanada de pan de centeno (rugbrød) con mantequilla y encima de todo: embutidos, pescado, carne, quesos o patés, con su guarnición. Es la comida de mediodía danesa por excelencia y se come con cuchillo y tenedor.",
+    "donde": [
+      "Schønnemann (desde 1877, solo a mediodía)",
+      "Aamanns 1921"
+    ],
+    "busqueda_commons": "Category:Smørrebrød",
+    "fuente": [
+      "https://en.wikipedia.org/wiki/Sm%C3%B8rrebr%C3%B8d",
+      "https://www.restaurantschonnemann.dk/en/welcome/"
+    ]
+  },
+  {
+    "clave": "stjerneskud",
+    "nombre_danes": "Stjerneskud",
+    "nombre_es": "«Estrella fugaz» (smørrebrød de platija)",
+    "grupo": "smorrebrod",
+    "que_es": "Smørrebrød de pan blanco tostado con un filete de platija frito y otro al vapor, coronado con gambas, caviar o huevas, espárragos y limón. Se dice que lo inventó Ida Davidsen en 1962, cuando Yuri Gagarin visitó Copenhague.",
+    "donde": [
+      "Restaurante de smørrebrød clásico (Schønnemann, Palægade, Told & Snaps…): sin confirmar que lo tengan en la carta de diciembre"
+    ],
+    "busqueda_commons": "Category:Stjerneskud",
+    "fuente": [
+      "https://da.wikipedia.org/wiki/Stjerneskud_%28sm%C3%B8rrebr%C3%B8d%29"
+    ],
+    "notas": "Lugar de venta no confirmado en carta actual. Ida Davidsen, la casa del stjerneskud, se da por cerrado (la familia lo llevó hasta 2023, según la Chaîne des Rôtisseurs, nov-2024)."
+  },
+  {
+    "clave": "dyrlaegens-natmad",
+    "nombre_danes": "Dyrlægens natmad",
+    "nombre_es": "«El tentempié nocturno del veterinario»",
+    "grupo": "smorrebrod",
+    "que_es": "Smørrebrød de centeno con paté de hígado (leverpostej), una loncha de ternera en salazón y gelatina de carne (sky), con aros de cebolla cruda y berros. El nombre nació en los años 20 en el restaurante de Oskar Davidsen, por un cliente veterinario de las caballerizas reales.",
+    "donde": [
+      "Restaurantes de smørrebrød clásico (p. ej. Schønnemann; sin confirmar en su carta)"
+    ],
+    "busqueda_commons": "",
+    "fuente": [
+      "https://en.wikipedia.org/wiki/Dyrl%C3%A6gens_natmad",
+      "https://www.copenhagentourism.org/best-smorrebrod-copenhagen/"
+    ],
+    "notas": "No hay categoría en Commons."
+  },
+  {
+    "clave": "aeg-og-rejer",
+    "nombre_danes": "Æg og rejer",
+    "nombre_es": "Huevo y gambas",
+    "grupo": "smorrebrod",
+    "que_es": "Uno de los smørrebrød más clásicos: rodajas de huevo duro y montones de gambas pequeñas con mayonesa sobre pan. Ligero y muy fotogénico.",
+    "donde": [
+      "Café Victor (Ny Østergade 8): «Æg & rejer» en su carta de mediodía, 255 DKK"
+    ],
+    "busqueda_commons": "",
+    "fuente": [
+      "https://en.wikipedia.org/wiki/Sm%C3%B8rrebr%C3%B8d",
+      "https://www.cafevictor.dk/menu"
+    ],
+    "notas": "Descripción NO verificada con fuente específica (solo general de smørrebrød); sin categoría propia en Commons."
+  },
+  {
+    "clave": "rullepolse",
+    "nombre_danes": "Rullepølse",
+    "nombre_es": "Fiambre enrollado de cerdo",
+    "grupo": "smorrebrod",
+    "que_es": "Panceta de cerdo (a veces ternera o cordero) aplanada, sazonada con hierbas y cebolla, enrollada, en salmuera varios días, cocida y prensada. Se corta muy fina sobre centeno, con gelatina (sky) y aros de cebolla cruda.",
+    "donde": [
+      "Restaurantes de smørrebrød clásico (sin confirmar en carta concreta)"
+    ],
+    "busqueda_commons": "",
+    "fuente": [
+      "https://en.wikipedia.org/wiki/Rullep%C3%B8lse"
+    ],
+    "notas": "No hay categoría en Commons."
+  },
+  {
+    "clave": "sild",
+    "nombre_danes": "Marineret sild",
+    "nombre_es": "Arenque marinado",
+    "grupo": "smorrebrod",
+    "que_es": "Arenque salado y luego en escabeche dulce de vinagre, azúcar y especias (pimienta, cebolla, laurel). Se come sobre centeno o con patatas, y casi siempre con un chupito de snaps; es plato fijo de Navidad.",
+    "donde": [
+      "Schønnemann (su arenque madurado a la antigua es uno de sus clásicos)"
+    ],
+    "busqueda_commons": "Category:Pickled herring",
+    "fuente": [
+      "https://da.wikipedia.org/wiki/Marineret_sild",
+      "https://www.restaurantschonnemann.dk/en/welcome/"
+    ]
+  },
+  {
+    "clave": "leverpostej",
+    "nombre_danes": "Leverpostej",
+    "nombre_es": "Paté de hígado danés",
+    "grupo": "smorrebrod",
+    "que_es": "Paté de hígado de cerdo y manteca, de lo más popular en Dinamarca. Se sirve frío o templado sobre centeno, a menudo con bacon, champiñones o pepinillo.",
+    "donde": [
+      "Restaurantes de smørrebrød clásico"
+    ],
+    "busqueda_commons": "Category:Leverpostej",
+    "fuente": [
+      "https://en.wikipedia.org/wiki/Liver_p%C3%A2t%C3%A9"
+    ]
+  },
+  {
+    "clave": "stegt-flaesk",
+    "nombre_danes": "Stegt flæsk med persillesovs",
+    "nombre_es": "Panceta crujiente con salsa de perejil",
+    "grupo": "platos",
+    "que_es": "Lonchas de panceta de cerdo fritas o al horno hasta quedar crujientes, con patatas cocidas y una bechamel con perejil picado. Se conoce desde ~1890 y en 2014 fue votado plato nacional de Dinamarca.",
+    "donde": [
+      "Schønnemann",
+      "Aamanns (ambos sirven la versión canónica según TableJourney)"
+    ],
+    "busqueda_commons": "Category:Pork belly dishes of Denmark",
+    "fuente": [
+      "https://da.wikipedia.org/wiki/Stegt_fl%C3%A6sk_med_persillesovs",
+      "https://en.wikipedia.org/wiki/Stegt_fl%C3%A6sk",
+      "https://tablejourney.com/denmark/copenhagen/seasonal-food/"
+    ]
+  },
+  {
+    "clave": "frikadeller",
+    "nombre_danes": "Frikadeller",
+    "nombre_es": "Albóndigas danesas",
+    "grupo": "platos",
+    "que_es": "Albóndigas aplanadas de carne picada (en Dinamarca, normalmente cerdo) fritas en sartén. Se comen con patatas y salsa, o frías sobre centeno.",
+    "donde": [
+      "Cocina danesa tradicional / smørrebrød clásico"
+    ],
+    "busqueda_commons": "Category:Frikadelle of Denmark",
+    "fuente": [
+      "https://en.wikipedia.org/wiki/Frikadelle",
+      "https://en.wikipedia.org/wiki/Danish_cuisine"
+    ]
+  },
+  {
+    "clave": "flaeskesteg",
+    "nombre_danes": "Flæskesteg",
+    "nombre_es": "Asado de cerdo con corteza crujiente",
+    "grupo": "platos",
+    "que_es": "Cerdo asado siempre con su corteza crujiente (svær), uno de los grandes platos nacionales y el centro de la cena de Nochebuena. En diciembre aparece en las cartas y en smørrebrød con lombarda.",
+    "donde": [
+      "Aamanns 1921 (cerdo navideño con lombarda y manzana en su menú de Navidad, 17 nov–28 dic)"
+    ],
+    "busqueda_commons": "Category:Flæskesteg",
+    "fuente": [
+      "https://en.wikipedia.org/wiki/Fl%C3%A6skesteg",
+      "https://tablejourney.com/denmark/copenhagen/seasonal-food/"
+    ]
+  },
+  {
+    "clave": "tarteletter",
+    "nombre_danes": "Tarteletter",
+    "nombre_es": "Volovanes de hojaldre",
+    "grupo": "platos",
+    "que_es": "Cestitas de hojaldre rellenas en caliente; el relleno clásico danés es gallina con espárragos en salsa blanca (høns i asparges). Típicas del buffet y de la julefrokost.",
+    "donde": [
+      "Buffets de julefrokost / cocina danesa tradicional (sin confirmar sitio concreto)"
+    ],
+    "busqueda_commons": "Category:Tartlets",
+    "fuente": [
+      "https://da.wikipedia.org/wiki/Tartelet"
+    ],
+    "notas": "La categoría de Commons es genérica (tartaletas, 2 ficheros); puede no mostrar la versión danesa."
+  },
+  {
+    "clave": "biksemad",
+    "nombre_danes": "Biksemad",
+    "nombre_es": "Picadillo de carne y patata",
+    "grupo": "platos",
+    "que_es": "Carne, patata y cebolla en dados salteados en sartén, el plato de aprovechamiento nórdico. Se corona con un huevo frito y se acompaña de remolacha encurtida y salsas.",
+    "donde": [
+      "Cocina danesa de bar/kro (sin confirmar sitio concreto)"
+    ],
+    "busqueda_commons": "Category:Pyttipanna",
+    "fuente": [
+      "https://en.wikipedia.org/wiki/Pyttipanna"
+    ],
+    "notas": "Commons usa el nombre sueco (pyttipanna)."
+  },
+  {
+    "clave": "rodkal",
+    "nombre_danes": "Rødkål",
+    "nombre_es": "Lombarda guisada",
+    "grupo": "platos",
+    "que_es": "Lombarda cocida en dulce-ácido que acompaña al cerdo asado, el pato o el ganso en Navidad. Indispensable en el plato de Nochebuena.",
+    "donde": [
+      "Aamanns 1921 (con el flæskesteg de Navidad)"
+    ],
+    "busqueda_commons": "Category:Brassica oleracea var. capitata f. rubra",
+    "fuente": [
+      "https://da.wikipedia.org/wiki/R%C3%B8dk%C3%A5l",
+      "https://da.wikipedia.org/wiki/Brunede_kartofler",
+      "https://tablejourney.com/denmark/copenhagen/seasonal-food/"
+    ],
+    "notas": "Categoría de Commons de la planta (lombarda), no del plato cocinado."
+  },
+  {
+    "clave": "rod-polse",
+    "nombre_danes": "Rød pølse",
+    "nombre_es": "Salchicha roja",
+    "grupo": "calle",
+    "que_es": "La salchicha fina teñida de rojo de los carritos (pølsevogn). Según la tradición, el tinte rojo empezó en Kødbyen en los años 30 para marcar salchichas del día anterior y acabó siendo la favorita.",
+    "donde": [
+      "Carritos pølsevogn del centro",
+      "DØP (Købmagergade 52, junto a la Torre Redonda)"
+    ],
+    "busqueda_commons": "Category:Rød pølse",
+    "fuente": [
+      "https://da.wikipedia.org/wiki/Wienerp%C3%B8lse",
+      "https://da.wikipedia.org/wiki/P%C3%B8lsevogn"
+    ]
+  },
+  {
+    "clave": "ristet-hotdog",
+    "nombre_danes": "Ristet hotdog",
+    "nombre_es": "Perrito danés «tostado»",
+    "grupo": "calle",
+    "que_es": "El clásico: salchicha a la plancha en pan blando con kétchup, mostaza, remoulade, cebolla cruda, cebolla frita crujiente y pepinillo agridulce en láminas. Es la versión que piden los daneses.",
+    "donde": [
+      "DØP (ecológico; Købmagergade 52 y Amagertorv 31)",
+      "John's Hotdog Deli (Bernstorffsgade 5)"
+    ],
+    "busqueda_commons": "Category:Hot dogs in Denmark",
+    "fuente": [
+      "https://da.wikipedia.org/wiki/Hotdog",
+      "https://www.visitcopenhagen.com/copenhagen/planning/dop-gdk412735",
+      "https://visitcopenhagen.com/copenhagen/eat-drink/legendary-tale-hotdogs-denmark"
+    ]
+  },
+  {
+    "clave": "fransk-hotdog",
+    "nombre_danes": "Fransk hotdog",
+    "nombre_es": "Perrito «francés»",
+    "grupo": "calle",
+    "que_es": "Salchicha metida en un panecillo con un agujero en el centro, que se rellena antes de salsa. Se come andando y no se desmonta.",
+    "donde": [
+      "Carritos pølsevogn del centro (sin confirmar uno concreto)"
+    ],
+    "busqueda_commons": "Category:Fransk hotdog",
+    "fuente": [
+      "https://visitcopenhagen.com/copenhagen/eat-drink/legendary-tale-hotdogs-denmark"
+    ],
+    "notas": "Commons solo tiene 1 fichero."
+  },
+  {
+    "clave": "glogg",
+    "nombre_danes": "Gløgg",
+    "nombre_es": "Vino caliente especiado",
+    "grupo": "navidad",
+    "que_es": "Vino tinto caliente con especias, al que en Dinamarca se le echan almendras y pasas. Es la bebida de los mercados de Navidad, casi siempre con æbleskiver.",
+    "donde": [
+      "Mercado de Navidad de Tivoli (13 nov 2026–3 ene 2027)",
+      "Mercados navideños de Nyhavn y el centro"
+    ],
+    "busqueda_commons": "Category:Glögg",
+    "fuente": [
+      "https://da.wikipedia.org/wiki/Gl%C3%B8gg",
+      "https://en.wikipedia.org/wiki/Mulled_wine",
+      "https://www.storyhunt.io/articles/copenhagen-christmas-guide-2026"
+    ]
+  },
+  {
+    "clave": "aebleskiver",
+    "nombre_danes": "Æbleskiver",
+    "nombre_es": "Buñuelos esféricos navideños",
+    "grupo": "navidad",
+    "que_es": "Bolitas de masa de tortita hechas en una sartén con huecos, esponjosas por dentro. Se comen templadas con azúcar glas y mermelada; pese al nombre («rodajas de manzana») hoy no llevan manzana.",
+    "donde": [
+      "Mercado de Navidad de Tivoli",
+      "Puestos de gløgg de los mercados navideños"
+    ],
+    "busqueda_commons": "Category:Æbleskiver",
+    "fuente": [
+      "https://da.wikipedia.org/wiki/%C3%86bleskiver",
+      "https://en.wikipedia.org/wiki/%C3%86bleskiver",
+      "https://www.storyhunt.io/articles/copenhagen-christmas-guide-2026"
+    ]
+  },
+  {
+    "clave": "risalamande",
+    "nombre_danes": "Risalamande",
+    "nombre_es": "Arroz con leche con almendras y cerezas",
+    "grupo": "navidad",
+    "que_es": "Arroz con leche frío mezclado con nata montada, vainilla y almendra picada, con salsa de cerezas por encima. Se esconde una almendra entera y quien la encuentra gana un regalo.",
+    "donde": [
+      "Menús de julefrokost y de Navidad de restaurantes daneses (sin confirmar sitio concreto)"
+    ],
+    "busqueda_commons": "Category:Risalamande",
+    "fuente": [
+      "https://en.wikipedia.org/wiki/Risalamande"
+    ],
+    "notas": "Lo de la almendra entera escondida no está en el resumen de Wikipedia leído (tradición conocida, sin confirmar con fuente)."
+  },
+  {
+    "clave": "julefrokost",
+    "nombre_danes": "Julefrokost",
+    "nombre_es": "Comida de Navidad danesa",
+    "grupo": "navidad",
+    "que_es": "Comida festiva de diciembre, entre amigos, familia o empresa, con platos tradicionales de Navidad: arenques, cerdo, paté, tarteletter, risalamande… regada con snaps y cerveza. Es larga y ruidosa.",
+    "donde": [
+      "Restaurantes con menú de julefrokost en diciembre (ver restaurantes.json)"
+    ],
+    "busqueda_commons": "Category:Christmas food of Denmark",
+    "fuente": [
+      "https://da.wikipedia.org/wiki/Julefrokost",
+      "https://en.wikipedia.org/wiki/Risalamande"
+    ]
+  },
+  {
+    "clave": "juleol",
+    "nombre_danes": "Juleøl",
+    "nombre_es": "Cerveza de Navidad",
+    "grupo": "navidad",
+    "que_es": "Tradicionalmente, cerveza negra, dulce y de muy poco alcohol (tipo hvidtøl) hecha con maltas de caramelo y chocolate, para acompañar las comidas grasas de Navidad. En diciembre los bares sirven cervezas navideñas de temporada.",
+    "donde": [
+      "Bares y cervecerías en diciembre (sin confirmar uno concreto)"
+    ],
+    "busqueda_commons": "Category:Christmas beers",
+    "fuente": [
+      "https://da.wikipedia.org/wiki/Jule%C3%B8l"
+    ],
+    "notas": "La última frase (cervezas de temporada en bares) no está confirmada con fuente."
+  },
+  {
+    "clave": "brunede-kartofler",
+    "nombre_danes": "Brunede kartofler",
+    "nombre_es": "Patatas caramelizadas",
+    "grupo": "navidad",
+    "que_es": "Patatitas cocidas y peladas que se doran en la sartén en azúcar con mantequilla hasta quedar caramelizadas. Van con el cerdo asado, el pato o el ganso y la lombarda en Nochebuena.",
+    "donde": [
+      "Menús de Navidad de cocina danesa (sin confirmar sitio concreto)"
+    ],
+    "busqueda_commons": "Category:Caramelized potatoes",
+    "fuente": [
+      "https://da.wikipedia.org/wiki/Brunede_kartofler"
+    ]
+  },
+  {
+    "clave": "kanelsnegl",
+    "nombre_danes": "Kanelsnegl",
+    "nombre_es": "Caracola de canela",
+    "grupo": "dulces",
+    "que_es": "Espiral de masa (en Dinamarca, normalmente de hojaldre tipo wienerbrød) con canela y azúcar, a menudo glaseada. En Sankt Peders Bageri los miércoles hay «onsdagssnegl».",
+    "donde": [
+      "Lagkagehuset (cadena con muchas tiendas)",
+      "Sankt Peders Bageri"
+    ],
+    "busqueda_commons": "Category:Kanelsnegl",
+    "fuente": [
+      "https://da.wikipedia.org/wiki/Kanelsnegl",
+      "https://tablejourney.com/denmark/dish/kanelsnegl/"
+    ]
+  },
+  {
+    "clave": "wienerbrod",
+    "nombre_danes": "Wienerbrød",
+    "nombre_es": "Bollería danesa («danish»)",
+    "grupo": "dulces",
+    "que_es": "Hojaldre fermentado con levadura, de capas finísimas, relleno de crema, mermelada o pasta de almendra. En Dinamarca lo llaman «pan vienés»; fuera, «danish».",
+    "donde": [
+      "Lagkagehuset",
+      "Panaderías del centro"
+    ],
+    "busqueda_commons": "Category:Danish pastry",
+    "fuente": [
+      "https://en.wikipedia.org/wiki/Danish_pastry"
+    ]
+  },
+  {
+    "clave": "flodebolle",
+    "nombre_danes": "Flødebolle",
+    "nombre_es": "Bombón de merengue",
+    "grupo": "dulces",
+    "que_es": "Base de barquillo con una montaña de merengue blando de clara batida, todo bañado en chocolate (a veces con coco). En Dinamarca se fabrican desde 1905-06.",
+    "donde": [
+      "Confiterías y tiendas de chocolate (sin confirmar sitio concreto)"
+    ],
+    "busqueda_commons": "Category:Schokokuss",
+    "fuente": [
+      "https://da.wikipedia.org/wiki/Fl%C3%B8debolle"
+    ],
+    "notas": "Commons lo agrupa con el equivalente alemán (Schokokuss)."
+  },
+  {
+    "clave": "kardemommebolle",
+    "nombre_danes": "Kardemommebolle / kardemommesnurre",
+    "nombre_es": "Bollo de cardamomo",
+    "grupo": "dulces",
+    "que_es": "Bollo trenzado o enrollado con mantequilla, azúcar y cardamomo, crujiente por fuera y denso por dentro. El de Juno the Bakery (Østerbro) es famoso y hace cola; conviene llegar temprano.",
+    "donde": [
+      "Juno the Bakery (Østerbro; comprobar horario, cierra lun-mar según una guía)"
+    ],
+    "busqueda_commons": "Category:Cardamom bread",
+    "fuente": [
+      "https://andershusa.com/best-bakeries-copenhagen/",
+      "https://www.linkiesta.it/2022/02/copenhagen-dolci-merenda-kardemummabullar/"
+    ],
+    "notas": "Horario de Juno sin confirmar en su web."
+  },
+  {
+    "clave": "hindbaersnitte",
+    "nombre_danes": "Hindbærsnitte",
+    "nombre_es": "Galleta de frambuesa",
+    "grupo": "dulces",
+    "que_es": "Dos láminas de masa quebrada con una capa fina de mermelada de frambuesa, glaseado blanco y virutas de colores por encima. Un clásico de pastelería de toda la vida.",
+    "donde": [
+      "Panaderías tradicionales (sin confirmar sitio concreto)"
+    ],
+    "busqueda_commons": "Category:Hindbærsnitter",
+    "fuente": [
+      "https://da.wikipedia.org/wiki/Hindb%C3%A6rsnitte"
+    ]
+  },
+  {
+    "clave": "sportskage",
+    "nombre_danes": "Sportskage",
+    "nombre_es": "Tarta Sportskage",
+    "grupo": "dulces",
+    "que_es": "La tarta de la casa de Conditori La Glace: nata montada con turrón duro triturado y profiteroles caramelizados sobre base de macaron. Se creó en 1891 para un estreno teatral.",
+    "donde": [
+      "Conditori La Glace (Skoubogade 3, desde 1870)"
+    ],
+    "busqueda_commons": "Category:La Glace",
+    "fuente": [
+      "https://lex.dk/La_Glace_(konditori)",
+      "https://www.falstaff.com/nordics/cafes/conditori-la-glace"
+    ],
+    "notas": "No hay categoría de la tarta; Category:La Glace (16 ficheros) es de la pastelería."
+  },
+  {
+    "clave": "rugbrod",
+    "nombre_danes": "Rugbrød",
+    "nombre_es": "Pan de centeno danés",
+    "grupo": "dulces",
+    "que_es": "Pan de centeno denso y oscuro con semillas, en forma de ladrillo alargado; la mayoría de los daneses lo comen a diario. Es la base de casi todo el smørrebrød.",
+    "donde": [
+      "Cualquier restaurante de smørrebrød",
+      "Panaderías"
+    ],
+    "busqueda_commons": "Category:Rye bread of Denmark",
+    "fuente": [
+      "https://en.wikipedia.org/wiki/Rugbr%C3%B8d"
+    ],
+    "notas": "No es dulce, pero va en el grupo de panadería."
+  },
+  {
+    "clave": "akvavit",
+    "nombre_danes": "Akvavit / snaps",
+    "nombre_es": "Aguardiente de hierbas",
+    "grupo": "bebida",
+    "que_es": "Destilado de grano o patata aromatizado con especias y hierbas (alcaravea, eneldo…), que se hace en Escandinavia desde el siglo XV. Se bebe en chupito frío acompañando arenque y smørrebrød, con «skål».",
+    "donde": [
+      "Schønnemann (más de 100 akvavits según varias guías)"
+    ],
+    "busqueda_commons": "Category:Aquavit",
+    "fuente": [
+      "https://en.wikipedia.org/wiki/Akvavit",
+      "https://www.copenhagentourism.org/best-smorrebrod-copenhagen/"
+    ],
+    "notas": "El número de akvavits de Schønnemann varía según la fuente (100-140)."
+  },
+  {
+    "clave": "gammel-dansk",
+    "nombre_danes": "Gammel Dansk",
+    "nombre_es": "Bitter danés",
+    "grupo": "bebida",
+    "que_es": "Licor amargo de hierbas («Viejo danés») que los daneses toman en celebraciones, a menudo por la mañana o en el desayuno de cumpleaños. Hoy lo produce Arcus en Oslo.",
+    "donde": [
+      "Bares y supermercados"
+    ],
+    "busqueda_commons": "Category:Gammel Dansk",
+    "fuente": [
+      "https://en.wikipedia.org/wiki/Gammel_Dansk"
+    ]
+  },
+  {
+    "clave": "carlsberg",
+    "nombre_danes": "Carlsberg",
+    "nombre_es": "Cerveza Carlsberg",
+    "grupo": "bebida",
+    "que_es": "La gran cervecera danesa, fundada en Copenhague en 1847 por J. C. Jacobsen. Su antigua fábrica de Vesterbro es hoy el centro de visitantes Home of Carlsberg, reabierto en diciembre de 2023.",
+    "donde": [
+      "Home of Carlsberg (Vesterbro)"
+    ],
+    "busqueda_commons": "Category:Carlsberg beer",
+    "fuente": [
+      "https://en.wikipedia.org/wiki/Carlsberg_Group",
+      "https://www.carlsberggroup.com/newsroom/carlsberg-opens-new-cultural-attraction/"
+    ],
+    "notas": "Horario de diciembre de Home of Carlsberg sin comprobar."
+  },
+  {
+    "clave": "mikkeller",
+    "nombre_danes": "Mikkeller",
+    "nombre_es": "Cerveza artesana Mikkeller",
+    "grupo": "bebida",
+    "que_es": "Cervecera artesana nacida en Copenhague en 2006 como «cervecera nómada» (sin fábrica propia), famosa por sabores intensos. Tiene varios bares propios en la ciudad, como Warpigs en Kødbyen.",
+    "donde": [
+      "Warpigs (Kødbyen)",
+      "Bares Mikkeller de la ciudad"
+    ],
+    "busqueda_commons": "Category:Mikkeller",
+    "fuente": [
+      "https://en.wikipedia.org/wiki/Mikkeller"
+    ],
+    "notas": "Direcciones y horarios de los bares sin comprobar."
+  }
+]

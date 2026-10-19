@@ -1,0 +1,1179 @@
+[
+  {
+    "nombre": "Tivoli en Navidad",
+    "nombre_local": "Jul i Tivoli",
+    "zona": "Indre By (junto a la estación central)",
+    "tipo": "navidad",
+    "direccion": "Vesterbrogade 3, 1620 København V",
+    "lat": 55.673416,
+    "lon": 12.569182,
+    "que_es": "El parque de atracciones de 1843 se viste de Navidad: miles de luces, árboles, puestos de comida y regalos, y todas las atracciones funcionando. CNN lo incluye entre los mejores mercados navideños del mundo.",
+    "por_que": "Es LA estampa navideña de Copenhague y abre hasta tarde: el plan perfecto para cuando a las 16:00 ya es de noche.",
+    "horario_dic": "Vie 4: 11:00–23:00 · Sáb 5: 11:00–23:00 · Dom 6: 11:00–22:00 · Lun 7: 11:00–22:00 · Mar 8: 11:00–22:00 (calendario oficial de tivoli.dk, temporada 13-nov-2026 a 3-ene-2027).",
+    "cerrado_dias": [],
+    "precio_dkk": "Entrada ~210 DKK (sin confirmar en web oficial; varía por fecha). Entrada + Ride Pass: 449–489 DKK (tienda oficial)",
+    "precio_eur": "~28 € entrada; 60–66 € con atracciones",
+    "duracion": "3–4 h (mejor de noche)",
+    "web": "https://www.tivoli.dk/en/opening-hours-and-seasons/christmas-in-tivoli",
+    "fuentes": [
+      "https://www.tivoli.dk/en/opening-hours-and-seasons/christmas-in-tivoli",
+      "https://www.tivoli.dk/en/opening-hours-and-seasons",
+      "https://shop.tivoli.dk/en/billetter-og-tivolikort/entre-og-turpas",
+      "https://www.storyhunt.io/articles/copenhagen-christmas-guide-2026",
+      "https://copenhagencard.com/attractions/tivoli"
+    ],
+    "verificado": true,
+    "notas": "Horario y fechas verificados en el calendario oficial. El precio de solo entrada no lo muestra la tienda oficial: 210 DKK es de StoryHunt (oct-2026). Incluido en la Copenhagen Card (entrada). Cerrado el 24-dic. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Mercadillo de Navidad de Nytorv y Gammeltorv",
+    "nombre_local": "Julemarked Nytorv & Gammeltorv",
+    "zona": "Indre By (Strøget)",
+    "tipo": "navidad",
+    "direccion": "Nytorv / Gammeltorv, 1450 København K",
+    "lat": 55.677487,
+    "lon": 12.573118,
+    "que_es": "El mayor mercadillo navideño de Dinamarca según sus organizadores (el antiguo de Kongens Nytorv, ahora en dos plazas unidas de Strøget). Casetas de madera, gløgg, æbleskiver, almendras tostadas y Papá Noel.",
+    "por_que": "Está a 200 m del Ayuntamiento, la entrada es gratis y este año tiene pista de patinaje gratis con préstamo de patines incluido.",
+    "horario_dic": "6-nov a 21-dic-2026. Vie 4: 11–21 · Sáb 5: 11–21 · Dom 6: 12–19 · Lun 7: 11–19 · Mar 8: 11–19.",
+    "cerrado_dias": [],
+    "precio_dkk": "Gratis (también la pista y los patines)",
+    "precio_eur": "0 €",
+    "duracion": "1 h",
+    "web": "https://julemarked.dk/",
+    "fuentes": [
+      "https://julemarked.dk/",
+      "https://www.storyhunt.io/en/articles/nytorv-gammeltorv-christmas-market"
+    ],
+    "verificado": true,
+    "notas": "Fechas y pista gratis: web oficial julemarked.dk. Horario: StoryHunt (oct-2026), que dice haberlo tomado de la web del organizador. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Navidad en Højbro Plads",
+    "nombre_local": "Jul på Højbro Plads",
+    "zona": "Indre By",
+    "tipo": "navidad",
+    "direccion": "Højbro Plads, 1200 København K",
+    "lat": 55.678375,
+    "lon": 12.579851,
+    "que_es": "Mercadillo nuevo en 2026 dedicado a las tradiciones navideñas de Dinamarca, Groenlandia y las Islas Feroe, con Christiansborg de fondo.",
+    "por_que": "Para ver algo distinto (Groenlandia y Feroe) a dos pasos de Strøget y del canal de Gammel Strand.",
+    "horario_dic": "14-nov a 20-dic-2026 según Visit Copenhagen. Horario diario sin confirmar.",
+    "cerrado_dias": [],
+    "precio_dkk": "Gratis (sin confirmar)",
+    "precio_eur": "0 €",
+    "duracion": "30–45 min",
+    "web": "https://www.visitcopenhagen.com/copenhagen/planning/christmas-market-on-hojbro-plads-gdk714628",
+    "fuentes": [
+      "https://www.visitcopenhagen.com/copenhagen/planning/christmas-market-on-hojbro-plads-gdk714628",
+      "https://julemarked.nu/en/plan-your-visit/",
+      "https://www.storyhunt.io/articles/copenhagen-christmas-guide-2026"
+    ],
+    "verificado": false,
+    "notas": "CONTRADICCIÓN: la web del mercado tradicional de Højbro (julemarked.nu) dice que en 2026 NO se celebra y se traslada a Rådhuspladsen; Visit Copenhagen y StoryHunt anuncian el nuevo 'Jul på Højbro Plads'. Probablemente distinto organizador. Comprobar antes. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Strøget y el Barrio Latino",
+    "nombre_local": "Strøget / Latinerkvarteret",
+    "zona": "Indre By",
+    "tipo": "paseo",
+    "direccion": "De Rådhuspladsen a Kongens Nytorv (Frederiksberggade–Østergade); Latinerkvarteret en torno a Vor Frue Kirke",
+    "lat": 55.678794,
+    "lon": 12.579001,
+    "que_es": "La calle peatonal comercial larguísima que atraviesa el centro, con sus plazas (Gammeltorv, Nytorv, Amagertorv) y, al norte, las callejuelas del Barrio Latino junto a la universidad y la catedral.",
+    "por_que": "Es el eje para enlazar mercadillos, Rundetaarn, Torvehallerne y Nyhavn a pie, todo iluminado en diciembre.",
+    "horario_dic": "Calle pública, siempre abierta. Tiendas en general hasta la tarde (horarios de cada tienda no comprobados).",
+    "cerrado_dias": [],
+    "precio_dkk": "Gratis",
+    "precio_eur": "0 €",
+    "duracion": "1–2 h",
+    "web": "https://www.visitcopenhagen.com/",
+    "fuentes": [
+      "https://www.storyhunt.io/en/articles/nytorv-gammeltorv-christmas-market"
+    ],
+    "verificado": false,
+    "notas": "Descripción general; sin ficha oficial consultada específica de Strøget. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Torre Redonda",
+    "nombre_local": "Rundetaarn",
+    "zona": "Indre By (Latinerkvarteret)",
+    "tipo": "mirador",
+    "direccion": "Købmagergade 52A, 1150 København K",
+    "lat": 55.681358,
+    "lon": 12.575794,
+    "que_es": "Torre-observatorio del siglo XVII (Christian IV) a la que se sube por una rampa en espiral sin escalones. Arriba, vistas de los tejados del centro.",
+    "por_que": "Barata, céntrica y abierta hasta las 21:00 los lunes y martes de invierno: ideal para el lunes 7, cuando casi todo cierra.",
+    "horario_dic": "Invierno (1-oct a 31-mar): lun–mar 10–21 · mié–dom 10–18. Vie 4: 10–18 · Sáb 5: 10–18 · Dom 6: 10–18 · Lun 7: 10–21 · Mar 8: 10–21.",
+    "cerrado_dias": [],
+    "precio_dkk": 60,
+    "precio_eur": 8,
+    "duracion": "45 min",
+    "web": "https://www.rundetaarn.dk/en/visit-us/",
+    "fuentes": [
+      "https://www.rundetaarn.dk/en/visit-us/"
+    ],
+    "verificado": true,
+    "notas": "Entradas solo en taquilla. El observatorio se restaura en 2026 (telescopio desmontado desde nov-2025, 'cerrará por completo'): no contar con mirar por el telescopio. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Mercado de Torvehallerne",
+    "nombre_local": "TorvehallerneKBH",
+    "zona": "Indre By (Nørreport)",
+    "tipo": "experiencia",
+    "direccion": "Frederiksborggade 21, 1360 København K",
+    "lat": 55.683867,
+    "lon": 12.569551,
+    "que_es": "Dos naves de cristal con más de 60 puestos de producto fresco, panaderías, café, smørrebrød y comida para tomar allí.",
+    "por_que": "Para desayunar o comer algo bueno y rápido entre visitas; abre todos los días, también el lunes.",
+    "horario_dic": "Lun–vie 10–19 · sáb–dom 10–18 (café y bollería desde las 7; algunos puestos cierran más tarde).",
+    "cerrado_dias": [],
+    "precio_dkk": "Entrada libre",
+    "precio_eur": "0 €",
+    "duracion": "45 min–1 h",
+    "web": "https://torvehallernekbh.dk/",
+    "fuentes": [
+      "https://torvehallernekbh.dk/",
+      "https://torvehallernekbh.dk/praktisk-info/"
+    ],
+    "verificado": true,
+    "notas": "Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Castillo de Rosenborg",
+    "nombre_local": "Rosenborg Slot",
+    "zona": "Indre By (Kongens Have)",
+    "tipo": "monumento",
+    "direccion": "Øster Voldgade 4A, 1350 København K",
+    "lat": 55.685693,
+    "lon": 12.57742,
+    "que_es": "Castillo renacentista de Christian IV en medio del jardín del Rey. Salas reales originales y, en el sótano, el Tesoro con las joyas de la Corona.",
+    "por_que": "Es el palacio más bonito de la ciudad por dentro, y en diciembre tiene visita guiada sobre la Navidad de los reyes.",
+    "horario_dic": "2-nov a 23-dic-2026: mar–dom 10–16; lunes cerrado. Vie 4, sáb 5, dom 6, mar 8: 10–16. Lun 7: CERRADO.",
+    "cerrado_dias": [
+      "lunes"
+    ],
+    "precio_dkk": "140 online / 150 en taquilla",
+    "precio_eur": "19–20 €",
+    "duracion": "1,5 h",
+    "web": "https://denkongeligesamling.dk/en/rosenborg/",
+    "fuentes": [
+      "https://denkongeligesamling.dk/en/rosenborg-castle/plan-your-visit/opening-hours/",
+      "https://denkongeligesamling.dk/en/rosenborg-castle/plan-your-visit/",
+      "https://denkongeligesamling.dk/en/rosenborg-castle/calendar/christmas-at-rosenborg/"
+    ],
+    "verificado": true,
+    "notas": "Acepta Copenhagen Card (QR en taquilla, sin reserva online). 'Christmas at Rosenborg': visita guiada 1 h, 22-nov a 30-dic, entrada + 30 DKK (la página no indica año). Royal Palace Pass (Rosenborg+Amalienborg+Christiansborg): 245 online / 255 taquilla. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Galería Nacional de Dinamarca (SMK)",
+    "nombre_local": "Statens Museum for Kunst",
+    "zona": "Indre By (Østervold)",
+    "tipo": "museo",
+    "direccion": "Sølvgade 48–50, 1307 København K",
+    "lat": 55.688764,
+    "lon": 12.57837,
+    "que_es": "El gran museo de arte del país: maestros europeos, Edad de Oro danesa y arte moderno, en un edificio histórico unido a un ala moderna de cristal.",
+    "por_que": "Colección potente y edificio precioso junto al parque Østre Anlæg; buen plan de tarde con poca luz.",
+    "horario_dic": "Mar–dom 10–18 (miércoles hasta 20); lunes cerrado. Vie 4, sáb 5, dom 6, mar 8: 10–18. Lun 7: CERRADO.",
+    "cerrado_dias": [
+      "lunes"
+    ],
+    "precio_dkk": 140,
+    "precio_eur": 19,
+    "duracion": "2 h",
+    "web": "https://www.smk.dk/en/section/visit-smk/",
+    "fuentes": [
+      "https://www.smk.dk/en/section/visit-smk/",
+      "https://shop.smk.dk/en/billetter"
+    ],
+    "verificado": true,
+    "notas": "Una página de pago mostraba 120 DKK; la web y la tienda dicen 140 DKK adultos (95 jóvenes). Menores de 18 gratis. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Colección Hirschsprung",
+    "nombre_local": "Den Hirschsprungske Samling",
+    "zona": "Indre By / Østerbro (Østre Anlæg)",
+    "tipo": "museo",
+    "direccion": "Stockholmsgade 20, 2100 København Ø",
+    "lat": 55.689914,
+    "lon": 12.577481,
+    "que_es": "Museo pequeño y coqueto de pintura danesa del siglo XIX (Edad de Oro, pintores de Skagen), a espaldas del SMK.",
+    "por_que": "Se ve en una hora y es muy 'danés'. Hasta el 24-ene-2027 tiene la exposición 'The Funen Painters'.",
+    "horario_dic": "Mar–dom 10–17; lunes cerrado (el último jueves de mes, hasta las 20). Vie 4, sáb 5, dom 6, mar 8: 10–17. Lun 7: CERRADO.",
+    "cerrado_dias": [
+      "lunes"
+    ],
+    "precio_dkk": 110,
+    "precio_eur": 15,
+    "duracion": "1 h",
+    "web": "https://www.hirschsprung.dk/en/plan-your-visit/opening-hours-and-admission",
+    "fuentes": [
+      "https://www.hirschsprung.dk/en/plan-your-visit/opening-hours-and-admission"
+    ],
+    "verificado": true,
+    "notas": "Menores de 29: 75 DKK. Hay entrada combinada 'Parkmuseerne' de 345 DKK. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Colección David",
+    "nombre_local": "Davids Samling",
+    "zona": "Indre By (Kongens Have)",
+    "tipo": "museo",
+    "direccion": "Kronprinsessegade 30, 1306 København K",
+    "lat": 55.68428,
+    "lon": 12.582385,
+    "que_es": "Casa-museo con una de las mejores colecciones de arte islámico de Europa, más arte europeo de los siglos XVIII y XIX.",
+    "por_que": "Es gratis siempre, está junto a Rosenborg y es una joya poco conocida.",
+    "horario_dic": "Mar, jue, vie, sáb, dom 10–17 · mié 10–21; lunes cerrado. Vie 4, sáb 5, dom 6, mar 8: 10–17. Lun 7: CERRADO.",
+    "cerrado_dias": [
+      "lunes"
+    ],
+    "precio_dkk": 0,
+    "precio_eur": 0,
+    "duracion": "1–1,5 h",
+    "web": "https://davidmus.dk/planlaeg-dit-besog",
+    "fuentes": [
+      "https://davidmus.dk/planlaeg-dit-besog",
+      "https://davidmus.dk/"
+    ],
+    "verificado": true,
+    "notas": "Cerrado 23, 24, 25 y 31-dic. Visitas guiadas gratis (en danés) los fines de semana a las 13 y 14 (temporada de otoño). Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Invernadero del Jardín Botánico",
+    "nombre_local": "Palmehuset, Botanisk Have",
+    "zona": "Indre By (Nørreport)",
+    "tipo": "experiencia",
+    "direccion": "Botanisk Have, Øster Farimagsgade 2B, 1353 København K",
+    "lat": 55.687508,
+    "lon": 12.572969,
+    "que_es": "Invernadero victoriano de hierro y cristal (1874) lleno de palmeras y plantas tropicales, dentro del Jardín Botánico.",
+    "por_que": "Media hora de calor húmedo y verde en pleno diciembre; muy fotogénico.",
+    "horario_dic": "Invierno (1-oct a 31-mar): mar–dom 10:00–15:30; lunes cerrado. Lun 7: CERRADO.",
+    "cerrado_dias": [
+      "lunes"
+    ],
+    "precio_dkk": "Gratis (sin confirmar)",
+    "precio_eur": "0 € (sin confirmar)",
+    "duracion": "30–45 min",
+    "web": "https://snm.ku.dk/botanisk-have/palmehuset/",
+    "fuentes": [
+      "https://snm.ku.dk/botanisk-have/palmehuset/"
+    ],
+    "verificado": false,
+    "notas": "Horario confirmado; el precio (gratis) no lo he visto escrito. La caseta de café de delante cierra en invierno. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Museo Nacional",
+    "nombre_local": "Nationalmuseet",
+    "zona": "Indre By (Slotsholmen)",
+    "tipo": "museo",
+    "direccion": "Prinsens Palæ, Ny Vestergade 10, 1471 København K",
+    "lat": 55.67471,
+    "lon": 12.574355,
+    "que_es": "La historia de Dinamarca desde la prehistoria hasta hoy: vikingos, el carro solar de Trundholm, etnografía y la Edad Media.",
+    "por_que": "Para entender el país (y los vikingos) en una tarde oscura; muy completo.",
+    "horario_dic": "Noviembre a marzo: mar–dom 10–17; lunes cerrado. Vie 4, sáb 5, dom 6, mar 8: 10–17. Lun 7: CERRADO.",
+    "cerrado_dias": [
+      "lunes"
+    ],
+    "precio_dkk": "135 online / 150 en taquilla",
+    "precio_eur": "18–20 €",
+    "duracion": "2–3 h",
+    "web": "https://nationalmuseet.dk/en/",
+    "fuentes": [
+      "https://nationalmuseet.dk/en/",
+      "https://nationalmuseet.dk/en/page/opening-hours"
+    ],
+    "verificado": true,
+    "notas": "Las salas empiezan a cerrar a las 16:45. Menores de 18 gratis. Ojo: la portada en inglés pone 'abierto todos los días', pero la página de horarios aclara que de nov a mar cierra los lunes. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Gliptoteca Ny Carlsberg",
+    "nombre_local": "Ny Carlsberg Glyptotek",
+    "zona": "Indre By (frente a Tivoli)",
+    "tipo": "museo",
+    "direccion": "Dantes Plads 7, 1556 København V",
+    "lat": 55.672534,
+    "lon": 12.571766,
+    "que_es": "Museo del fundador de Carlsberg: escultura antigua (Egipto, Grecia, Roma), impresionistas franceses y un jardín de invierno con palmeras bajo una cúpula de cristal.",
+    "por_que": "El jardín de invierno es de los sitios más bonitos de la ciudad, y está pegado a Tivoli para enlazarlo al anochecer.",
+    "horario_dic": "Mar, mié, vie, sáb, dom 10–17 · jue 10–21; lunes cerrado. Vie 4, sáb 5, dom 6, mar 8: 10–17. Lun 7: CERRADO.",
+    "cerrado_dias": [
+      "lunes"
+    ],
+    "precio_dkk": "135 online / 150 en taquilla",
+    "precio_eur": "18–20 €",
+    "duracion": "1,5–2 h",
+    "web": "https://glyptoteket.com/visit/opening-hours",
+    "fuentes": [
+      "https://glyptoteket.com/visit/opening-hours",
+      "https://glyptoteket.com/visit/tickets"
+    ],
+    "verificado": true,
+    "notas": "Gratis el último miércoles de cada mes (no coincide). Cerrado 23–26-dic. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Ayuntamiento de Copenhague y su torre",
+    "nombre_local": "Københavns Rådhus",
+    "zona": "Indre By (Rådhuspladsen)",
+    "tipo": "mirador",
+    "direccion": "Rådhuspladsen 1, 1550 København V",
+    "lat": 55.675263,
+    "lon": 12.569791,
+    "que_es": "Ayuntamiento de 1905 con un gran salón abierto al público y una torre de 105 m que se sube con visita guiada.",
+    "por_que": "El vestíbulo es gratis y bonito; la torre ofrece vistas sobre Tivoli. En diciembre la plaza tiene el gran árbol de Navidad.",
+    "horario_dic": "Edificio: lun–vie 9–16 · sáb 9:30–13; domingo cerrado. Visitas a la torre: días laborables a las 11 y a las 14; sábados a las 12. Dom 6: CERRADO.",
+    "cerrado_dias": [
+      "domingo"
+    ],
+    "precio_dkk": "Edificio gratis; torre 60 DKK (sin fecha 2026)",
+    "precio_eur": "0 € / ~8 €",
+    "duracion": "30–50 min (torre)",
+    "web": "https://www.kk.dk/artikel/information-om-r%C3%A5dhuset",
+    "fuentes": [
+      "https://www.kk.dk/artikel/information-om-r%C3%A5dhuset",
+      "https://www.kk.dk/artikel/rundvisninger-paa-raadhuset-guided-tours"
+    ],
+    "verificado": false,
+    "notas": "Horario y visitas según kk.dk (vía buscador); el precio de 60 DKK no tiene fecha. Las visitas pueden cancelarse si hay actos. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Pista de hielo de Kongens Nytorv",
+    "nombre_local": "Copenhagen Winter Wonderland",
+    "zona": "Indre By (Kongens Nytorv)",
+    "tipo": "navidad",
+    "direccion": "Kongens Nytorv, 1050 København K",
+    "lat": 55.680419,
+    "lon": 12.585963,
+    "que_es": "Pista de patinaje de unos 1.300 m² que rodea la plaza real, frente al Teatro Real y al Hotel d'Angleterre.",
+    "por_que": "Patinar con el teatro y Nyhavn al lado es muy de postal.",
+    "horario_dic": "Sin anunciar: la web oficial dice 'Winter Wonderland 2026, más información pronto'. En 2025 abrió del 14-nov al 4-ene.",
+    "cerrado_dias": [],
+    "precio_dkk": "Sin confirmar (en 2025: 60 DKK)",
+    "precio_eur": "~8 € (referencia 2025)",
+    "duracion": "1 h",
+    "web": "https://copenhagenwonderland.com/",
+    "fuentes": [
+      "https://copenhagenwonderland.com/",
+      "https://www.storyhunt.io/articles/copenhagen-christmas-guide-2026"
+    ],
+    "verificado": false,
+    "notas": "Confirmar fechas y precio en noviembre. Alternativa segura y gratis: la pista del mercado de Nytorv. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Kunsthal Charlottenborg",
+    "nombre_local": "Kunsthal Charlottenborg",
+    "zona": "Indre By (Kongens Nytorv / Nyhavn)",
+    "tipo": "museo",
+    "direccion": "Kongens Nytorv 1, 1050 København K",
+    "lat": 55.679839,
+    "lon": 12.588356,
+    "que_es": "Sala de arte contemporáneo en el palacio de la Academia de Bellas Artes, en la esquina de Nyhavn. Hasta el 21-feb-2027: 'Reroute', de Som Supaparinya.",
+    "por_que": "Abre el LUNES (a diferencia de casi todos los museos) y está en plena ruta de Nyhavn.",
+    "horario_dic": "Lun y mié–vie 11–19 · sáb–dom 11–17 · martes cerrado. Vie 4: 11–19 · Sáb 5: 11–17 · Dom 6: 11–17 · Lun 7: 11–19 · Mar 8: CERRADO.",
+    "cerrado_dias": [
+      "martes"
+    ],
+    "precio_dkk": 95,
+    "precio_eur": 13,
+    "duracion": "1 h",
+    "web": "https://kunsthalcharlottenborg.dk/en/visit/",
+    "fuentes": [
+      "https://kunsthalcharlottenborg.dk/en/visit/",
+      "https://kunsthalcharlottenborg.dk/en/"
+    ],
+    "verificado": true,
+    "notas": "Estudiantes 55 DKK; gratis los miércoles desde las 17 (no coincide). Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "El Cascanueces del Ballet Real",
+    "nombre_local": "George Balanchines Nøddeknækkeren – Det Kongelige Teater",
+    "zona": "Indre By (Kongens Nytorv)",
+    "tipo": "navidad",
+    "direccion": "Gamle Scene, Kongens Nytorv 9, 1050 København K",
+    "lat": 55.679029,
+    "lon": 12.586433,
+    "que_es": "La versión de Balanchine del ballet de Chaikovski, por el Ballet Real Danés y la Orquesta Real (la más antigua del mundo, de 1448), en el teatro histórico.",
+    "por_que": "Es la gran tradición navideña de la ciudad y coincide con el fin de semana del viaje.",
+    "horario_dic": "Temporada 20-nov a 22-dic-2026. Hay funciones el vie 4, sáb 5 (dos) y dom 6 (dos); el lun 7 y el mar 8 no hay. Horas de diciembre sin confirmar (en noviembre: vie 19:30, sáb/dom 13:00 y 17:00).",
+    "cerrado_dias": [
+      "lunes",
+      "martes"
+    ],
+    "precio_dkk": "150–915",
+    "precio_eur": "20–123 €",
+    "duracion": "2 h con un descanso",
+    "web": "https://www.kglteater.dk/ballet/2627/george-balanchines-noeddeknaekkeren/",
+    "fuentes": [
+      "https://www.kglteater.dk/ballet/2627/george-balanchines-noeddeknaekkeren/"
+    ],
+    "verificado": true,
+    "notas": "Días deducidos de la lista de repartos de la web oficial; la hora exacta se ve al comprar. Hay introducción gratis 50 y 30 min antes en el foyer del balcón. Comprar pronto: algunas funciones ya tenían 'Få billetter'. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Palacio de Christiansborg",
+    "nombre_local": "Christiansborg Slot",
+    "zona": "Slotsholmen",
+    "tipo": "monumento",
+    "direccion": "Prins Jørgens Gård 1, 1218 København K",
+    "lat": 55.676735,
+    "lon": 12.580034,
+    "que_es": "Sede del Parlamento, del Gobierno y del Tribunal Supremo, y salones de representación de la Casa Real: Gran Salón con los tapices de Bjørn Nørgaard, Salón del Trono, ruinas medievales del subsuelo, cocinas y caballerizas reales.",
+    "por_que": "Para ver el poder danés de cerca; las ruinas de 800 años bajo el palacio sorprenden.",
+    "horario_dic": "Horario de invierno 2026 SIN CONFIRMAR: la web oficial solo pone verano (30-mar a 1-nov, todos los días 10–17) y Navidad (26–30-dic 10–17). Otros años, en invierno: mar–dom 10–17, lunes cerrado (sin confirmar).",
+    "cerrado_dias": [
+      "lunes (sin confirmar)"
+    ],
+    "precio_dkk": "Palace Ticket 215 online / 225 en taquilla",
+    "precio_eur": "29–30 €",
+    "duracion": "2–3 h",
+    "web": "https://denkongeligesamling.dk/en/christiansborg-palace/",
+    "fuentes": [
+      "https://denkongeligesamling.dk/en/christiansborg-palace/plan-your-visit/opening-hours/",
+      "https://denkongeligesamling.dk/en/christiansborg-palace/plan-your-visit/",
+      "https://denkongeligesamling.dk/en/christiansborg-palace/"
+    ],
+    "verificado": false,
+    "notas": "Puede cerrar sin avisar por actos oficiales. Revisar 'opening hours this week' en la web oficial antes de ir. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Torre de Christiansborg",
+    "nombre_local": "Tårnet, Christiansborg",
+    "zona": "Slotsholmen",
+    "tipo": "mirador",
+    "direccion": "Christiansborg, 1218 København K (entrada por la Puerta del Rey, Kongeporten)",
+    "lat": 55.676735,
+    "lon": 12.580034,
+    "que_es": "La torre más alta de Copenhague (106 m). Se sube en ascensor a un mirador gratuito; arriba también hay restaurante.",
+    "por_que": "Es gratis, abre hasta las 21:00 y las vistas de noche con las luces de Navidad merecen mucho la pena.",
+    "horario_dic": "Según la web del Parlamento (vía buscador) y Visit Copenhagen: mar–sáb 11–21 · dom 11–17:30 · lunes cerrado. Vie 4: 11–21 · Sáb 5: 11–21 · Dom 6: 11–17:30 · Lun 7: CERRADO · Mar 8: 11–21.",
+    "cerrado_dias": [
+      "lunes"
+    ],
+    "precio_dkk": 0,
+    "precio_eur": 0,
+    "duracion": "30–45 min",
+    "web": "https://www.ft.dk/da/taarnet/bes%C3%B8g",
+    "fuentes": [
+      "https://www.visitcopenhagen.com/copenhagen/planning/the-tower-christiansborg-palace-gdk917422",
+      "https://www.ft.dk/da/taarnet/bes%C3%B8g",
+      "https://taarnet.dk/?lang=en"
+    ],
+    "verificado": false,
+    "notas": "CONTRADICCIÓN: taarnet.dk pone 'mirador cerrado hasta nuevo aviso' (páginas antiguas); Visit Copenhagen lo da abierto en oct–nov-2026. ft.dk no se pudo abrir (Cloudflare). Las escaleras no se pueden usar; hay cola por el aforo de arriba. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Museo Thorvaldsen",
+    "nombre_local": "Thorvaldsens Museum",
+    "zona": "Slotsholmen",
+    "tipo": "museo",
+    "direccion": "Bertel Thorvaldsens Plads 2, 1213 København K",
+    "lat": 55.676753,
+    "lon": 12.578788,
+    "que_es": "El museo más antiguo de Dinamarca (1848), dedicado al escultor neoclásico Bertel Thorvaldsen: salas de colores intensos llenas de mármoles blancos.",
+    "por_que": "El edificio en sí es una obra de arte y se ve en una hora; está junto a Christiansborg.",
+    "horario_dic": "Mar–dom 10–17; lunes cerrado. Vie 4, sáb 5, dom 6, mar 8: 10–17. Lun 7: CERRADO.",
+    "cerrado_dias": [
+      "lunes"
+    ],
+    "precio_dkk": 110,
+    "precio_eur": 15,
+    "duracion": "1 h",
+    "web": "https://www.thorvaldsensmuseum.dk/en/visit-the-museet",
+    "fuentes": [
+      "https://www.thorvaldsensmuseum.dk/en/visit-the-museet",
+      "https://www.thorvaldsensmuseum.dk/en/visit-the-museet/prices"
+    ],
+    "verificado": true,
+    "notas": "Gratis los miércoles (no coincide). Cerrado 24, 25 y 31-dic y 1-ene. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "La antigua Bolsa (Børsen), en reconstrucción",
+    "nombre_local": "Børsen",
+    "zona": "Slotsholmen",
+    "tipo": "monumento",
+    "direccion": "Børsgade, 1217 København K",
+    "lat": 55.676323,
+    "lon": 12.582588,
+    "que_es": "El edificio renacentista de la Bolsa (s. XVII), famoso por su aguja de colas de dragón, ardió el 16-abr-2024 y perdió la aguja. Se está reconstruyendo y está tapado.",
+    "por_que": "Para entender una herida reciente de la ciudad; se ve por fuera desde el canal o al pasar hacia Christianshavn.",
+    "horario_dic": "Solo por fuera (obra).",
+    "cerrado_dias": [],
+    "precio_dkk": 0,
+    "precio_eur": 0,
+    "duracion": "10 min",
+    "web": "https://danskerhverv.dk/kampagner/sammen-om-borsen/borsen-genopbygning---engelsk/fire-and-reconstruction",
+    "fuentes": [
+      "https://danskerhverv.dk/kampagner/sammen-om-borsen/borsen-genopbygning---engelsk/fire-and-reconstruction",
+      "https://en.wikipedia.org/wiki/B%C3%B8rsen"
+    ],
+    "verificado": false,
+    "notas": "La reconstrucción empezó el 26-sep-2024. No he encontrado el estado concreto de las obras en 2026. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Nyhavn",
+    "nombre_local": "Nyhavn",
+    "zona": "Nyhavn y Frederiksstaden",
+    "tipo": "paseo",
+    "direccion": "Nyhavn, 1051 København K",
+    "lat": 55.680524,
+    "lon": 12.58913,
+    "que_es": "El canal del siglo XVII con casas de colores y veleros de madera, donde vivió Hans Christian Andersen (en tres casas distintas).",
+    "por_que": "La foto clásica; en diciembre, con las luces y los veleros decorados, todavía más. Mejor con luz (antes de las 15:30) y luego volver de noche.",
+    "horario_dic": "Espacio público, siempre abierto.",
+    "cerrado_dias": [],
+    "precio_dkk": 0,
+    "precio_eur": 0,
+    "duracion": "30–45 min",
+    "web": "https://www.visitcopenhagen.com/copenhagen/planning/inspiration/72-hours-copenhagen-design-food-and-hidden-neighbourhoods",
+    "fuentes": [
+      "https://www.visitcopenhagen.com/copenhagen/planning/inspiration/72-hours-copenhagen-design-food-and-hidden-neighbourhoods",
+      "https://www.visitcopenhagen.com/copenhagen/activities/hans-christian-andersens-copenhagen",
+      "https://www.storyhunt.io/articles/copenhagen-christmas-guide-2026"
+    ],
+    "verificado": true,
+    "notas": "Las fechas del mercadillo de Nyhavn 2026 están sin anunciar (StoryHunt, oct-2026). Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Paseo en barco por los canales con Netto-Bådene",
+    "nombre_local": "Netto-Bådene Havnerundfart",
+    "zona": "Nyhavn y Frederiksstaden",
+    "tipo": "experiencia",
+    "direccion": "Nyhavn, junto a Heibergsgade, 1051 København K",
+    "lat": 55.67958,
+    "lon": 12.588563,
+    "que_es": "La compañía barata de barcos por el puerto y los canales: Nyhavn, Holmen, la Ópera, la Sirenita... con guía en danés, inglés y alemán.",
+    "por_que": "El canal tour más barato, y de octubre a marzo con barcos cubiertos y con calefacción.",
+    "horario_dic": "Otoño/invierno: barcos cubiertos y con calefacción. Horario de diciembre sin confirmar (el 19-oct salía de Nyhavn cada 40 min de 10:00 a 16:40). Sin reserva: se hace cola y se compra para la siguiente salida.",
+    "cerrado_dias": [],
+    "precio_dkk": 80,
+    "precio_eur": 11,
+    "duracion": "1 h",
+    "web": "https://www.havnerundfart.dk/",
+    "fuentes": [
+      "https://www.havnerundfart.dk/"
+    ],
+    "verificado": false,
+    "notas": "Puede cancelarse por marea alta, canales cortados o hielo (en marzo de 2026 avisaban 'el puerto se ha deshelado, volvemos a navegar'). Mirar la web ese día. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Paseo clásico por los canales con Strömma",
+    "nombre_local": "Canal Tours Copenhagen – Strömma",
+    "zona": "Indre By / Nyhavn",
+    "tipo": "experiencia",
+    "direccion": "Ved Stranden 26, 1061 København K (también sale de Nyhavn)",
+    "lat": 55.676991,
+    "lon": 12.582081,
+    "que_es": "El canal tour 'oficial' de una hora con guía en directo en danés e inglés.",
+    "por_que": "Navega todo el año, con barcos cubiertos y con calefacción en invierno; está incluido en la Copenhagen Card.",
+    "horario_dic": "Navega todo el año, según el horario de su web (no he podido abrir el de diciembre).",
+    "cerrado_dias": [],
+    "precio_dkk": "Desde 209 (hay precio rebajado online)",
+    "precio_eur": "~28 €",
+    "duracion": "1 h",
+    "web": "https://www.stromma.com/en-dk/copenhagen/sightseeing/sightseeing-by-boat/",
+    "fuentes": [
+      "https://www.stromma.com/en-dk/copenhagen/sightseeing/sightseeing-by-boat/",
+      "https://copenhagencard.com/page/attractions/741"
+    ],
+    "verificado": false,
+    "notas": "Incluido en la Copenhagen Card. Si hay hielo puede cancelarse o salir de otro muelle. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Canal tour en barco eléctrico de GoBoat",
+    "nombre_local": "GoBoat Harbor Tours",
+    "zona": "Islands Brygge (Amager)",
+    "tipo": "experiencia",
+    "direccion": "Islands Brygge 10, 2300 København S",
+    "lat": 55.669112,
+    "lon": 12.578555,
+    "que_es": "Barquito eléctrico silencioso para 9 personas con capitán-guía en inglés: Christiansborg, Børsen, Nyhavn, la Ópera, Amalienborg y el canal de Christianshavn.",
+    "por_que": "Grupo pequeño, más tranquilo que los barcos grandes; prestan mantas y se cubre si hace falta.",
+    "horario_dic": "'Todos los días', salidas desde las 9:45 cada media hora (la web no especifica el horario de diciembre). Un artículo de 2025 decía que en invierno no sale martes ni miércoles (sin confirmar en 2026).",
+    "cerrado_dias": [
+      "martes (sin confirmar)"
+    ],
+    "precio_dkk": 209,
+    "precio_eur": 28,
+    "duracion": "1 h",
+    "web": "https://goboat.dk/en/goboat-harbor-tours",
+    "fuentes": [
+      "https://goboat.dk/en/goboat-harbor-tours",
+      "https://kongres-magazine.eu/2025/01/copenhagens-eco-boats-unveil-a-new-winter-experience/"
+    ],
+    "verificado": false,
+    "notas": "Comprobar el día exacto en el botón de compra. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Amalienborg (palacio y museo)",
+    "nombre_local": "Amalienborg / Amalienborgmuseet",
+    "zona": "Nyhavn y Frederiksstaden",
+    "tipo": "monumento",
+    "direccion": "Amalienborg Slotsplads, 1257 København K",
+    "lat": 55.68396,
+    "lon": 12.593078,
+    "que_es": "Cuatro palacios rococó idénticos alrededor de una plaza octogonal: es la residencia de invierno de la familia real. En uno de ellos, el museo enseña los aposentos reales.",
+    "por_que": "La plaza con la Guardia Real y el eje hasta la Iglesia de Mármol es de lo más elegante de la ciudad.",
+    "horario_dic": "Museo, 1-nov a 23-dic: mar–dom 10–16; lunes cerrado. La plaza siempre es accesible. Lun 7: museo CERRADO.",
+    "cerrado_dias": [
+      "lunes (museo)"
+    ],
+    "precio_dkk": "125 online / 135 en taquilla (página de precios de ~2025)",
+    "precio_eur": "17–18 €",
+    "duracion": "1 h museo + plaza",
+    "web": "https://denkongeligesamling.dk/en/amalienborg-museum/",
+    "fuentes": [
+      "https://denkongeligesamling.dk/en/amalienborg-museum/plan-your-visit/opening-hours/",
+      "https://denkongeligesamling.dk/en/amalienborg-museum/plan-your-visit/"
+    ],
+    "verificado": true,
+    "notas": "Precio de una página de hace ~18 meses: confirmar. El relevo de la guardia no lo he comprobado. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Iglesia de Mármol (Frederiks Kirke)",
+    "nombre_local": "Marmorkirken",
+    "zona": "Nyhavn y Frederiksstaden",
+    "tipo": "monumento",
+    "direccion": "Frederiksgade 4, 1265 København K",
+    "lat": 55.684974,
+    "lon": 12.589552,
+    "que_es": "Iglesia rococó con una de las cúpulas más grandes de Escandinavia, alineada con Amalienborg.",
+    "por_que": "Entrar es gratis, y los fines de semana se puede subir a la cúpula con vistas sobre el puerto.",
+    "horario_dic": "Lun–jue 10–17 · vie 12–17 · sáb 10–17 (domingo: misa a las 10:30; el horario de visita del domingo no se ve en la web). Cúpula: sáb y dom a las 13:30, máximo 15 personas, sin reserva.",
+    "cerrado_dias": [],
+    "precio_dkk": "Iglesia gratis; cúpula 50 DKK",
+    "precio_eur": "0 € / ~7 €",
+    "duracion": "30 min (+45 min la cúpula)",
+    "web": "https://www.marmorkirken.dk/",
+    "fuentes": [
+      "https://www.marmorkirken.dk/"
+    ],
+    "verificado": true,
+    "notas": "La cúpula no se sube si hay ceremonias, conciertos o mal tiempo. La iglesia cierra sin mucho aviso por funerales o ensayos. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Museo del Diseño de Dinamarca",
+    "nombre_local": "Designmuseum Danmark",
+    "zona": "Nyhavn y Frederiksstaden",
+    "tipo": "museo",
+    "direccion": "Bredgade 68, 1260 København K",
+    "lat": 55.686374,
+    "lon": 12.594408,
+    "que_es": "El museo del diseño danés (sillas, lámparas, moda, artes decorativas) en un antiguo hospital del siglo XVIII con jardín.",
+    "por_que": "Imprescindible si os gusta el diseño escandinavo; la sala de sillas es famosa.",
+    "horario_dic": "Mar–dom 10–18 · jue 10–20; lunes cerrado. Vie 4, sáb 5, dom 6, mar 8: 10–18. Lun 7: CERRADO.",
+    "cerrado_dias": [
+      "lunes"
+    ],
+    "precio_dkk": 140,
+    "precio_eur": 19,
+    "duracion": "1,5–2 h",
+    "web": "https://designmuseum.dk/en/besog-os/opening-hours-admission/",
+    "fuentes": [
+      "https://designmuseum.dk/en/besog-os/opening-hours-admission/"
+    ],
+    "verificado": true,
+    "notas": "Venta de entradas hasta 1 h antes de cerrar. Jardín, tienda, biblioteca y café FORMAT sin entrada. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "La Ciudadela",
+    "nombre_local": "Kastellet",
+    "zona": "Østerbro / Frederiksstaden",
+    "tipo": "paseo",
+    "direccion": "Gl. Hovedvagt, Kastellet 1, 2100 København Ø",
+    "lat": 55.691383,
+    "lon": 12.593745,
+    "que_es": "Fortaleza en forma de estrella de cinco puntas del siglo XVII, todavía militar, con barracones rojos, un molino y paseo por las murallas de hierba.",
+    "por_que": "Paseo gratis y muy fotogénico de camino a la Sirenita.",
+    "horario_dic": "Recinto abierto al público; Visit Copenhagen solo da el horario de verano (06–22). Horario de invierno sin confirmar.",
+    "cerrado_dias": [],
+    "precio_dkk": 0,
+    "precio_eur": 0,
+    "duracion": "45 min",
+    "web": "https://visitcopenhagen.com/de/copenhagen/das-kastell-gdk410745",
+    "fuentes": [
+      "https://visitcopenhagen.com/de/copenhagen/das-kastell-gdk410745"
+    ],
+    "verificado": false,
+    "notas": "En diciembre, ir con luz (antes de las 15:30). Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "La Sirenita",
+    "nombre_local": "Den Lille Havfrue",
+    "zona": "Østerbro (Langelinie)",
+    "tipo": "monumento",
+    "direccion": "Langelinie, 2100 København Ø",
+    "lat": 55.692866,
+    "lon": 12.59929,
+    "que_es": "La estatua de bronce de Edvard Eriksen (1913) basada en el cuento de Andersen, sobre una roca en el agua; la regaló Carl Jacobsen (Carlsberg).",
+    "por_que": "Es pequeña y suele estar llena, pero es parada obligada si se pasea por Kastellet y Langelinie.",
+    "horario_dic": "Al aire libre, siempre accesible.",
+    "cerrado_dias": [],
+    "precio_dkk": 0,
+    "precio_eur": 0,
+    "duracion": "15 min",
+    "web": "https://www.visitcopenhagen.com/copenhagen/planning/the-little-mermaid-gdk586951",
+    "fuentes": [
+      "https://www.visitcopenhagen.com/copenhagen/planning/the-little-mermaid-gdk586951",
+      "https://www.visitcopenhagen.com/copenhagen/planning/langelinie-gdk414235"
+    ],
+    "verificado": true,
+    "notas": "Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Torre de la Iglesia de Nuestro Salvador",
+    "nombre_local": "Vor Frelsers Kirke – tårnet",
+    "zona": "Christianshavn",
+    "tipo": "mirador",
+    "direccion": "Sankt Annæ Gade 29, 1416 København K",
+    "lat": 55.672908,
+    "lon": 12.594252,
+    "que_es": "Iglesia barroca cuya torre de 1752 tiene una escalera de caracol POR FUERA: 400 escalones hasta la bola dorada, con vistas de toda la ciudad.",
+    "por_que": "Las mejores vistas de Copenhague, según la propia iglesia, y abre hasta las 20:00 todos los días, también el lunes.",
+    "horario_dic": "Torre: todos los días 09:00–20:00 (cerrada en enero y el 24–25-dic); última subida 30 min antes. Iglesia: todos los días 11:00–15:30.",
+    "cerrado_dias": [],
+    "precio_dkk": 70,
+    "precio_eur": 9,
+    "duracion": "45 min–1 h",
+    "web": "https://www.vorfrelserskirke.dk/kontakt/taarnet/",
+    "fuentes": [
+      "https://www.vorfrelserskirke.dk/kontakt/taarnet/",
+      "https://www.vorfrelserskirke.dk/abningstider-opening-hours"
+    ],
+    "verificado": true,
+    "notas": "La Copenhagen Card NO la incluye. Hay venta online. Puede cerrar por el tiempo (viento, hielo): con lluvia la escalera exterior resbala. Restauración 2026–2028 con andamios en la entrada, pero iglesia y torre abiertas. Una guía de terceros decía que cierra de mediados de diciembre a febrero; la web oficial solo dice enero. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Christiania",
+    "nombre_local": "Fristaden Christiania",
+    "zona": "Christianshavn",
+    "tipo": "barrio",
+    "direccion": "Entrada principal por Prinsessegade, 1440 København K",
+    "lat": 55.673432,
+    "lon": 12.599987,
+    "que_es": "La 'ciudad libre' autogestionada desde 1971 en unos antiguos cuarteles: casas hechas a mano, talleres, murales, cafés y lago. Tras años de violencia, el trapicheo de Pusher Street se cerró en 2024 y ahora hay artesanía, cafés y panaderías.",
+    "por_que": "No hay nada igual en Europa. En diciembre hay pista de hielo en Pusher Street con puestos de gløgg y sopa.",
+    "horario_dic": "Barrio abierto. Pista de hielo de Pusher Street: del 22-nov al 4-ene (la página no dice el año; horario en skojtebane.dk, que no cargaba).",
+    "cerrado_dias": [],
+    "precio_dkk": "Entrada libre (patinar: sin confirmar)",
+    "precio_eur": "0 €",
+    "duracion": "1–1,5 h",
+    "web": "https://www.visitcopenhagen.com/copenhagen/areas/neighborhoods/area-guide-christiania",
+    "fuentes": [
+      "https://www.visitcopenhagen.com/copenhagen/areas/neighborhoods/area-guide-christiania",
+      "https://www.visitcopenhagen.com/copenhagen/planning/pusher-street-gdk1155050",
+      "https://www.visitcopenhagen.com/copenhagen/planning/christianias-ice-rink-gdk1154224",
+      "https://www.visitcopenhagen.com/copenhagen/planning/visit-christiania-freetown-gdk1158782"
+    ],
+    "verificado": true,
+    "notas": "Respetar las zonas sin fotos y no mirar en las casas. Hay visitas guiadas por vecinos ('Visit Christiania Freetown'). El mercado navideño de la Grå Hal no tiene fechas de 2026 (otros años, 9–20 dic: probablemente no coincide). Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Sauna de La Banchina (sopa y sauna los domingos)",
+    "nombre_local": "La Banchina – Soup & Sauna",
+    "zona": "Refshaleøen",
+    "tipo": "experiencia",
+    "direccion": "Refshalevej 141, 1432 København K",
+    "lat": 55.689293,
+    "lon": 12.610906,
+    "que_es": "Cafetería-restaurante en un muelle de Refshaleøen con sauna de leña y baño en el puerto. Los domingos de invierno se puede ir sin reserva a la sauna compartida y luego tomar sopa.",
+    "por_que": "La experiencia nórdica más auténtica (sauna + chapuzón en el agua helada) y el domingo 6 encaja con el drop-in.",
+    "horario_dic": "Drop-in 'Soup & Sauna': solo DOMINGOS del 18-oct a finales de marzo → dom 6. Resto de días: sesión privada de 1 h 45 min con reserva (hasta 4 semanas antes).",
+    "cerrado_dias": [],
+    "precio_dkk": "Drop-in dominical 120 DKK por 1 h (sopa aparte a precio especial); sesión privada: precio sin confirmar",
+    "precio_eur": "~16 €",
+    "duracion": "1 h (drop-in)",
+    "web": "https://labanchina.dk/sauna",
+    "fuentes": [
+      "https://labanchina.dk/sauna",
+      "https://www.visitcopenhagen.com/copenhagen/la-banchina-gdk1096386"
+    ],
+    "verificado": true,
+    "notas": "Drop-in sin reserva: entradas en la barra el mismo día, por orden de llegada. Leer 'The Law of the Sauna' antes de ir. Hora exacta del drop-in sin confirmar. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "CopenHot: jacuzzis de leña y sauna junto al mar",
+    "nombre_local": "CopenHot",
+    "zona": "Refshaleøen",
+    "tipo": "experiencia",
+    "direccion": "Refshalevej 204, 1432 København K (según VisitDenmark)",
+    "lat": 55.690754,
+    "lon": 12.623939,
+    "que_es": "'Wellness nórdico' en el puerto: jacuzzis de madera y saunas calentados con leña, y hasta un jacuzzi-barco que navega.",
+    "por_que": "Bañarse a 40 ºC con el puerto helado delante es memorable.",
+    "horario_dic": "Con reserva online; horarios de diciembre sin confirmar.",
+    "cerrado_dias": [],
+    "precio_dkk": "Sin confirmar (en 2022: 'HotDays' 300 DKK/persona; jacuzzi privado 1.300 DKK)",
+    "precio_eur": "sin confirmar",
+    "duracion": "1,5 h",
+    "web": "https://www.copenhot.com/",
+    "fuentes": [
+      "https://www.copenhot.com/",
+      "https://www.visitdenmark.com/denmark/plan-your-trip/copenhot-gdk1088478",
+      "https://www.thewalkingnortherners.co.uk/?p=1476"
+    ],
+    "verificado": false,
+    "notas": "Precios de 2022: no fiarse. GoBoat vende un combinado barco + 1,5 h de jacuzzi desde 410 DKK/persona (dato de 2025). Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Reffen (comida callejera) — CERRADO en diciembre",
+    "nombre_local": "Reffen",
+    "zona": "Refshaleøen",
+    "tipo": "experiencia",
+    "direccion": "Refshalevej 167A, 1432 København K",
+    "lat": 55.693168,
+    "lon": 12.60978,
+    "que_es": "El mayor mercado de comida callejera del norte de Europa, en contenedores junto al agua.",
+    "por_que": "NO SIRVE para este viaje: cierra de noviembre a febrero.",
+    "horario_dic": "CERRADO por invierno (de noviembre a febrero).",
+    "cerrado_dias": [
+      "viernes",
+      "sábado",
+      "domingo",
+      "lunes",
+      "martes"
+    ],
+    "precio_dkk": null,
+    "precio_eur": null,
+    "duracion": null,
+    "web": "https://reffen.dk/en/opening-hours-seasons/",
+    "fuentes": [
+      "https://reffen.dk/en/opening-hours-seasons/"
+    ],
+    "verificado": true,
+    "notas": "Lo dejo en la lista para que la guía NO lo recomiende por error. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "CopenHill: esquí y mirador sobre una incineradora",
+    "nombre_local": "CopenHill (Amager Bakke)",
+    "zona": "Amager / Refshaleøen (en frente)",
+    "tipo": "mirador",
+    "direccion": "Vindmøllevej 6, 2300 København S",
+    "lat": 55.684871,
+    "lon": 12.621102,
+    "que_es": "La planta de residuos-energía de BIG con pista de esquí sintética en el tejado, ruta para subir andando, ascensor y café arriba.",
+    "por_que": "La azotea, el ascensor y la ruta a pie son GRATIS y hay vistas sobre el puerto; si os animáis, se puede esquiar.",
+    "horario_dic": "Azotea/café/ascensor: lun 12–17 · mar–vie 12–19 · sáb y dom 10–17 (la web da también 'sáb 10–19'; contradicción). Esquí: lunes cerrado, mar–vie 14–19 (fines de semana: sin confirmar). Trineo: lunes y martes cerrado.",
+    "cerrado_dias": [
+      "lunes (esquí)"
+    ],
+    "precio_dkk": "Azotea gratis; esquí por horas (precio sin confirmar) + tarjeta 50 DKK",
+    "precio_eur": "0 € azotea",
+    "duracion": "1 h (azotea) / 1–2 h (esquí)",
+    "web": "https://www.copenhill.dk/en",
+    "fuentes": [
+      "https://www.copenhill.dk/en",
+      "https://www.copenhill.dk/en/planl%C3%A6g%20bes%C3%B8g/%C3%A5bningstider",
+      "https://www.copenhill.dk/en/prices/priser"
+    ],
+    "verificado": false,
+    "notas": "La página de precios no cargaba las cifras de esquí. Reservar el esquí online. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Kødbyen, el antiguo barrio del matadero",
+    "nombre_local": "Kødbyen",
+    "zona": "Vesterbro / Kødbyen",
+    "tipo": "barrio",
+    "direccion": "Flæsketorvet, 1711 København V",
+    "lat": 55.667769,
+    "lon": 12.558387,
+    "que_es": "El antiguo distrito cárnico (la 'Ciudad Blanca' y la 'Gris'): naves industriales que hoy tienen restaurantes, bares, galerías y discotecas, con algunos negocios de carne que siguen funcionando.",
+    "por_que": "Para cenar y tomar algo de noche en un ambiente local; está a un paseo de la estación central.",
+    "horario_dic": "Barrio abierto; cada local tiene su horario (no comprobados).",
+    "cerrado_dias": [],
+    "precio_dkk": 0,
+    "precio_eur": 0,
+    "duracion": "Tarde-noche",
+    "web": "https://www.visitcopenhagen.com/copenhagen/planning/3-day-copenhagen-itinerary",
+    "fuentes": [
+      "https://www.visitcopenhagen.com/copenhagen/planning/3-day-copenhagen-itinerary",
+      "https://www.visitcopenhagen.com/copenhagen/planning/travel-info/24-hours-in-copenhagen-through-the-lens-of-a-local"
+    ],
+    "verificado": true,
+    "notas": "No he encontrado mercadillo de Navidad en Kødbyen en 2026. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Home of Carlsberg",
+    "nombre_local": "Home of Carlsberg",
+    "zona": "Vesterbro (Carlsberg Byen)",
+    "tipo": "experiencia",
+    "direccion": "Gamle Carlsberg Vej 11, 1799 København V",
+    "lat": 55.664586,
+    "lon": 12.530263,
+    "que_es": "La antigua fábrica de Carlsberg convertida en museo de la cerveza: la puerta de los elefantes, bodegas, caballerizas y una colección enorme de botellas.",
+    "por_que": "Abre todos los días (también el lunes 7) y la entrada incluye una cerveza de 40 cl.",
+    "horario_dic": "Todos los días 10–18 (cerrado 24-dic y 1-ene).",
+    "cerrado_dias": [],
+    "precio_dkk": 235,
+    "precio_eur": 32,
+    "duracion": "1,5–2 h",
+    "web": "https://homeofcarlsberg.com/plan-your-visit/",
+    "fuentes": [
+      "https://homeofcarlsberg.com/plan-your-visit/",
+      "https://homeofcarlsberg.com/"
+    ],
+    "verificado": true,
+    "notas": "Precio dinámico: puede variar según el día. Cata de cervezas 155 DKK; visita a las bodegas secretas 130 DKK. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Jardines de Frederiksberg y pista de la Runddel",
+    "nombre_local": "Frederiksberg Have / Skøjtebanen på Frederiksberg Runddel",
+    "zona": "Frederiksberg",
+    "tipo": "paseo",
+    "direccion": "Frederiksberg Runddel, 2000 Frederiksberg",
+    "lat": 55.674706,
+    "lon": 12.525019,
+    "que_es": "Parque romántico del siglo XVIII con canales y el palacio de Frederiksberg. En la rotonda de la entrada se monta en invierno una pista de patinaje gratis.",
+    "por_que": "Paseo tranquilo de barrio; si la pista está montada, patinar es gratis.",
+    "horario_dic": "Parque abierto. Pista: sin fechas de 2026 (otros años, desde el último fin de semana de noviembre hasta febrero, todos los días).",
+    "cerrado_dias": [],
+    "precio_dkk": "Gratis (alquiler de patines: 60 DKK, dato antiguo)",
+    "precio_eur": "0 €",
+    "duracion": "1 h",
+    "web": "https://visitorservice.kk.dk/en/events/the-ice-rink-at-frederiksberg-runddel",
+    "fuentes": [
+      "https://visitorservice.kk.dk/en/events/the-ice-rink-at-frederiksberg-runddel",
+      "https://www.tv2kosmopol.dk/koebenhavn/populaere-skojtebaner-risikerer-at-lukke-pa-grund-af-varm-vinter-897b5"
+    ],
+    "verificado": false,
+    "notas": "En 2022 no se montó la pista (crisis energética) y hubo dudas sobre el sistema de frío. Confirmar en noviembre. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Cementerio de Assistens",
+    "nombre_local": "Assistens Kirkegård",
+    "zona": "Nørrebro",
+    "tipo": "paseo",
+    "direccion": "Kapelvej 2, 2200 København N",
+    "lat": 55.690925,
+    "lon": 12.549442,
+    "que_es": "Cementerio-parque donde los vecinos pasean y donde están enterrados Hans Christian Andersen y Søren Kierkegaard.",
+    "por_que": "Un paseo muy de Copenhague, tranquilo y gratis, para enlazar con Jægersborggade y Nørrebro.",
+    "horario_dic": "Invierno: 7–19 (verano 7–22).",
+    "cerrado_dias": [],
+    "precio_dkk": 0,
+    "precio_eur": 0,
+    "duracion": "45 min",
+    "web": "https://www.storyhunt.io/da/artikler/assistens-kirkegaard",
+    "fuentes": [
+      "https://www.storyhunt.io/da/gaature/lydvandring-pa-assistens",
+      "https://www.visitcopenhagen.com/copenhagen/planning/assistens-cemetery-gdk964360"
+    ],
+    "verificado": false,
+    "notas": "Horario de una audioguía de StoryHunt hecha con el Ayuntamiento; no lo he visto en la web oficial de los cementerios. Con luz, antes de las 15:30. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Superkilen",
+    "nombre_local": "Superkilen",
+    "zona": "Nørrebro",
+    "tipo": "paseo",
+    "direccion": "Nørrebrogade 208, 2200 København N",
+    "lat": 55.699678,
+    "lon": 12.542397,
+    "que_es": "Parque urbano de 2012 (BIG, Superflex y Topotek1) con objetos de más de 50 países: plaza roja, mercado negro con fuente marroquí, columpios iraquíes, tobogán-pulpo japonés...",
+    "por_que": "Arquitectura contemporánea gratis y muy fotogénica, junto a la estación de Nørrebro.",
+    "horario_dic": "Espacio público, siempre abierto.",
+    "cerrado_dias": [],
+    "precio_dkk": 0,
+    "precio_eur": 0,
+    "duracion": "30 min",
+    "web": "https://www.visitcopenhagen.com/copenhagen/planning/superkilen-park-gdk707822",
+    "fuentes": [
+      "https://www.visitcopenhagen.com/copenhagen/planning/superkilen-park-gdk707822"
+    ],
+    "verificado": true,
+    "notas": "Mejor de día. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Mercado de Navidad de Flid (artesanía y diseño)",
+    "nombre_local": "Flid's Christmas Market – Nørrebrohallen",
+    "zona": "Nørrebro",
+    "tipo": "navidad",
+    "direccion": "Nørrebrohallen, Nørrebro, 2200 København N (calle exacta sin confirmar)",
+    "lat": 55.699822,
+    "lon": 12.543415,
+    "que_es": "Mercado de artesanos y diseñadores daneses en un pabellón de barrio.",
+    "por_que": "Si se confirma, coincidiría exactamente con el viernes 4 y el sábado 5.",
+    "horario_dic": "'4 y 5 de diciembre' según Visit Copenhagen, pero la página parece de 2025 (pie © 2025). Año y horario sin confirmar.",
+    "cerrado_dias": [],
+    "precio_dkk": "Sin confirmar",
+    "precio_eur": "sin confirmar",
+    "duracion": "1 h",
+    "web": "https://www.visitcopenhagen.com/copenhagen/planning/flids-christmas-market-gdk1121546",
+    "fuentes": [
+      "https://www.visitcopenhagen.com/copenhagen/planning/flids-christmas-market-gdk1121546"
+    ],
+    "verificado": false,
+    "notas": "Comprobar en noviembre. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Acuario Nacional Den Blå Planet",
+    "nombre_local": "Den Blå Planet",
+    "zona": "Amager (Kastrup, junto al aeropuerto)",
+    "tipo": "experiencia",
+    "direccion": "Jacob Fortlingsvej 1, 2770 Kastrup",
+    "lat": 55.638143,
+    "lon": 12.6561,
+    "que_es": "El mayor acuario del norte de Europa, en un edificio con forma de remolino: tiburones, mantas, nutrias y selva tropical.",
+    "por_que": "Abre todos los días; el lunes 7, hasta las 21:00. Plan bajo techo con metro directo.",
+    "horario_dic": "Lun 10–21 · mar–dom 10–17 (temporada alta de Navidad, todos los días 10–21, solo desde el 21-dic). Vie 4: 10–17 · Sáb 5: 10–17 · Dom 6: 10–17 · Lun 7: 10–21 · Mar 8: 10–17.",
+    "cerrado_dias": [],
+    "precio_dkk": "249 taquilla / 219 online (fin de semana: 259 / 229)",
+    "precio_eur": "29–35 €",
+    "duracion": "2 h",
+    "web": "https://denblaaplanet.dk/en/plan-your-visit/prices-and-opening-hours/",
+    "fuentes": [
+      "https://denblaaplanet.dk/en/plan-your-visit/prices-and-opening-hours/"
+    ],
+    "verificado": true,
+    "notas": "Entradas con franja horaria; los fines de semana se agotan: comprar online. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Museo Louisiana de Arte Moderno",
+    "nombre_local": "Louisiana Museum of Modern Art",
+    "zona": "Excursión (Humlebæk, 40 min en tren)",
+    "tipo": "excursion",
+    "direccion": "Gl. Strandvej 13, 3050 Humlebæk",
+    "lat": 55.969352,
+    "lon": 12.543157,
+    "que_es": "Uno de los museos de arte moderno más bonitos del mundo: pabellones de cristal en un jardín de esculturas frente al estrecho de Øresund, con Suecia al fondo.",
+    "por_que": "Arte, arquitectura y paisaje en uno; abre hasta las 22:00 entre semana.",
+    "horario_dic": "Mar–vie 11–22 · sáb–dom 11–18 · lunes cerrado. Vie 4: 11–22 · Sáb 5: 11–18 · Dom 6: 11–18 · Lun 7: CERRADO · Mar 8: 11–22.",
+    "cerrado_dias": [
+      "lunes"
+    ],
+    "precio_dkk": 145,
+    "precio_eur": 19,
+    "duracion": "Medio día (3–4 h + tren)",
+    "web": "https://louisiana.dk/en/plan-your-visit/opening-hours/",
+    "fuentes": [
+      "https://louisiana.dk/en/plan-your-visit/opening-hours/",
+      "https://louisiana.dk/en/plan-your-visit/getting-here-and-parking/"
+    ],
+    "verificado": true,
+    "notas": "Tren directo varias veces por hora desde la estación central hasta Humlebæk (~40 min) + 10–15 min andando. Para el café, la tienda y el parque de esculturas también hace falta entrada. Estudiantes 130 DKK. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Castillo de Kronborg (el castillo de Hamlet)",
+    "nombre_local": "Kronborg Slot",
+    "zona": "Excursión (Helsingør)",
+    "tipo": "excursion",
+    "direccion": "Kronborg, 3000 Helsingør",
+    "lat": 56.039285,
+    "lon": 12.621251,
+    "que_es": "Fortaleza renacentista Patrimonio de la UNESCO a la entrada del Øresund, escenario del Hamlet de Shakespeare, con casamatas oscuras donde 'duerme' Holger Danske.",
+    "por_que": "La excursión clásica; se combina con el casco antiguo de Helsingør y se ve Suecia enfrente.",
+    "horario_dic": "Periodo de Navidad (nov–dic): lunes cerrado · mar–vie 10–16 · sáb–dom 10–17. Vie 4: 10–16 · Sáb 5: 10–17 · Dom 6: 10–17 · Lun 7: CERRADO · Mar 8: 10–16.",
+    "cerrado_dias": [
+      "lunes"
+    ],
+    "precio_dkk": "135 online / 150 en taquilla",
+    "precio_eur": "18–20 €",
+    "duracion": "Día entero (2–3 h castillo + tren)",
+    "web": "https://kronborg.dk/en",
+    "fuentes": [
+      "https://kronborg.dk/en/page/kronborg-castle-opening-hours",
+      "https://kronborg.dk/en/tickets/day-ticket",
+      "https://kronborg.dk/en/"
+    ],
+    "verificado": false,
+    "notas": "Las páginas oficiales no cuadran del todo (una pone mar–dom 10–16); en lo que coinciden todas es en que el lunes cierra. El tiempo de tren desde Copenhague no lo he comprobado. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Museo de Barcos Vikingos de Roskilde",
+    "nombre_local": "Vikingeskibsmuseet",
+    "zona": "Excursión (Roskilde)",
+    "tipo": "excursion",
+    "direccion": "Vindeboder 12, 4000 Roskilde",
+    "lat": 55.65087,
+    "lon": 12.081472,
+    "que_es": "Cinco barcos vikingos originales hundidos a propósito en el fiordo hacia el año 1070 y recuperados, más un astillero donde se construyen réplicas.",
+    "por_que": "Abre TODOS los días, también el lunes 7: es la excursión ideal para ese día, junto con la catedral.",
+    "horario_dic": "Invierno (19-oct a 30-abr): todos los días 10–16. El astillero, solo días laborables 10–16. Las salidas en barco no funcionan en invierno.",
+    "cerrado_dias": [],
+    "precio_dkk": 130,
+    "precio_eur": 17,
+    "duracion": "2 h + tren",
+    "web": "https://www.vikingeskibsmuseet.dk/en/visit-the-museum",
+    "fuentes": [
+      "https://www.vikingeskibsmuseet.dk/en/visit-the-museum/opening-hours-and-admission?L=3",
+      "https://www.vikingeskibsmuseet.dk/en/"
+    ],
+    "verificado": true,
+    "notas": "Precio de invierno para adultos; 10 DKK menos comprando online. Menores de 18 gratis. Visitas guiadas diarias en inglés (todo 2026). Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Catedral de Roskilde",
+    "nombre_local": "Roskilde Domkirke",
+    "zona": "Excursión (Roskilde)",
+    "tipo": "excursion",
+    "direccion": "Domkirkepladsen 3, 4000 Roskilde",
+    "lat": 55.642644,
+    "lon": 12.080435,
+    "que_es": "Catedral de ladrillo de los siglos XII–XIII, Patrimonio de la UNESCO, panteón de los reyes daneses (unos 40 monarcas).",
+    "por_que": "Se combina con el Museo Vikingo en la misma excursión y también abre el lunes.",
+    "horario_dic": "Octubre a abril: lun–sáb 10–16 · dom 13–16. Puede cerrar por ceremonias.",
+    "cerrado_dias": [],
+    "precio_dkk": "De pago (capillas reales y museo); precio sin confirmar",
+    "precio_eur": "sin confirmar",
+    "duracion": "1 h",
+    "web": "https://roskildedomkirke.dk/info/aabningstider",
+    "fuentes": [
+      "https://roskildedomkirke.dk/info/aabningstider",
+      "https://roskildedomkirke.dk/besoeg"
+    ],
+    "verificado": false,
+    "notas": "Mirar el calendario del día: si la casilla está vacía, ese día está cerrada. Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Navidad en Bakken (el parque de atracciones más antiguo del mundo)",
+    "nombre_local": "Jul på Bakken – Dyrehavsbakken",
+    "zona": "Excursión (Klampenborg, norte)",
+    "tipo": "navidad",
+    "direccion": "Dyrehavevej 62, 2930 Klampenborg",
+    "lat": 55.775701,
+    "lon": 12.575262,
+    "que_es": "El parque de atracciones de 1583, dentro del bosque de ciervos de Dyrehaven, convertido en un gran mercado navideño, con pista de hielo.",
+    "por_que": "Más local y menos turístico que Tivoli, y la entrada es gratis. Combina con un paseo por Dyrehaven con luz.",
+    "horario_dic": "21-nov a 20-dic-2026, solo vie–dom: vie 14–21 · sáb 12–21 · dom 12–19. Vie 4, sáb 5 y dom 6 ABIERTO · lun 7 y mar 8 cerrado. Pista de hielo: mar–dom.",
+    "cerrado_dias": [
+      "lunes",
+      "martes"
+    ],
+    "precio_dkk": "Entrada gratis",
+    "precio_eur": "0 €",
+    "duracion": "2–3 h + tren",
+    "web": "https://www.bakken.dk/jul/",
+    "fuentes": [
+      "https://www.bakken.dk/planlaeg-dit-besog/abningstider/",
+      "https://www.bakken.dk/jul/",
+      "https://www.bakken.dk/",
+      "https://www.visitcopenhagen.com/copenhagen/planning/christmas-at-bakken-gdk1105972"
+    ],
+    "verificado": true,
+    "notas": "Horario 'sujeto a cambios' según bakken.dk. Las fechas que da Visit Copenhagen no cuadran del todo (14–15 nov); fiarse de bakken.dk. Tren a Klampenborg desde el centro (tiempo no comprobado). Coordenadas: OpenStreetMap/Nominatim."
+  },
+  {
+    "nombre": "Malmö (Suecia) por el puente de Øresund",
+    "nombre_local": "Malmö",
+    "zona": "Excursión (Suecia)",
+    "tipo": "excursion",
+    "direccion": "Stortorget, Malmö (Suecia)",
+    "lat": 55.606119,
+    "lon": 13.000622,
+    "que_es": "La tercera ciudad de Suecia, al otro lado del puente de Øresund: casco antiguo con plazas, el castillo, el parque Kungsparken y el rascacielos Turning Torso.",
+    "por_que": "Otro país en menos de 40 minutos de tren, con su propio ambiente navideño.",
+    "horario_dic": "Trenes Øresundståg desde la estación central de Copenhague, varios cada hora, 35–40 min.",
+    "cerrado_dias": [],
+    "precio_dkk": "~105 DKK ida (dato de agregadores, sin confirmar)",
+    "precio_eur": "~14 € ida",
+    "duracion": "Medio día o día entero",
+    "web": "https://www.oresundstag.se/",
+    "fuentes": [
+      "https://www.omio.com/trains/copenhagen/malmoe",
+      "https://everyrail.com/trains/copenhagen-to-malmo.md"
+    ],
+    "verificado": false,
+    "notas": "Precio y tiempo sacados de agregadores, no de la web del operador. Llevar el DNI o el pasaporte y comprobar si hay controles en la frontera (sin confirmar). En Suecia se paga en coronas suecas (SEK). Coordenadas: OpenStreetMap/Nominatim."
+  }
+]

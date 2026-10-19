@@ -1,0 +1,770 @@
+<style>
+  :root{
+    --crema:#fbf8f2; --tinta:#26282b; --tinta2:#5f6b70;
+    --oro:#14607f; --oro-suave:#d8e8ef; --teca:#b4552d;
+    --verde:#5c7a52; --mar:#2f8ca6; --linea:#e2e0d6;
+    --card:#ffffff; --sombra:0 2px 14px rgba(20,60,80,.09);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:Georgia,'Times New Roman',serif;background:var(--crema);color:var(--tinta);line-height:1.65}
+  .sans{font-family:-apple-system,'Segoe UI',Roboto,Ubuntu,sans-serif}
+
+  /* ---------- HERO ---------- */
+  header.hero{position:relative;min-height:58vh;display:flex;align-items:flex-end;
+    background:linear-gradient(180deg,rgba(8,30,45,.22),rgba(8,30,45,.62));color:#fff}
+  .hero-inner{max-width:1050px;margin:0 auto;padding:60px 24px 48px;width:100%}
+  .hero h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:normal;letter-spacing:.5px;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+  .hero .fechas{font-family:-apple-system,'Segoe UI',sans-serif;font-size:1.02rem;letter-spacing:1.5px;text-transform:uppercase;opacity:.95;margin-top:10px}
+  .hero .sub{margin-top:14px;font-style:italic;font-size:1.15rem;max-width:640px;opacity:.95}
+
+  /* ---------- NAV ---------- */
+  nav{position:sticky;top:0;z-index:50;background:rgba(250,246,239,.96);backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--linea)}
+  .nav-inner{position:relative;max-width:1050px;margin:0 auto;display:flex;align-items:center;padding:0 16px 0 24px}
+  nav .wrap{flex:1 1 auto;min-width:0;display:flex;gap:4px;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}
+  nav a{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.85rem;color:var(--tinta2);
+    text-decoration:none;padding:12px 10px;border-bottom:3px solid transparent}
+  nav a:hover{color:var(--oro);border-bottom-color:var(--oro)}
+  .menu-btn{flex:0 0 auto;margin-left:12px;z-index:52;background:var(--oro);color:#fff;border:none;
+    border-radius:9px;padding:8px 13px;font-size:.95rem;cursor:pointer;display:inline-flex;align-items:center;
+    gap:8px;box-shadow:0 2px 8px rgba(20,60,80,.20);font-family:-apple-system,'Segoe UI',sans-serif;font-weight:600}
+  .menu-btn:hover{background:var(--teca)}
+  .menu-btn .bars{font-size:1.05rem;line-height:1}
+  .menu-panel{position:absolute;right:16px;top:50px;z-index:51;background:var(--card);border:1px solid var(--linea);
+    border-radius:12px;box-shadow:0 10px 28px rgba(20,60,80,.22);padding:8px;min-width:210px;
+    display:none;flex-direction:column}
+  .menu-panel.abierto{display:flex}
+  .tema-en-menu{display:none;width:100%;background:none;border:1px solid var(--linea);
+    border-radius:9px;padding:9px;font-size:.9rem;color:var(--tinta2);cursor:pointer;margin-bottom:8px;
+    font-family:-apple-system,'Segoe UI',sans-serif}
+  @media(max-width:430px){.tema-en-menu{display:block}}
+  .menu-panel .cab2{margin-top:10px;padding-top:10px;border-top:1px solid var(--linea)}
+  .menu-panel .cab{font-size:.8rem;letter-spacing:2px;text-transform:uppercase;color:var(--oro);padding:6px 14px 6px}
+  .menu-panel a{padding:11px 14px;border-radius:8px;color:var(--tinta);text-decoration:none;font-size:.95rem;
+    border-bottom:none;display:flex;align-items:center;gap:10px}
+  .menu-panel a:hover{background:var(--oro-suave);color:var(--teca);border-bottom:none}
+
+  main{max-width:1050px;margin:0 auto;padding:0 24px}
+
+  /* ---------- RESUMEN / TIMELINE ---------- */
+  .resumen{padding:56px 0 20px}
+  h2{font-size:2rem;font-weight:normal;color:var(--teca);margin-bottom:6px}
+  .kicker{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.78rem;letter-spacing:3px;
+    text-transform:uppercase;color:var(--oro);margin-bottom:8px}
+  .timeline{margin:30px 0 10px;border-left:3px solid var(--oro-suave);padding-left:0;list-style:none}
+  .timeline li{position:relative;padding:10px 0 10px 28px}
+  .timeline li::before{content:'';position:absolute;left:-8.5px;top:20px;width:14px;height:14px;
+    border-radius:50%;background:var(--oro);border:3px solid var(--crema)}
+  .timeline .etapa{font-family:-apple-system,'Segoe UI',sans-serif;font-weight:600;font-size:1.05rem}
+  .timeline .det{color:var(--tinta2);font-size:.95rem}
+  .timeline .tr{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.82rem;color:var(--mar);
+    padding:2px 0 2px 28px;font-style:normal}
+  .timeline .tr::before{display:none}
+  .timeline li.tr-li{padding:2px 0 2px 28px}
+  .timeline li.tr-li::before{content:'🚆';background:none;border:none;left:-10px;top:4px;font-size:.85rem;color:var(--mar)}
+  .timeline li.tr-li.coche::before{content:'🚗'}
+  .timeline li.tr-li.barco::before{content:'⛵'}
+
+  .claves{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:34px 0}
+  .clave{background:var(--card);border:1px solid var(--linea);border-radius:12px;padding:18px;box-shadow:var(--sombra)}
+  .clave .n{font-family:-apple-system,'Segoe UI',sans-serif;font-size:1.5rem;font-weight:700;color:var(--teca)}
+  .clave .t{font-size:.9rem;color:var(--tinta2)}
+
+  /* ---------- MAPA ---------- */
+  .mapa-wrap{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:26px;align-items:start;margin:24px 0 10px}
+  .mapa-svg svg{width:100%;height:auto;display:block;margin:0 auto;
+    background:#e9f1f4;border-radius:16px;border:1px solid var(--linea)}
+  .leyenda{background:var(--card);border:1px solid var(--linea);border-radius:14px;padding:20px 22px;box-shadow:var(--sombra)}
+  .leyenda h4{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.95rem;color:var(--teca);margin-bottom:12px}
+  .leyenda .lg{display:flex;align-items:flex-start;gap:10px;font-family:-apple-system,'Segoe UI',sans-serif;
+    font-size:.88rem;margin-bottom:11px;color:#3a4247}
+  .leyenda .lg .ic{font-size:1.05rem;line-height:1.3}
+  .leyenda .vuelos{margin-top:14px;padding-top:14px;border-top:1px dashed var(--linea);
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.82rem;color:var(--tinta2)}
+  .leyenda .vuelos b{color:var(--mar)}
+  @media(max-width:760px){.mapa-wrap{grid-template-columns:1fr}}
+
+  /* ---------- ETAPAS ---------- */
+  section.etapa-sec{padding:44px 0 18px;border-top:1px solid var(--linea)}
+  .banner{position:relative;border-radius:16px;overflow:hidden;margin:20px 0 26px;box-shadow:var(--sombra)}
+  .banner img{width:100%;height:340px;object-fit:cover;display:block}
+  .banner .pie{position:absolute;bottom:0;left:0;right:0;padding:30px 22px 14px;
+    background:linear-gradient(transparent,rgba(6,26,38,.72));color:#fff;
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.85rem}
+  .fechas-chip{display:inline-block;font-family:-apple-system,'Segoe UI',sans-serif;font-size:.82rem;
+    background:var(--oro-suave);color:var(--teca);border-radius:999px;padding:4px 14px;
+    letter-spacing:.5px;margin:4px 0 12px;font-weight:600}
+  .intro{font-size:1.08rem;max-width:760px;margin-bottom:22px}
+
+  .dias{display:grid;gap:14px;margin:10px 0 24px}
+  .dia{background:var(--card);border:1px solid var(--linea);border-left:5px solid var(--oro);
+    border-radius:12px;padding:18px 20px;box-shadow:var(--sombra)}
+  .dia h4{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.95rem;color:var(--teca);margin-bottom:6px}
+  .dia h4 .fecha{color:var(--oro);font-weight:400;margin-left:6px;font-size:.85rem}
+  .dia p{font-size:.98rem;color:#3a4247}
+  .dia .tip{margin-top:8px;font-size:.88rem;color:var(--verde);font-style:italic}
+
+  .comer{background:#f4f9fb;border:1px solid #cfe2ea;border-radius:14px;padding:22px 24px;margin:6px 0 26px}
+  .comer h3{font-family:-apple-system,'Segoe UI',sans-serif;font-size:1rem;color:var(--teca);
+    letter-spacing:1px;text-transform:uppercase;margin-bottom:12px}
+  .comer h3::before{content:'🐟 '}
+  .comer-fotos{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:0 0 16px}
+  .comer-fotos figure{border-radius:10px;overflow:hidden;box-shadow:var(--sombra);background:#eee}
+  .comer-fotos img{width:100%;height:130px;object-fit:cover;display:block}
+  .comer-fotos figcaption{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.8rem;
+    color:var(--tinta2);padding:6px 9px;background:#fff;text-align:center}
+  .platos{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+  .plato{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.85rem;background:#fff;
+    border:1px solid #e5d3a8;border-radius:999px;padding:5px 13px;color:#7a5a10}
+  .comer p{font-size:.93rem;color:var(--tinta2)}
+
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0 24px}
+  .duo figure{border-radius:12px;overflow:hidden;box-shadow:var(--sombra);background:#eee}
+  .duo img{width:100%;height:230px;object-fit:cover;display:block}
+  .duo figcaption{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.8rem;color:var(--tinta2);
+    padding:8px 12px;background:var(--card)}
+  @media(max-width:640px){.duo{grid-template-columns:1fr}.banner img{height:230px}}
+
+  /* ---------- BARRIOS ---------- */
+  .barrios-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:24px 0}
+  .bcard{background:var(--card);border:1px solid var(--linea);border-top:4px solid var(--teca);
+    border-radius:12px;padding:20px;box-shadow:var(--sombra)}
+  .bcard h4{font-family:-apple-system,'Segoe UI',sans-serif;font-size:1.05rem;color:var(--teca);margin-bottom:8px}
+  .bcard .barrio{font-family:-apple-system,'Segoe UI',sans-serif;font-weight:700;color:var(--oro);
+    font-size:.95rem;margin-bottom:8px}
+  .bcard p{font-size:.93rem;color:#3a4247}
+  .excel-nota{background:#f4f9fb;border:1px solid #cfe2ea;border-radius:12px;padding:16px 20px;
+    margin:20px 0 8px;font-size:.95rem;color:#5c4a22}
+
+  /* ---------- TABLA HOTELES ---------- */
+  .tabla-wrap{overflow-x:auto;margin:22px 0 8px;border:1px solid var(--linea);border-radius:14px;box-shadow:var(--sombra);-webkit-overflow-scrolling:touch}
+  table.hoteles{border-collapse:collapse;width:100%;min-width:860px;background:var(--card);
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.9rem}
+  table.hoteles thead th{background:var(--teca);color:#fff;text-align:left;padding:12px 14px;
+    font-size:.78rem;letter-spacing:.6px;text-transform:uppercase;white-space:nowrap}
+  table.hoteles td{padding:11px 14px;border-top:1px solid var(--linea);vertical-align:top;color:#3a4247}
+  table.hoteles tr.grupo td{background:var(--oro-suave);color:var(--teca);font-weight:700;
+    font-size:.86rem;letter-spacing:.2px}
+  table.hoteles a.hotel{display:inline-block;color:var(--mar);font-weight:600;text-decoration:none;border-bottom:1px dotted var(--mar)}
+  table.hoteles a.hotel:hover{color:var(--teca);border-bottom-color:var(--teca)}
+  table.hoteles a.booking{display:inline-flex;align-items:center;gap:4px;margin-top:7px;font-size:.81rem;
+    color:#0a53c4;text-decoration:none;background:#eaf1fc;border:1px solid #cfe0f7;border-radius:7px;
+    padding:3px 9px;font-weight:600;white-space:nowrap}
+  table.hoteles a.booking:hover{background:#d9e6fb;border-color:#a9c8f0}
+  table.clima{min-width:640px}
+  table.clima .clima-fecha{font-size:.79rem;opacity:.75}
+  table.clima .clima-t{white-space:nowrap;font-weight:700}
+  table.clima .t-max{color:#b4531f}
+  table.clima .t-min{color:#2f6f9e}
+  table.clima .clima-ll,table.clima .clima-rec{font-size:.86rem;white-space:nowrap}
+  ul.lista-practica{margin:12px 0 0;padding-left:20px;line-height:1.65}
+  ul.lista-practica li{margin-bottom:9px}
+  .zona-cell{color:var(--tinta2);font-size:.85rem;white-space:normal;max-width:150px}
+  .gama-cell{white-space:nowrap;color:var(--tinta2);font-size:.85rem}
+  .precio-cell{white-space:nowrap;font-weight:700;color:var(--tinta)}
+  .estrellas{color:var(--oro);white-space:nowrap;font-size:1rem;letter-spacing:1px}
+  .estrellas .vacia{color:#dccfb5}
+  .porque-cell{max-width:270px;font-size:.85rem}
+  .chars{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+  .char{font-size:.8rem;background:#f3ede0;border:1px solid #e7dcc3;border-radius:999px;
+    padding:2px 8px;color:#6b5f4f;white-space:nowrap}
+  table.hoteles tr.nuevo td{background:#f5eefc;border-top:1px solid #e3d2f5}
+  table.hoteles tr.nuevo td:first-child{box-shadow:inset 4px 0 0 #7c4dbe}
+  table.hoteles tr.nuevo .char{background:#efe4fb;border-color:#dcc7f2;color:#5b3690}
+  .tag-nuevo{display:inline-block;margin-top:7px;margin-left:6px;font-size:.79rem;font-weight:700;
+    letter-spacing:.5px;text-transform:uppercase;background:#7c4dbe;color:#fff;border-radius:6px;padding:2px 7px}
+  .leyenda-hoteles .lc.morado{background:#f5eefc;border-color:#dcc7f2;color:#5b3690;font-weight:600}
+  .leyenda-hoteles{background:#f4f9fb;border:1px solid #cfe2ea;border-radius:12px;padding:16px 20px;
+    margin:6px 0 16px;font-size:.88rem;color:#5c4a22}
+  .leyenda-hoteles .leg-chars{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+  .leyenda-hoteles .lc{font-size:.78rem;background:#fff;border:1px solid #e7dcc3;border-radius:999px;padding:3px 10px;color:#6b5f4f}
+
+  /* ---------- PRESUPUESTO ---------- */
+  .presu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:24px 0 18px}
+  .pline{background:var(--card);border:1px solid var(--linea);border-radius:12px;padding:16px 18px;box-shadow:var(--sombra)}
+  .pline .cat{font-family:-apple-system,'Segoe UI',sans-serif;font-weight:600;font-size:.95rem;color:var(--teca);margin-bottom:4px}
+  .pline .cat .ic{margin-right:6px}
+  .pline .imp{font-family:-apple-system,'Segoe UI',sans-serif;font-size:1.25rem;font-weight:700;color:var(--tinta)}
+  .pline .nota{font-size:.85rem;color:var(--tinta2);margin-top:4px}
+  .totales{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:8px 0 18px}
+  .total{border-radius:14px;padding:22px;color:#fff;box-shadow:var(--sombra)}
+  .total.t1{background:linear-gradient(135deg,#6b8f7a,#3d6b52)}
+  .total.t2{background:linear-gradient(135deg,#d69a2e,#946307)}
+  .total.t3{background:linear-gradient(135deg,#a5623f,#8a4a2b)}
+  .total .lbl{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;opacity:.92}
+  .total .val{font-family:-apple-system,'Segoe UI',sans-serif;font-size:1.9rem;font-weight:700;margin:6px 0 2px}
+  .total .pp{font-size:.85rem;opacity:.92;font-family:-apple-system,'Segoe UI',sans-serif}
+  .presu-nota{font-size:.9rem;color:var(--tinta2);font-style:italic;margin-top:6px}
+
+  .sitios{list-style:none;margin:6px 0 12px}
+  .sitios li{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.9rem;color:#3a4247;
+    padding:9px 0;border-top:1px dashed #e5d3a8}
+  .sitios li:first-child{border-top:none}
+  .sitios .nombre{font-weight:700;color:var(--teca)}
+  .sitios .dir{color:var(--tinta2);font-size:.83rem}
+  .sitios a{color:var(--mar);text-decoration:none;border-bottom:1px dotted var(--mar);font-size:.83rem}
+  .sitios a:hover{color:var(--teca);border-bottom-color:var(--teca)}
+
+  /* fichas de comida: qué pedir, horario y sellos */
+  .sitios li{line-height:1.5}
+  .sitios .pedir{display:block;margin-top:6px;padding:7px 11px;background:#fdf6e7;
+    border-left:3px solid var(--oro);border-radius:0 7px 7px 0;font-size:.87rem;color:#5c4a24}
+  .sitios .pedir b{color:var(--teca);text-transform:uppercase;font-size:.81rem;letter-spacing:.8px;margin-right:5px}
+  .sitios .datos{display:block;margin-top:5px;font-size:.8rem;color:var(--tinta2)}
+  .sitios .sello{display:inline-grid;place-items:center;width:18px;height:18px;
+    border-radius:50%;margin-left:6px;vertical-align:-3px;color:#fff;cursor:help}
+  .sitios .sello svg{width:10px;height:10px;display:block}
+  .sitios .sello.leyenda{background:var(--teca)}
+  .sitios .sello.estrella{background:#b31b34}
+  .sitios .sello.bib{background:#b31b34}
+  .sitios .sello.local{background:var(--verde)}
+  .sitios .sello.barato{background:var(--mar)}
+  .sitios .sello.cena{background:#6b4a8a}
+  .sitios .sello.amigo{background:#a8386b}
+  .sitios a.reservar{color:#6b4a8a;border-bottom-color:#6b4a8a;font-weight:600;margin-left:9px}
+  .sitios a.reservar:hover{color:#4e3566;border-bottom-color:#4e3566}
+  .leyenda-sellos{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.78rem;color:var(--tinta2);
+    display:flex;gap:16px;flex-wrap:wrap;margin:2px 0 10px}
+  .leyenda-sellos span{display:inline-flex;align-items:center;gap:5px}
+  .leyenda-sellos i{width:16px;height:16px;border-radius:50%;display:inline-grid;place-items:center;
+    font-style:normal;color:#fff;flex:0 0 auto}
+  .leyenda-sellos i svg{width:9px;height:9px;display:block}
+
+  .trio{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:8px 0 24px}
+  .trio figure{border-radius:12px;overflow:hidden;box-shadow:var(--sombra);background:#eee}
+  .trio img{width:100%;height:180px;object-fit:cover;display:block}
+  .trio figcaption{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.78rem;color:var(--tinta2);
+    padding:8px 11px;background:var(--card)}
+
+  table.tab{border-collapse:collapse;width:100%;min-width:640px;background:var(--card);
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.9rem}
+  table.tab thead th{background:var(--teca);color:#fff;text-align:left;padding:12px 14px;
+    font-size:.78rem;letter-spacing:.6px;text-transform:uppercase;white-space:nowrap}
+  table.tab td{padding:11px 14px;border-top:1px solid var(--linea);vertical-align:top;color:#3a4247}
+  table.tab td b{color:var(--tinta)}
+
+  .btn-guardar{display:inline-flex;align-items:center;gap:9px;background:#fff;color:#2f5f47;border:none;
+    border-radius:10px;padding:13px 22px;font-family:-apple-system,'Segoe UI',sans-serif;font-size:1rem;
+    font-weight:700;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.18)}
+  .btn-guardar:hover{background:#eef6f1}
+  .btn-guardar[disabled]{opacity:.65;cursor:default}
+  .btn-zip{display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;
+    border:1.5px solid rgba(255,255,255,.6);border-radius:10px;padding:12px 20px;
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.95rem;font-weight:600}
+  .btn-zip:hover{background:rgba(255,255,255,.14)}
+  .botonera{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:16px 0 6px}
+  .estado-offline{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.92rem;margin-top:10px;min-height:1.3em}
+
+  img.fallo{display:none}
+  figure.sinfoto{min-height:120px;display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(135deg,#f3e3c3,#e8d0a0);color:#8a6a20;font-family:sans-serif;font-size:.9rem}
+
+  /* ---------- ELEFANTES ---------- */
+  .destacado{background:linear-gradient(135deg,#31543f,#3d6b52);color:#f3efe4;border-radius:18px;
+    padding:34px 30px;margin:30px 0;box-shadow:var(--sombra)}
+  .destacado h3{font-size:1.6rem;font-weight:normal;margin-bottom:12px}
+  .destacado p{margin-bottom:12px;font-size:1rem}
+  .destacado ul{margin:10px 0 10px 22px;font-size:.97rem}
+  .destacado li{margin-bottom:6px}
+  .destacado .ojo{background:rgba(255,255,255,.12);border-radius:10px;padding:12px 16px;
+    font-size:.9rem;font-family:-apple-system,'Segoe UI',sans-serif;margin-top:14px}
+
+  /* ---------- PRÁCTICO ---------- */
+  .practico{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px;margin:24px 0 40px}
+  .pcard{background:var(--card);border:1px solid var(--linea);border-radius:14px;padding:22px;box-shadow:var(--sombra)}
+  .pcard h4{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.95rem;color:var(--teca);margin-bottom:10px}
+  .pcard ul{margin-left:18px;font-size:.92rem;color:#3a4247}
+  .pcard li{margin-bottom:7px}
+
+  footer{border-top:1px solid var(--linea);padding:30px 24px 50px;text-align:center;
+    color:var(--tinta2);font-size:.85rem;font-style:italic}
+
+  .pcard li.aviso{background:#fdf3e3;border-left:3px solid var(--oro);border-radius:0 8px 8px 0;
+    padding:11px 14px;margin:-4px 0 12px -8px;list-style:none}
+  .pcard li.aviso a{color:var(--teca);font-weight:600}
+
+  /* ---------- AUDIOGUÍA ---------- */
+  /* bloque grande: sólo el de "para el avión" */
+  .audioguia{background:linear-gradient(180deg,#fffdf8,#fdf7ea);border:1px solid var(--oro-suave);
+    border-radius:14px;padding:18px 20px;margin:22px 0 6px;box-shadow:var(--sombra)}
+  .audioguia .cab{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.78rem;letter-spacing:1.6px;
+    text-transform:uppercase;color:var(--oro);font-weight:700;display:flex;align-items:center;
+    gap:8px;flex-wrap:wrap;margin-bottom:4px}
+  .audioguia .expl{font-size:.93rem;color:var(--tinta2);font-style:italic;margin-bottom:12px}
+
+  /* bloque dentro de la pastilla de cada día */
+  .audios-dia{margin-top:13px;padding-top:11px;border-top:1px dashed var(--linea)}
+  .audios-dia .tit{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.8rem;letter-spacing:1.4px;
+    text-transform:uppercase;color:var(--oro);font-weight:700;margin-bottom:7px;display:flex;
+    align-items:center;gap:6px}
+  .audios-dia .tit svg{width:15px;height:15px;flex:0 0 auto}
+
+  .pistas{display:flex;flex-direction:column;gap:6px}
+  .pista{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:var(--card);
+    border:1px solid var(--linea);border-radius:10px;padding:9px 12px;cursor:pointer;
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.92rem;color:var(--tinta);
+    transition:border-color .15s,transform .1s}
+  .pista:hover{border-color:var(--oro);transform:translateX(2px)}
+  .pista .ico{flex:0 0 auto;width:32px;height:32px;border-radius:9px;display:grid;place-items:center;
+    border:1.5px solid currentColor}
+  .pista .ico svg{width:19px;height:19px;display:block}
+  /* cada tipo, con su color y su icono */
+  .pista.k-capsula .ico{color:var(--oro);background:#fdf6e7}
+  .pista.k-guia    .ico{color:var(--verde);background:#f1f8f3}
+  .pista.k-fondo   .ico{color:var(--mar);background:#eef5f8}
+  .pista.sonando{border-color:var(--verde);background:#f4faf6}
+  .pista.sonando .ico{color:#fff;background:var(--verde);border-color:var(--verde)}
+  .pista .txt{flex:1 1 auto;min-width:0}
+  .pista .nom{display:block;line-height:1.35}
+  .pista .meta{display:block;font-size:.82rem;color:var(--tinta2);margin-top:1px}
+
+  .btn-bajar{margin-top:14px;width:100%;background:none;border:1px dashed var(--oro);color:var(--oro);
+    border-radius:10px;padding:9px;font-family:-apple-system,'Segoe UI',sans-serif;font-size:.86rem;
+    cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
+  .btn-bajar svg{width:16px;height:16px;flex:0 0 auto}
+  .btn-bajar:hover{background:var(--oro);color:#fff;border-style:solid}
+  .btn-bajar[disabled]{opacity:.7;cursor:default;border-style:solid}
+  .bajar-etapa{margin:20px 0 4px}
+
+  /* ---------- REPRODUCTOR FLOTANTE ---------- */
+  #player{position:fixed;left:0;right:0;bottom:0;z-index:80;background:rgba(43,38,32,.97);
+    backdrop-filter:blur(8px);color:#fff;transform:translateY(105%);transition:transform .25s ease;
+    box-shadow:0 -4px 20px rgba(0,0,0,.25);font-family:-apple-system,'Segoe UI',sans-serif}
+  #player.visible{transform:translateY(0)}
+  .pl-inner{max-width:1050px;margin:0 auto;padding:11px 16px 13px;display:flex;align-items:center;gap:13px}
+  .pl-play{flex:0 0 auto;width:46px;height:46px;border-radius:50%;background:var(--oro);color:#fff;
+    border:none;font-size:1.1rem;cursor:pointer;display:grid;place-items:center}
+  .pl-mid{flex:1 1 auto;min-width:0}
+  .pl-tit{font-size:.9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .pl-barra{margin-top:7px;height:5px;background:rgba(255,255,255,.22);border-radius:4px;cursor:pointer;position:relative}
+  .pl-prog{height:100%;background:var(--oro);border-radius:4px;width:0}
+  .pl-t{font-size:.81rem;opacity:.75;margin-top:4px;display:flex;justify-content:space-between}
+  .pl-x{flex:0 0 auto;background:none;border:none;color:#fff;opacity:.6;font-size:1.3rem;cursor:pointer;padding:4px 8px}
+  .pl-x:hover{opacity:1}
+  .pl-vel{flex:0 0 auto;background:rgba(255,255,255,.14);border:none;color:#fff;border-radius:7px;
+    padding:6px 9px;font-size:.78rem;cursor:pointer}
+  @media(max-width:560px){
+    .pl-inner{gap:10px;padding:9px 12px 11px}
+    .pl-play{width:42px;height:42px}
+    .audioguia{padding:15px 14px}
+  }
+
+  /* ---------- HOY: el bloque de uso diario ---------- */
+  #hoy{max-width:1050px;margin:0 auto;padding:0 24px}
+  .hoy-caja{background:linear-gradient(135deg,#2f4f3d,#3d6b52);color:#f4f0e6;border-radius:18px;
+    padding:24px 26px;margin:24px 0 8px;box-shadow:0 4px 22px rgba(40,60,45,.22);
+    font-family:-apple-system,'Segoe UI',Roboto,sans-serif}
+  .hoy-cab{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:3px}
+  .hoy-eti{font-size:.8rem;letter-spacing:2px;text-transform:uppercase;opacity:.85;font-weight:700}
+  .hoy-fecha{font-size:.85rem;opacity:.8;margin-left:auto}
+  .hoy-caja h2{font-family:Georgia,serif;font-size:1.7rem;font-weight:normal;margin:2px 0 10px;color:#fff}
+  .hoy-plan{font-size:.98rem;line-height:1.6;opacity:.96}
+  .hoy-plan b,.hoy-plan strong{color:#ffe1a8}
+  .hoy-tip{background:rgba(255,255,255,.14);border-left:3px solid #ffe1a8;border-radius:0 9px 9px 0;
+    padding:10px 13px;margin:2px 0 10px;font-size:.89rem;line-height:1.55}
+  .hoy-tip b{color:#ffe1a8}
+  .hoy-mad{border-left-color:#9fd4e8}
+  .hoy-mad .mad-cab{color:#9fd4e8;margin-bottom:5px}
+  .hoy-mad .mad-zona{border-top-color:rgba(255,255,255,.2);color:#dfe9ef}
+  .hoy-rejilla{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:16px}
+  .hoy-tarjeta{background:rgba(255,255,255,.12);border-radius:12px;padding:13px 15px}
+  .hoy-tarjeta h4{font-size:.8rem;letter-spacing:1.4px;text-transform:uppercase;opacity:.8;margin-bottom:7px}
+  .hoy-tarjeta a{color:#ffe1a8;text-decoration:none;border-bottom:1px dotted rgba(255,225,168,.5)}
+  .hoy-tarjeta ul{list-style:none;font-size:.9rem;line-height:1.75}
+  .hoy-audio{display:flex;align-items:center;gap:9px;width:100%;text-align:left;background:rgba(255,255,255,.14);
+    border:none;border-radius:9px;padding:8px 11px;color:#fff;cursor:pointer;font-size:.88rem;
+    font-family:inherit;margin-bottom:6px}
+  .hoy-audio:hover{background:rgba(255,255,255,.24)}
+  .hoy-audio .ic{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.9);
+    color:#2f4f3d;display:grid;place-items:center;font-size:.8rem;padding-left:2px}
+  .hoy-audio .du{margin-left:auto;opacity:.7;font-size:.78rem}
+  .hoy-pie{margin-top:15px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .hoy-btn{background:#ffe1a8;color:#2f4f3d;border:none;border-radius:9px;padding:9px 15px;
+    font-weight:600;font-size:.88rem;cursor:pointer;text-decoration:none;display:inline-block}
+  .hoy-btn.ghost{background:rgba(255,255,255,.16);color:#fff}
+  .hoy-nav{display:flex;gap:6px;margin-left:auto}
+  .hoy-nav button{background:rgba(255,255,255,.16);color:#fff;border:none;border-radius:8px;
+    width:34px;height:34px;font-size:1rem;cursor:pointer}
+  .hoy-nav button:hover{background:rgba(255,255,255,.3)}
+  .hoy-cuenta{background:linear-gradient(135deg,#8a4a2b,#a85a33)}
+  @media(max-width:560px){
+    #hoy{padding:0 14px}
+    .hoy-caja{padding:18px 16px;border-radius:14px}
+    .hoy-caja h2{font-size:1.4rem}
+  }
+
+  /* ---------- BUSCADOR ---------- */
+  .buscador{position:relative;flex:0 0 auto;margin-left:8px;min-width:0}
+  .buscador input{width:150px;min-width:0;border:1px solid var(--linea);background:var(--card);
+    border-radius:9px;padding:8px 11px 8px 30px;font-size:16px;
+    font-family:-apple-system,'Segoe UI',sans-serif;color:var(--tinta);transition:width .2s}
+  .buscador input:focus{outline:none;border-color:var(--oro);width:210px}
+  .buscador .lupa{position:absolute;left:9px;top:50%;transform:translateY(-50%);opacity:.5;font-size:.85rem;
+    pointer-events:none}
+  .resultados{position:absolute;right:0;top:calc(100% + 6px);width:min(88vw,360px);max-height:60vh;
+    overflow-y:auto;background:var(--card);border:1px solid var(--linea);border-radius:12px;
+    box-shadow:0 8px 28px rgba(20,60,80,.20);display:none;z-index:70}
+  .resultados.abierto{display:block}
+  .resultados a{display:block;padding:10px 14px;border-bottom:1px solid var(--linea);text-decoration:none;
+    color:var(--tinta);font-size:.88rem;border-left:3px solid transparent}
+  .resultados a:hover{background:#fdf6e7;border-left-color:var(--oro)}
+  .resultados a small{display:block;color:var(--tinta2);font-size:.78rem;margin-top:2px}
+  .resultados .vacio{padding:14px;color:var(--tinta2);font-size:.86rem;text-align:center}
+
+  /* ---------- VOLVER ARRIBA ---------- */
+  #arriba{position:fixed;right:16px;bottom:16px;z-index:75;width:46px;height:46px;border-radius:50%;
+    background:var(--teca);color:#fff;border:none;font-size:1.15rem;cursor:pointer;opacity:0;
+    pointer-events:none;transition:opacity .2s,transform .2s;box-shadow:0 3px 14px rgba(0,0,0,.25)}
+  #arriba.visible{opacity:.92;pointer-events:auto}
+  #arriba:hover{opacity:1;transform:translateY(-2px)}
+  #player.visible ~ #arriba{bottom:92px}
+
+  /* ---------- MODO OSCURO ---------- */
+  .tema-btn{flex:0 0 auto;background:none;border:1px solid var(--linea);border-radius:9px;
+    width:36px;height:36px;font-size:.95rem;cursor:pointer;margin-left:8px;color:var(--tinta2)}
+  .tema-btn:hover{border-color:var(--oro);color:var(--oro)}
+  html[data-tema="oscuro"]{
+    --crema:#101619; --tinta:#e6eaec; --tinta2:#9aa8ae;
+    --oro:#5fb4d4; --oro-suave:#16323f; --teca:#e08a5e;
+    --verde:#8bb07c; --mar:#63b3d0; --linea:#263237;
+    --card:#182126; --sombra:0 2px 14px rgba(0,0,0,.4);
+  }
+  html[data-tema="oscuro"] body{background:var(--crema);color:var(--tinta)}
+  html[data-tema="oscuro"] nav{background:rgba(16,22,25,.96)}
+  html[data-tema="oscuro"] .sitios li{color:var(--tinta);border-top-color:var(--linea)}
+  html[data-tema="oscuro"] .sitios .pedir{background:#2a2114;color:#e8d5ac;border-left-color:var(--oro)}
+  html[data-tema="oscuro"] .pcard li.aviso{background:#2a2114}
+  html[data-tema="oscuro"] .audioguia{background:linear-gradient(180deg,#211c16,#1b1711);
+    border-color:var(--linea)}
+  html[data-tema="oscuro"] .pista{background:var(--card);color:var(--tinta)}
+  html[data-tema="oscuro"] .pista.k-capsula .ico{background:#2a2114}
+  html[data-tema="oscuro"] .pista.k-guia .ico{background:#1c2b21}
+  html[data-tema="oscuro"] .pista.k-fondo .ico{background:#152530}
+  html[data-tema="oscuro"] .resultados a:hover{background:#2a2114}
+  html[data-tema="oscuro"] img{filter:brightness(.86)}
+
+  /* ---------- MARCAR COMO PROBADO ---------- */
+  .marcar{display:inline-block;margin-left:8px;background:none;border:1px solid var(--linea);
+    border-radius:20px;padding:3px 10px;font-size:.78rem;color:var(--tinta2);cursor:pointer;
+    font-family:-apple-system,'Segoe UI',sans-serif;vertical-align:1px}
+  .marcar:hover{border-color:var(--verde);color:var(--verde)}
+  .sitios li.hecho{opacity:.62}
+  .sitios li.hecho .nombre{text-decoration:line-through;text-decoration-thickness:1px}
+  .sitios li.hecho .marcar{background:var(--verde);border-color:var(--verde);color:#fff;opacity:1}
+  .contador-probados{font-size:.82rem;color:var(--verde);font-weight:600;margin:2px 0 8px}
+
+  /* ---------- FRASES EN TAILANDÉS ---------- */
+  .ojo-genero{background:#fdf6e7;border-left:3px solid var(--oro);border-radius:0 9px 9px 0;
+    padding:12px 15px;margin:14px 0 20px;font-size:.9rem;
+    font-family:-apple-system,'Segoe UI',sans-serif;color:#5c4a24}
+  .grupo-frases{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.76rem;letter-spacing:1.8px;
+    text-transform:uppercase;color:var(--oro);font-weight:700;margin:26px 0 8px}
+  .frases{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:9px}
+  .frases li{display:flex;align-items:flex-start;gap:11px;background:var(--card);border:1px solid var(--linea);
+    border-radius:12px;padding:12px 13px;box-shadow:var(--sombra)}
+  .fr-play,.fr-ver{flex:0 0 auto;width:36px;height:36px;border-radius:50%;border:1.5px solid var(--oro);
+    background:none;color:var(--oro);cursor:pointer;font-size:.85rem;display:grid;place-items:center;
+    padding-left:2px}
+  .fr-ver{border-color:var(--linea);color:var(--tinta2);padding-left:0;align-self:center}
+  .fr-play:hover,.fr-ver:hover{background:var(--oro);color:#fff;border-color:var(--oro)}
+  .fr-play.sonando{background:var(--verde);border-color:var(--verde);color:#fff}
+  .fr-txt{flex:1 1 auto;min-width:0;font-family:-apple-system,'Segoe UI',sans-serif}
+  .fr-es{display:block;font-size:.94rem;color:var(--tinta);font-weight:600;line-height:1.35}
+  .fr-th{display:block;font-size:1.12rem;color:var(--teca);margin-top:3px;line-height:1.5}
+  .fr-fon{display:block;font-size:.85rem;color:var(--tinta2);font-style:italic;margin-top:1px}
+  .fr-nota{display:block;font-size:.8rem;color:var(--tinta2);margin-top:5px;
+    padding-top:5px;border-top:1px dashed var(--linea)}
+
+  /* pantalla para enseñar la frase */
+  #enseñar{position:fixed;inset:0;z-index:120;background:#fff;display:none;
+    flex-direction:column;align-items:center;justify-content:center;padding:26px;text-align:center}
+  #enseñar.abierto{display:flex}
+  #enseñar .th{font-size:clamp(2rem,9vw,4rem);color:#111;line-height:1.6;font-weight:600}
+  #enseñar .es{font-size:1rem;color:#666;margin-top:26px;font-family:-apple-system,'Segoe UI',sans-serif}
+  #enseñar .fon{font-size:.95rem;color:#999;font-style:italic;margin-top:5px;
+    font-family:-apple-system,'Segoe UI',sans-serif}
+  #enseñar .cerrar{position:absolute;top:16px;right:16px;background:#eee;border:none;border-radius:50%;
+    width:44px;height:44px;font-size:1.2rem;cursor:pointer;color:#333}
+  #enseñar .oir{margin-top:30px;background:#946307;color:#fff;border:none;border-radius:10px;
+    padding:13px 24px;font-size:1rem;cursor:pointer;font-family:-apple-system,'Segoe UI',sans-serif}
+
+  /* ---------- POR SI ACASO ---------- */
+  .urgencias{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:11px;margin:18px 0 24px}
+  .urg{display:block;background:var(--card);border:1px solid var(--linea);border-left:4px solid var(--teca);
+    border-radius:12px;padding:14px 16px;text-decoration:none;box-shadow:var(--sombra);
+    font-family:-apple-system,'Segoe UI',sans-serif}
+  .urg:hover{border-left-color:var(--oro);transform:translateY(-1px)}
+  .urg-fuerte{border-left-color:#b31b34;background:linear-gradient(135deg,#fff,#fff5f5)}
+  .urg .num{display:block;font-size:1.9rem;font-weight:700;color:var(--teca);letter-spacing:1px;line-height:1.1}
+  .urg-fuerte .num{color:#b31b34}
+  .urg .que{display:block;font-size:.95rem;color:var(--tinta);font-weight:600;margin-top:2px}
+  .urg .det{display:block;font-size:.8rem;color:var(--tinta2);margin-top:3px;line-height:1.4}
+  .pcard li.rellenar{border-bottom:1px dashed var(--linea);padding-bottom:6px;margin-bottom:6px;
+    color:var(--tinta2)}
+  .pcard li.rellenar b{color:var(--tinta2);letter-spacing:1px}
+  html[data-tema="oscuro"] .urg{background:var(--card)}
+  html[data-tema="oscuro"] .urg-fuerte{background:linear-gradient(135deg,#2a1a1a,#211c16)}
+
+  /* ---------- ACCESO A HOY Y CONVERSOR ---------- */
+  #irhoy{position:fixed;right:16px;bottom:70px;z-index:75;background:var(--verde);color:#fff;border:none;
+    border-radius:22px;padding:11px 17px;font-size:.86rem;font-weight:700;cursor:pointer;opacity:0;
+    pointer-events:none;transition:opacity .2s,transform .2s;box-shadow:0 3px 14px rgba(0,0,0,.25);
+    font-family:-apple-system,'Segoe UI',sans-serif;letter-spacing:.5px}
+  #irhoy.visible{opacity:.95;pointer-events:auto}
+  #irhoy:hover{opacity:1;transform:translateY(-2px)}
+  #player.visible ~ #irhoy{bottom:146px}
+  #conversor{font-family:-apple-system,'Segoe UI',sans-serif;margin-top:6px}
+  .conv-fila{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .conv-fila input{width:120px;border:1px solid var(--linea);border-radius:9px;padding:11px 12px;
+    font-size:1.15rem;background:var(--card);color:var(--tinta);font-weight:600}
+  .conv-fila input:focus{outline:none;border-color:var(--oro)}
+  .conv-uni{font-size:1.2rem;color:var(--tinta2)}
+  .conv-igual{color:var(--tinta2);margin:0 3px}
+  .conv-fila output{font-size:1.35rem;font-weight:700;color:var(--verde)}
+  .conv-tabla{display:flex;gap:7px;flex-wrap:wrap;margin-top:13px}
+  .conv-tabla span{background:var(--card);border:1px solid var(--linea);border-radius:9px;padding:7px 11px;
+    font-size:.83rem;color:var(--tinta2)}
+  .conv-tabla b{display:block;color:var(--tinta);font-size:.92rem}
+  .conv-tipo{display:block;margin-top:14px;font-size:.83rem;color:var(--tinta2)}
+  .conv-tipo input{width:64px;border:1px solid var(--linea);border-radius:7px;padding:4px 7px;
+    background:var(--card);color:var(--tinta);font-size:.86rem}
+  .conv-tipo span{display:block;margin-top:3px;font-style:italic;opacity:.85}
+
+  /* ---------- ACCESO RÁPIDO ---------- */
+  #rapido{position:fixed;right:16px;bottom:16px;z-index:78;display:flex;flex-direction:column;
+    align-items:flex-end;gap:9px;opacity:0;pointer-events:none;transition:opacity .2s}
+  #rapido.visible{opacity:1;pointer-events:auto}
+  .rap-btn{width:52px;height:52px;border-radius:50%;background:var(--teca);color:#fff;border:none;
+    font-size:1.25rem;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.28);display:grid;place-items:center}
+  .rap-btn:hover{background:var(--oro)}
+  .rap-lista{display:flex;flex-direction:column;align-items:flex-end;gap:8px;
+    max-height:0;overflow:hidden;transition:max-height .22s ease,opacity .2s;opacity:0}
+  #rapido.abierto .rap-lista{max-height:260px;opacity:1}
+  .rap-item{display:flex;align-items:center;gap:9px;background:none;border:none;cursor:pointer;padding:0}
+  .rap-t{background:rgba(43,38,32,.92);color:#fff;font-size:.83rem;padding:6px 11px;border-radius:8px;
+    font-family:-apple-system,'Segoe UI',sans-serif;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+  .rap-ic{width:44px;height:44px;border-radius:50%;background:var(--card);border:1px solid var(--linea);
+    display:grid;place-items:center;font-size:1.05rem;box-shadow:0 3px 12px rgba(0,0,0,.18)}
+  .rap-item:hover .rap-ic{background:var(--oro-suave);border-color:var(--oro)}
+  #player.visible ~ #rapido{bottom:92px}
+
+  /* ---------- ETAPAS: desplegable en el móvil, barra en el ordenador ---------- */
+  .etapas-sel{display:none;flex:1 1 auto;min-width:0;border:1px solid var(--linea);border-radius:9px;
+    background:var(--card);color:var(--tinta);padding:9px 10px;font-size:.9rem;margin:6px 0;
+    font-family:-apple-system,'Segoe UI',sans-serif}
+  @media(max-width:760px){
+    nav .wrap{display:none}
+    /* La barra pasa a dos filas: arriba lo que se usa a diario y, debajo,
+       el desplegable de etapas a todo lo ancho. Si no, en un móvil estrecho
+       se apelotonan cinco controles en la misma línea. */
+    .nav-inner{flex-wrap:wrap;padding-bottom:8px}
+    .etapas-sel{display:block;order:10;flex-basis:100%;width:100%;margin:0}
+    .buscador{flex:1 1 auto}
+    .buscador input{width:100%}
+    .buscador input:focus{width:100%}
+  }
+
+  /* ---------- BOTÓN HOY, SIEMPRE A LA VISTA ---------- */
+  .btn-hoy{flex:0 0 auto;display:inline-flex;align-items:center;gap:7px;background:var(--verde);
+    color:#fff;border-radius:9px;padding:8px 14px 8px 11px;font-size:.92rem;font-weight:700;
+    text-decoration:none;margin-right:12px;box-shadow:0 2px 8px rgba(45,80,60,.22);
+    font-family:-apple-system,'Segoe UI',sans-serif;letter-spacing:.3px;white-space:nowrap}
+  .btn-hoy:hover{background:#2f5540;color:#fff}
+  .btn-hoy svg{width:17px;height:17px;flex:0 0 auto}
+  @media(max-width:560px){
+    .btn-hoy{padding:8px 10px;font-size:.86rem;margin-right:6px}
+    .btn-hoy svg{width:15px;height:15px}
+    .nav-inner{padding:0 8px;gap:0}
+    .menu-btn{margin-left:6px;padding:8px 10px;font-size:.86rem}
+    .menu-btn .bars{display:none}
+    .buscador{flex:1 1 60px;margin-left:6px}
+    .buscador input{width:100%}
+    .tema-btn{width:34px;height:34px;margin-left:6px}
+  }
+  /* en pantallas de móvil estrechas el tema se va al menú: es lo que menos se usa */
+  @media(max-width:430px){
+    .tema-btn{display:none}
+    .btn-hoy span{font-size:.85rem}
+  }
+
+  /* ---------- HOTEL YA RESERVADO ---------- */
+  tr.reservado{background:linear-gradient(90deg,#eef7f1,#f7fbf8)}
+  tr.reservado td{border-left:none}
+  tr.reservado td:first-child{border-left:4px solid var(--verde)}
+  .sello-reserva{display:inline-block;background:var(--verde);color:#fff;font-size:.72rem;
+    font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:3px 9px;border-radius:20px;
+    font-family:-apple-system,'Segoe UI',sans-serif;margin-bottom:4px}
+  tr.reservado .precio-cell{color:var(--verde);font-weight:700;text-transform:uppercase;font-size:.8rem}
+  html[data-tema="oscuro"] tr.reservado{background:linear-gradient(90deg,#1b2a21,#1a231d)}
+
+  /* ---------- PLAN DE MADRUGADOR ---------- */
+  .madrugador{background:linear-gradient(135deg,#f3f7fb,#fbfcfe);border:1px solid #dbe6f0;
+    border-left:3px solid var(--mar);border-radius:0 12px 12px 0;padding:13px 16px;margin:12px 0 4px;
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.9rem;line-height:1.6;color:#2c3a44}
+  .mad-cab{display:flex;align-items:center;gap:7px;font-size:.72rem;letter-spacing:1.4px;
+    text-transform:uppercase;color:var(--mar);font-weight:700;margin-bottom:7px}
+  .mad-cab svg{width:16px;height:16px;flex:0 0 auto}
+  .madrugador p{margin:0 0 7px}
+  .madrugador p:last-child{margin-bottom:0}
+  .mad-zona{padding-top:7px;border-top:1px dashed #dbe6f0;font-size:.87rem;color:#4a5a66}
+  .mad-zona b{color:var(--mar)}
+  html[data-tema="oscuro"] .madrugador{background:linear-gradient(135deg,#16212a,#1a1f24);border-color:#25333d}
+  html[data-tema="oscuro"] .madrugador,html[data-tema="oscuro"] .mad-zona{color:#c3d2dc}
+
+  /* ---------- LOS PLATOS, UNO A UNO ---------- */
+  .filtro-platos{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 18px}
+  .fp{background:var(--card);border:1px solid var(--linea);border-radius:20px;padding:7px 15px;
+    font-size:.86rem;color:var(--tinta2);cursor:pointer;font-family:inherit}
+  .fp:hover{border-color:var(--oro);color:var(--oro)}
+  .fp.activo{background:var(--oro);border-color:var(--oro);color:#fff;font-weight:600}
+  .platos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+  .plato-card{background:var(--card);border:1px solid var(--linea);border-radius:14px;overflow:hidden;
+    box-shadow:var(--sombra);display:flex;flex-direction:column}
+  .plato-card img{width:100%;height:170px;object-fit:cover;display:block;background:#efe7d8}
+  .plato-card img.fallo{display:none}
+  .plato-card.sinfoto{border-style:dashed}
+  .pc-txt{padding:14px 15px 15px;font-family:-apple-system,'Segoe UI',sans-serif;flex:1 1 auto;
+    display:flex;flex-direction:column}
+  .pc-txt h4{font-family:Georgia,serif;font-size:1.12rem;font-weight:normal;color:var(--teca);
+    line-height:1.3;margin-bottom:2px}
+  .pc-th{font-size:.92rem;color:var(--tinta2);margin-left:4px}
+  .pc-fon{font-size:.82rem;color:var(--tinta2);font-style:italic;margin-bottom:8px}
+  .pc-fon b{font-style:normal;color:var(--verde)}
+  .pc-txt p{font-size:.89rem;line-height:1.55;color:var(--tinta);margin-bottom:9px;flex:1 1 auto}
+  .pc-donde{font-size:.84rem;line-height:1.5;background:#fdf6e7;border-radius:8px;padding:8px 11px;
+    color:#5c4a24}
+  .pc-donde b{color:var(--teca);text-transform:uppercase;font-size:.7rem;letter-spacing:.8px;
+    display:block;margin-bottom:2px}
+  .pc-etapa{font-size:.74rem;color:var(--tinta2);text-transform:uppercase;letter-spacing:1px;
+    margin-top:9px;padding-top:8px;border-top:1px dashed var(--linea)}
+  .plato-card.oculto{display:none}
+  html[data-tema="oscuro"] .pc-donde{background:#2a2114;color:#e8d5ac}
+  @media(max-width:560px){
+    .platos-grid{grid-template-columns:1fr;gap:13px}
+    .plato-card img{height:190px}
+  }
+
+  /* ---------- ¿QUÉ TENGO CERCA? ---------- */
+  #cerca{position:fixed;inset:0;z-index:130;background:rgba(20,15,8,.55);display:none;
+    align-items:flex-end;justify-content:center;backdrop-filter:blur(3px)}
+  #cerca.abierto{display:flex}
+  .cerca-caja{background:var(--crema);width:100%;max-width:560px;max-height:82vh;overflow-y:auto;
+    border-radius:18px 18px 0 0;padding:22px 20px 26px;position:relative;
+    font-family:-apple-system,'Segoe UI',sans-serif;box-shadow:0 -6px 30px rgba(0,0,0,.3)}
+  .cerca-caja h3{font-family:Georgia,serif;font-size:1.45rem;font-weight:normal;color:var(--teca);margin-bottom:4px}
+  .cerca-x{position:absolute;top:14px;right:14px;background:var(--card);border:1px solid var(--linea);
+    border-radius:50%;width:36px;height:36px;font-size:1rem;cursor:pointer;color:var(--tinta2)}
+  .cerca-estado{font-size:.92rem;color:var(--tinta2);margin-bottom:14px;line-height:1.5}
+  .cerca-estado b{color:var(--teca)}
+  .cerca-item{display:flex;align-items:flex-start;gap:12px;padding:11px 12px;background:var(--card);
+    border:1px solid var(--linea);border-radius:11px;margin-bottom:7px;text-decoration:none;color:var(--tinta)}
+  .cerca-item:hover{border-color:var(--oro)}
+  .cerca-d.aprox{color:var(--tinta2);font-weight:600;font-size:.8rem}
+  .cerca-d{flex:0 0 auto;min-width:62px;font-weight:700;color:var(--verde);font-size:.9rem;
+    padding-top:1px;text-align:right}
+  .cerca-n{flex:1 1 auto;font-size:.95rem;line-height:1.35}
+  .cerca-n small{display:block;color:var(--tinta2);font-size:.8rem;margin-top:2px;font-weight:400}
+  .cerca-sello{display:inline-block;font-size:.68rem;text-transform:uppercase;letter-spacing:.5px;
+    padding:2px 7px;border-radius:20px;margin-left:6px;vertical-align:1px;color:#fff}
+  .cerca-sello.k-leyenda{background:var(--teca)} .cerca-sello.k-bib{background:#b31b34}
+  .cerca-sello.k-local{background:var(--verde)} .cerca-sello.k-barato{background:var(--mar)}
+  .cerca-sello.k-cena{background:#6b4a8a}
+  .btn-cerca{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;margin:16px 0 4px;
+    background:var(--verde);color:#fff;border:none;border-radius:12px;padding:14px;font-size:1rem;
+    font-weight:700;cursor:pointer;font-family:-apple-system,'Segoe UI',sans-serif;
+    box-shadow:0 3px 12px rgba(45,80,60,.25)}
+  .btn-cerca:hover{background:#2f5540}
+  .btn-cerca svg{width:20px;height:20px}
+  @media(min-width:640px){#cerca{align-items:center} .cerca-caja{border-radius:18px}}
+
+  /* ---------- ÍNDICE DE COMIDA ---------- */
+  .bajo-boton{font-size:.86rem;color:var(--tinta2);text-align:center;margin:-2px 0 22px;
+    font-family:-apple-system,'Segoe UI',sans-serif}
+  .comida-puertas{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:13px;margin-bottom:26px}
+  .cp{display:block;background:var(--card);border:1px solid var(--linea);border-left:4px solid var(--oro);
+    border-radius:0 14px 14px 0;padding:18px 20px;text-decoration:none;box-shadow:var(--sombra);
+    font-family:-apple-system,'Segoe UI',sans-serif;transition:transform .12s}
+  .cp:hover{transform:translateX(3px);border-left-color:var(--teca)}
+  .cp-ic{font-size:1.7rem;display:block;margin-bottom:6px}
+  .cp b{display:block;font-family:Georgia,serif;font-size:1.16rem;font-weight:normal;color:var(--teca);
+    margin-bottom:5px}
+  .cp span:last-child{display:block;font-size:.88rem;color:var(--tinta2);line-height:1.5}
+  .ir-titulo{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.76rem;letter-spacing:1.8px;
+    text-transform:uppercase;color:var(--oro);font-weight:700;margin-bottom:10px}
+  .ir-etapas{display:flex;flex-wrap:wrap;gap:8px}
+  .ir-etapa{display:inline-flex;align-items:baseline;gap:7px;background:var(--card);
+    border:1px solid var(--linea);border-radius:22px;padding:8px 15px;text-decoration:none;
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.9rem;color:var(--tinta)}
+  .ir-etapa:hover{border-color:var(--oro);color:var(--teca)}
+  .ir-etapa span{font-size:.8rem;color:var(--tinta2)}
+
+  /* ---------- AVISO DE VERSIÓN NUEVA ---------- */
+  /* Ventana centrada, no una pastilla abajo: si la guía cambia mientras están de
+     viaje, tienen que verlo. Al aceptar se borra la copia guardada y se recarga. */
+  #nuevaVersion{position:fixed;inset:0;z-index:300;display:flex;align-items:center;
+    justify-content:center;padding:20px;background:rgba(12,20,28,.55);
+    backdrop-filter:blur(3px);opacity:0;transition:opacity .22s ease;
+    font-family:-apple-system,'Segoe UI',Roboto,sans-serif}
+  #nuevaVersion.visible{opacity:1}
+  #nuevaVersion .nv-caja{background:var(--card);color:var(--tinta);border-radius:18px;
+    padding:30px 28px 24px;max-width:420px;width:100%;text-align:center;
+    box-shadow:0 18px 60px rgba(0,0,0,.35);transform:scale(.92);transition:transform .22s ease}
+  #nuevaVersion.visible .nv-caja{transform:scale(1)}
+  #nuevaVersion .nv-ico{font-size:2.4rem;line-height:1;margin-bottom:12px}
+  #nuevaVersion h3{font-family:Georgia,serif;font-size:1.35rem;font-weight:normal;
+    color:var(--teca);margin-bottom:10px}
+  #nuevaVersion p{font-size:.94rem;color:var(--tinta2);line-height:1.6;margin-bottom:20px}
+  #nuevaVersion .nv-botones{display:flex;flex-direction:column;gap:9px}
+  #nvOk{background:var(--oro);color:#fff;border:none;border-radius:11px;padding:13px 20px;
+    font-weight:700;font-size:1rem;cursor:pointer;font-family:inherit;width:100%}
+  #nvOk:hover{background:var(--teca)}
+  #nvOk[disabled]{opacity:.7;cursor:default}
+  #nvNo{background:none;border:none;color:var(--tinta2);font-size:.9rem;cursor:pointer;
+    padding:8px;font-family:inherit;text-decoration:underline}
+  #nvNo:hover{color:var(--tinta)}
+  @media(max-width:420px){#nuevaVersion .nv-caja{padding:24px 20px 18px}}
+
+  /* ---------- LOS TIMOS ---------- */
+  .pcard-ancho{grid-column:1/-1}
+  .p-intro{font-size:.93rem;color:var(--tinta2);margin-bottom:12px;line-height:1.55}
+  .timos{margin:0 0 4px 0;padding-left:0;list-style:none;counter-reset:t}
+  .timos li{position:relative;padding:11px 0 11px 40px;border-top:1px dashed var(--linea);
+    font-size:.92rem;line-height:1.6;counter-increment:t}
+  .timos li:first-child{border-top:none}
+  .timos li::before{content:counter(t);position:absolute;left:0;top:12px;width:26px;height:26px;
+    border-radius:50%;background:#b31b34;color:#fff;display:grid;place-items:center;font-size:.82rem;
+    font-weight:700}
+  .timos b{color:var(--teca)}
+  .timos em{color:var(--verde);font-style:normal;font-weight:600}
+  .timos-fin{margin-top:14px;background:#fdf6e7;border-left:3px solid var(--oro);border-radius:0 9px 9px 0;
+    padding:12px 15px;font-size:.9rem;line-height:1.6;color:#5c4a24}
+  html[data-tema="oscuro"] .timos-fin{background:#2a2114;color:#e8d5ac}
+  /* ---------- AÑADIDOS NERJA: listas de "lo que hay que ver" ---------- */
+  .sub-h{font-family:-apple-system,'Segoe UI',sans-serif;font-size:1rem;color:var(--teca);
+    letter-spacing:1px;text-transform:uppercase;margin:30px 0 14px}
+  .lista-ver{list-style:none;display:grid;gap:10px;margin:0 0 24px}
+  .lista-ver li{background:var(--card);border:1px solid var(--linea);border-radius:11px;
+    padding:13px 16px 13px 40px;position:relative;font-size:.97rem;color:#3a4247;box-shadow:var(--sombra)}
+  .lista-ver li::before{content:'';position:absolute;left:17px;top:20px;width:8px;height:8px;
+    border-radius:50%;background:var(--oro)}
+  .lista-ver li b{color:var(--tinta)}
+  html[data-tema="oscuro"] .lista-ver li{color:var(--tinta)}
+
+  /* --- Legibilidad en modo oscuro (auditoría del 28 ago 2026) ---
+     Estos textos llevaban el color fijo #3a4247, pensado para fondo claro: sobre
+     el fondo oscuro daban 1,64:1 de contraste y no se leían. */
+  html[data-tema="oscuro"] .dia p,
+  html[data-tema="oscuro"] .bcard p,
+  html[data-tema="oscuro"] .lista-ver li,
+  html[data-tema="oscuro"] .leyenda .lg,
+  html[data-tema="oscuro"] .pcard ul,
+  html[data-tema="oscuro"] table.hoteles td,
+  html[data-tema="oscuro"] table.tab td{color:var(--tinta)}
+  /* el botón Info: en oscuro el azul se aclara, así que el texto va oscuro */
+  html[data-tema="oscuro"] .menu-btn{color:#12161a}
+  html[data-tema="oscuro"] .menu-btn:hover{color:#fff}
+
+  /* la flecha «Arriba» del acceso rápido es texto, no un emoji: en modo oscuro
+     se quedaba en negro sobre fondo oscuro y no se veía */
+  html[data-tema="oscuro"] .rap-ic{color:var(--tinta)}
+</style>

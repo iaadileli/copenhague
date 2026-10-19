@@ -1,0 +1,55 @@
+<script>
+/* ---------- EL TIEMPO, ACTUALIZADO AL ABRIR LA WEB ----------
+   La sección ya viene con la predicción escrita (así se ve sin conexión y aunque
+   la API no responda). Si hay datos, se repinta con lo último de Open-Meteo. */
+(function(){
+  var rejilla = document.getElementById('tiempoRejilla');
+  if (!rejilla) return;
+
+  var CIELO = {0:['☀️','despejado'], 1:['🌤️','casi despejado'], 2:['⛅','nubes y claros'], 3:['☁️','nublado'],
+    45:['🌫️','niebla'], 48:['🌫️','niebla helada'],
+    51:['🌦️','llovizna'], 53:['🌦️','llovizna'], 55:['🌧️','llovizna fuerte'],
+    56:['🌧️','llovizna helada'], 57:['🌧️','llovizna helada'],
+    61:['🌦️','lluvia floja'], 63:['🌧️','lluvia'], 65:['🌧️','lluvia fuerte'],
+    66:['🌧️','lluvia helada'], 67:['🌧️','lluvia helada'],
+    71:['🌨️','nieve'], 73:['🌨️','nieve'], 75:['🌨️','nieve fuerte'], 77:['🌨️','granizo menudo'],
+    80:['🌦️','chubascos'], 81:['🌧️','chubascos'], 82:['🌧️','chubascos fuertes'],
+    85:['🌨️','chubascos de nieve'], 86:['🌨️','chubascos de nieve'],
+    95:['⛈️','tormenta'], 96:['⛈️','tormenta con granizo'], 99:['⛈️','tormenta con granizo']};
+  var MESES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto',
+               'septiembre','octubre','noviembre','diciembre'];
+
+  var url = 'https://api.open-meteo.com/v1/forecast?latitude=55.6761&longitude=12.5683' +
+            '&daily=weather_code,temperature_2m_max,temperature_2m_min,' +
+            'precipitation_probability_max,wind_speed_10m_max&timezone=Europe%2FCopenhagen&forecast_days=16';
+
+  fetch(url).then(function(r){ return r.json(); }).then(function(d){
+    var dd = d && d.daily;
+    if (!dd || !dd.time) return;
+    var cambiados = 0;
+    dd.time.forEach(function(fecha, i){
+      var fila = rejilla.querySelector('[data-t="' + fecha + '"]');
+      if (!fila) return;
+      var c = CIELO[dd.weather_code[i]] || ['🌡️','variable'];
+      var lluvia = dd.precipitation_probability_max[i] || 0;
+      fila.querySelector('.t-icono').textContent = c[0];
+      fila.querySelector('.t-cielo').textContent = c[1];
+      fila.querySelector('.t-grados').innerHTML =
+        '<b>' + Math.round(dd.temperature_2m_max[i]) + '°</b>' +
+        '<span>' + Math.round(dd.temperature_2m_min[i]) + '°</span>';
+      fila.querySelector('.t-lluvia').textContent = '💧 ' + lluvia + '%';
+      fila.querySelector('.t-viento').textContent = '💨 ' + Math.round(dd.wind_speed_10m_max[i]) + ' km/h';
+      fila.classList.toggle('mojado', lluvia >= 50);
+      cambiados++;
+    });
+    var sello = document.getElementById('tiempoSello');
+    if (sello && cambiados) {
+      var h = new Date();
+      sello.textContent = 'Predicción de hoy, ' + h.getDate() + ' de ' + MESES[h.getMonth()] +
+                          ', a las ' + String(h.getHours()).padStart(2,'0') + ':' +
+                          String(h.getMinutes()).padStart(2,'0');
+      sello.classList.add('al-dia');
+    }
+  }).catch(function(){ /* sin datos: se queda la predicción escrita, que es lo que toca */ });
+})();
+</script>

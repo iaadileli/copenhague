@@ -1,0 +1,97 @@
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="fechas">Para Alicia y Luis · del viernes 4 al martes 8 de diciembre de 2026</div>
+    <h1>Copenhague en Navidad</h1>
+    <p class="sub">Cuatro días y medio con siete horas de luz al día, que se aprovechan mejor de lo
+    que parece: Tivoli encendido, mercadillos con gløgg, smørrebrød a mediodía, kanelsnegle en cada
+    esquina y un buen montón de tiendas raras, empezando por la de las pinzas.</p>
+  </div>
+</header>
+
+<nav class="sans"><div class="nav-inner"><div class="wrap">
+  <a href="#ruta">Cómo usarla</a>
+  <a href="#navidad">Navidad</a>
+  <a href="#tiempo">El tiempo</a>
+  <a href="#mapa">Mapa</a>
+  <a href="#indre">El centro</a>
+  <a href="#nyhavn">Nyhavn</a>
+  <a href="#christianshavn">Christianshavn</a>
+  <a href="#vesterbro">Vesterbro y Tivoli</a>
+  <a href="#norrebro">Nørrebro</a>
+  <a href="#excursiones">Excursiones</a>
+  <a href="#comer">Comer</a>
+  <a href="#probar">Qué probar</a>
+  <a href="#pan">Panaderías</a>
+  <a href="#tiendas">Tiendas raras</a>
+  <a href="#hoteles">Hoteles</a>
+</div>
+  <div class="buscador sans">
+    <span class="lupa">🔍</span>
+    <input id="buscar" type="search" placeholder="Buscar…" aria-label="Buscar en la guía" autocomplete="off">
+    <div class="resultados" id="resultados"></div>
+  </div>
+  <button id="tema" class="tema-btn sans" aria-label="Cambiar a modo oscuro">☾</button>
+  <button id="menuBtn" class="menu-btn" onclick="toggleMenuInfo(event)" aria-label="Menú de información práctica" aria-expanded="false">
+    <span class="bars">☰</span><span>Info</span>
+  </button>
+  <div class="menu-panel" id="menuInfo">
+    <button id="temaMenu" class="tema-en-menu">☾ Modo oscuro</button>
+    <div class="cab">Sobre la marcha</div>
+    <a href="#comer" onclick="cerrarMenuInfo()">🍽️ Comer (y quién abre domingo y lunes)</a>
+    <a href="#probar" onclick="cerrarMenuInfo()">🥪 Qué hay que probar, con foto</a>
+    <a href="#pan" onclick="cerrarMenuInfo()">🥐 Panaderías, pastelerías y cafés</a>
+    <a href="#tiendas" onclick="cerrarMenuInfo()">🛍️ Tiendas raras (la de las pinzas)</a>
+    <a href="#navidad" onclick="cerrarMenuInfo()">🎄 Tivoli y los mercadillos</a>
+    <a href="#tiempo" onclick="cerrarMenuInfo()">🌡️ El tiempo y las horas de luz</a>
+    <div class="cab cab2">Antes de salir</div>
+    <a href="#hoteles" onclick="cerrarMenuInfo()">🏨 Dónde dormir</a>
+    <a href="#transporte" onclick="cerrarMenuInfo()">🚇 Del aeropuerto al centro, y el metro</a>
+    <a href="#practico" onclick="cerrarMenuInfo()">🧭 Guía práctica y Copenhagen Card</a>
+    <a href="#offline" onclick="cerrarMenuInfo()">📥 Guardarla en el móvil</a>
+  </div>
+</div></nav>
+
+<main>
+
+<section class="resumen" id="ruta">
+  <div class="kicker">Cómo se usa esto</div>
+  <h2>Muchos planes, ninguna agenda</h2>
+  <p class="intro">Esta guía no os dice qué hacer el sábado a las once. Copenhague es llana, el centro
+  se cruza andando en media hora y el metro va cada pocos minutos, así que lo que de verdad manda en
+  diciembre no es la distancia: <strong>es la luz</strong>. Amanece a las 8:20 y <strong>a las 15:40
+  ya es de noche</strong>. Aquí hay <strong>cinco zonas de la ciudad y las excursiones</strong>, cada
+  una con lo que merece la pena, <strong>dónde comer allí mismo</strong> y las tiendas curiosas que
+  pillan de camino. Elegid sobre la marcha.</p>
+
+  <div class="claves">
+    <div class="clave"><div class="n">15:40</div><div class="t">se pone el sol: lo de fuera, por la mañana; la tarde, para luces, Tivoli y cafés</div></div>
+    <div class="clave"><div class="n">7,46</div><div class="t">coronas danesas por euro, fijo; casi todo se paga con tarjeta</div></div>
+    <div class="clave"><div class="n">15 min</div><div class="t">del aeropuerto al centro en metro o en tren</div></div>
+    <div class="clave"><div class="n">lunes 7</div><div class="t">cierran casi todos los museos: ese día, Tivoli, torres, mercados y tiendas</div></div>
+  </div>
+
+  <h3 class="sub-h">Las zonas, en una línea cada una</h3>
+  <ul class="lista-ver">
+    <li><b><a href="#indre">El centro (Indre By y Slotsholmen)</a></b> — Strøget, el mercadillo grande de Navidad, la Torre Redonda, Rosenborg, Christiansborg y Torvehallerne. Aquí están casi todas las tiendas raras, y las dos de las pinzas.</li>
+    <li><b><a href="#nyhavn">Nyhavn y Frederiksstaden</a></b> — el canal de las casas de colores, el palacio real, la iglesia de mármol, Kastellet y la Sirenita. Para pasear con luz.</li>
+    <li><b><a href="#christianshavn">Christianshavn, Christiania y el puerto</a></b> — canales con barcos, la torre de la escalera por fuera, la ciudad libre y las saunas flotantes.</li>
+    <li><b><a href="#vesterbro">Vesterbro, Tivoli y Frederiksberg</a></b> — Tivoli de Navidad, la Glyptoteca, el antiguo matadero de Kødbyen para cenar y la calle «francesa» de Værnedamsvej.</li>
+    <li><b><a href="#norrebro">Nørrebro y Østerbro</a></b> — barrio de vecinos: Jægersborggade, las panaderías que salen en todas las listas, el cementerio donde está Andersen y los lagos.</li>
+    <li><b><a href="#excursiones">Excursiones</a></b> — Louisiana, el castillo de Hamlet, Roskilde, Bakken en Navidad o Malmö por el puente. Una, como mucho, y no el lunes.</li>
+  </ul>
+
+  <div class="tip"><b>Tres cosas que conviene saber antes de nada:</b> el <b>lunes 7 cierran casi
+  todos los museos</b> (SMK, Glyptoteca, Nacional, Rosenborg, Louisiana…), así que ese es el día de
+  Tivoli, torres, mercadillos y compras; el <b>smørrebrød es de mediodía</b>, casi nadie lo sirve
+  de cena; y los <b>viernes y sábados de diciembre son noches de cena de empresa</b>
+  (<i>julefrokost</i>): las cenas de esos dos días, reservadas desde casa.</div>
+
+  <p class="intro" style="margin-top:18px">Y fuera de las zonas: <a href="#navidad"><b>la Navidad</b></a>
+  (Tivoli, mercadillos, el Cascanueces), <a href="#comer"><b>comer</b></a> con la tabla de quién abre
+  cada día, <a href="#tiendas"><b>las tiendas raras</b></a> todas juntas y
+  <a href="#hoteles"><b>dónde dormir</b></a>. El botón ⚡ de abajo a la derecha tiene el
+  <b>«¿qué tengo cerca?»</b>: usa el GPS y os ordena por distancia los
+  <span data-total-sitios>120</span> sitios de la guía, filtrando por comida, café, tiendas o planes.</p>
+</section>

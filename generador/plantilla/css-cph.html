@@ -1,0 +1,255 @@
+<style>
+  /* ================== COPENHAGUE: paleta y piezas propias ==================
+     El rojo de la bandera danesa y el azul de los canales.
+     */
+  :root{
+    --crema:#f8f6f1; --tinta:#1f2328; --tinta2:#5b636b;
+    --oro:#b3122e; --oro-suave:#f6dfe3; --teca:#1f4b6e;
+    --verde:#3d7a4a; --mar:#2f6f8f; --linea:#e3e0d9;
+    --vino:#b3122e; --praline:#d4607a;
+    --card:#ffffff; --sombra:0 2px 14px rgba(20,35,60,.09);
+  }
+  html[data-tema="oscuro"]{
+    --crema:#12151a; --tinta:#e9ecef; --tinta2:#a3acb5;
+    --oro:#ef8193; --oro-suave:#2c1a1f; --teca:#8fbde0;
+    --verde:#8fb086; --mar:#6fb0c2; --linea:#2a3038;
+    --vino:#ef8193; --praline:#ef8193;
+    --card:#1a1e24; --sombra:0 2px 14px rgba(0,0,0,.45);
+  }
+
+  /* los sellos de esta guía (tres sitios: comer.py, la tabla SELLO del JS y aquí) */
+  .sitios .sello.smorre,.cerca-sello.k-smorre{background:#1f4b6e}
+  .sitios .sello.pan,.cerca-sello.k-pan{background:#a8661c}
+  .sitios .sello.cafe,.cerca-sello.k-cafe{background:#6b4a33}
+  .sitios .sello.tienda,.cerca-sello.k-tienda{background:#7a4a86}
+  .sitios .sello.pinzas,.cerca-sello.k-pinzas{background:#c2185b}
+  .sitios .sello.navidad,.cerca-sello.k-navidad{background:#b3122e}
+  .sitios .sello.plan,.cerca-sello.k-plan{background:#2f6f8f}
+  .sitios .sello.leyenda,.cerca-sello.k-leyenda{background:#8a6a1f}
+  .sitios .sello.capricho,.cerca-sello.k-capricho{background:#4a3f8f}
+  /* la nota en estrellas: dorado sobre claro, y las vacías apagadas */
+  .nota{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.86rem;letter-spacing:1px;
+    color:#a8740f;margin-left:7px;white-space:nowrap;font-weight:700;cursor:help}
+  .nota i{font-style:normal;color:#d9cdb4}
+  .cerca-n .nota{font-size:.78rem}
+  html[data-tema="oscuro"] .nota{color:#e8b64c}
+  html[data-tema="oscuro"] .nota i{color:#4d4238}
+    /* «qué hay que probar»: cada plato con su foto (sep-2026) */
+  .probar{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin:10px 0 6px}
+  .probar-item{background:var(--card);border:1px solid var(--linea);border-radius:12px;overflow:hidden;box-shadow:var(--sombra)}
+  .probar-item img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block;background:#eee}
+  .probar-item p{margin:0;padding:11px 14px 13px;font-size:.9rem;line-height:1.5}
+  .probar-item.sin-foto{grid-column:1/-1}
+  .probar-grupo{font-family:-apple-system,'Segoe UI',sans-serif;font-size:1rem;margin:22px 0 2px;padding-bottom:5px;border-bottom:2px solid var(--oro)}
+  .probar-grupo span{display:block;font-weight:400;font-size:.86rem;color:var(--tinta2);margin-top:2px}
+  /* «los mejores»: dos columnas que en el móvil se apilan */
+  .podio{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:10px 0 4px}
+  .podio-col{background:var(--card);border:1px solid var(--linea);border-radius:12px;padding:14px 16px 6px;box-shadow:var(--sombra)}
+  .podio-cab{font-family:-apple-system,'Segoe UI',sans-serif;font-weight:700;font-size:.9rem;
+    color:var(--teca);text-transform:uppercase;letter-spacing:.6px;margin-bottom:6px}
+  .podio ol{margin:0;padding-left:20px}
+  .podio li{margin:0 0 10px;line-height:1.4}
+  .podio li small{display:block;color:var(--tinta2);font-size:.82rem;margin-top:2px}
+  .podio a,.lista-ver a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--mar)}
+
+  /* la tabla de «quién abre el fin de semana» */
+  .tabla-abre td.ab-si,.tabla-abre td.ab-no,.tabla-abre td.ab-medio{text-align:center;
+    font-family:-apple-system,'Segoe UI',sans-serif;font-weight:600;font-size:.85rem;white-space:nowrap}
+  .tabla-abre td.ab-si{color:#2f6d3f}
+  .tabla-abre td.ab-no{color:#a33; font-size:1.1rem}
+  .tabla-abre td.ab-medio{color:#96650f;font-size:.78rem}
+  html[data-tema="oscuro"] .tabla-abre td.ab-si{color:#8fd3a2}
+  html[data-tema="oscuro"] .tabla-abre td.ab-no{color:#f08c8c}
+  html[data-tema="oscuro"] .tabla-abre td.ab-medio{color:#e8c07a}
+  .tabla-abre td.ab-n{font-weight:600}
+  .tabla-abre td.ab-nota{font-size:.84rem;color:var(--tinta2);line-height:1.5}
+  .ab-comp{color:#2f6d3f;margin-left:6px;font-size:.8rem;cursor:help}
+  html[data-tema="oscuro"] .ab-comp{color:#8fd3a2}
+
+  /* el total de las dos noches, bajo el precio por noche */
+  .total-est{display:block;font-size:.74rem;font-weight:400;color:var(--tinta2);margin-top:3px;line-height:1.35}
+
+  /* al saltar a una sección, que el nav pegajoso no tape el título */
+  .etapa-sec,section[id],#tiempo{scroll-margin-top:64px}
+
+  /* alguna foto viene pequeña de origen: a todo lo ancho se ve blanda */
+  .banner.pequeno{max-width:660px;margin-left:auto;margin-right:auto}
+
+  /* el hero: la fuente Bartholdi a pleno sol en la place des Terreaux (28-sep-2026; Adil
+     quería luz: antes Saint-Georges de noche, y antes un mar de tejados). La foto es clara,
+     así que arriba casi no se toca y abajo el degradado sube para que se lea el texto */
+  header.hero{background:linear-gradient(180deg,rgba(10,20,35,.08) 0%,rgba(10,20,35,.42) 40%,rgba(10,20,35,.82) 100%),
+    url('img/portada-hero.jpg') center 40%/cover no-repeat}
+  /* con fondo claro, la fecha y el subtítulo necesitan sombra igual que el título */
+  .hero .fechas,.hero .sub{text-shadow:0 1px 10px rgba(0,0,0,.75),0 0 2px rgba(0,0,0,.6)}
+
+  /* los bloques de fondo claro también en modo oscuro (si no, texto claro sobre fondo claro) */
+  html[data-tema="oscuro"] .comer,
+  html[data-tema="oscuro"] .excel-nota,
+  html[data-tema="oscuro"] .leyenda-hoteles{background:#1a1417;border-color:#33272c}
+  html[data-tema="oscuro"] .cerca-invita{background:#1a1417;border-color:#33272c}
+  .comer h3::before{content:'🍽️ '}
+  .comer.pan-bloque h3::before{content:'🥐 '}
+  .comer.tiendas-bloque h3::before{content:'🛍️ '}
+
+  /* secciones de aviso: la del carnaval y la de lo que hay que reservar */
+  .aviso-sec{background:linear-gradient(135deg,#fdf0f2,#fbf6ef);border:1px solid #f0cdd4;
+    border-radius:16px;padding:26px 26px 8px;margin:34px 0 10px}
+  html[data-tema="oscuro"] .aviso-sec{background:linear-gradient(135deg,#241419,#1d1a17);border-color:#3d232a}
+  .aviso-sec > .kicker{color:var(--teca)}
+
+  /* el mapa: una imagen de OpenStreetMap de fondo y las zonas encima, cada una
+     en su coordenada real. Los colores van en CSS y también literales en el SVG:
+     fill="var(--x)" en un ATRIBUTO no lo resuelven Safari ni iOS. */
+  .mapa-wrap{display:block;margin:22px 0 10px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .mapa-svg{width:100%;min-width:660px;height:auto;display:block;border-radius:14px;
+    border:1px solid var(--linea);box-shadow:var(--sombra)}
+  .m-base{opacity:.95}
+  html[data-tema="oscuro"] .m-base{filter:invert(.9) hue-rotate(180deg) saturate(.55) brightness(1.05)}
+
+  .m-punto circle{fill:#45343c;stroke:#ffffff;stroke-width:2.5}
+  .m-punto.destaca circle{fill:#b3122e;stroke:#ffffff;stroke-width:3}
+  html[data-tema="oscuro"] .m-punto circle{stroke:#171114}
+  /* las etiquetas del mapa van a la escala de su imagen (heredado de Lyon: la ciudad cabe
+     en menos sitio), así que las etiquetas van a su escala, no a la de allí */
+  .m-tit{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-size:22px;font-weight:700;
+    fill:#2b1b22;paint-order:stroke;stroke:#ffffff;stroke-width:5.5;stroke-linejoin:round}
+  .m-sub{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-size:17px;font-weight:500;
+    fill:#6a5560;paint-order:stroke;stroke:#ffffff;stroke-width:5;stroke-linejoin:round}
+  html[data-tema="oscuro"] .m-tit{fill:#f5edf0;stroke:#120d10;stroke-width:5}
+  html[data-tema="oscuro"] .m-sub{fill:#cbb9c0;stroke:#120d10;stroke-width:4.5}
+
+  /* la casa donde duermen, marcada aparte del resto */
+  .m-punto.casa circle{fill:#7a2f8f;stroke:#ffffff;stroke-width:5}
+  html[data-tema="oscuro"] .m-punto.casa circle{fill:#c98ada;stroke:#121a22}
+  .m-punto.casa .m-tit{font-size:29px;letter-spacing:1px;fill:#5f2472}
+  html[data-tema="oscuro"] .m-punto.casa .m-tit{fill:#e3bff0}
+
+  /* cada zona del mapa es un enlace a su sección */
+  a.m-punto{cursor:pointer}
+  .m-toca{fill:transparent}
+  a.m-punto:hover .m-toca,a.m-punto:focus .m-toca{fill:#b3122e;fill-opacity:.10}
+  html[data-tema="oscuro"] a.m-punto:hover .m-toca{fill:#e8879a;fill-opacity:.16}
+  a.m-punto:hover circle{stroke-width:6}
+  a.m-punto:hover .m-tit{text-decoration:underline}
+  a.m-punto:focus{outline:none}
+  a.m-punto:focus-visible .m-toca{fill-opacity:.18;stroke:#b3122e;stroke-width:3}
+  .mapa-pinchar b{color:var(--teca)}
+  .mapa-credito a{color:var(--mar)}
+
+  /* leyenda bajo el mapa */
+  .mapa-pie{display:flex;flex-wrap:wrap;gap:16px;font-size:.82rem;color:var(--tinta2);margin:0 0 18px}
+  .mapa-pie span{display:inline-flex;align-items:center;gap:7px}
+  .m-ll{width:12px;height:12px;border-radius:50%;background:#45343c;display:inline-block}
+  html[data-tema="oscuro"] .m-ll{background:#b9a6ad}
+  .m-ll.casa{background:#7a2f8f}
+  html[data-tema="oscuro"] .m-ll.casa{background:#c98ada}
+  .m-ll.destaca{background:#b3122e}
+  html[data-tema="oscuro"] .m-ll.destaca{background:#e8879a}
+  .m-ll.rio{width:22px;height:7px;border-radius:4px;background:#7fb0c4}
+  html[data-tema="oscuro"] .m-ll.rio{background:#2b6076}
+
+  /* la invitación al «qué tengo cerca» */
+  .cerca-invita{background:#fbf4f5;border:1px solid #ecd6da;border-radius:12px;
+    padding:14px 18px;margin:20px 0 6px;font-size:.93rem;color:var(--tinta2);line-height:1.6}
+  .cerca-invita b{color:var(--tinta)}
+  .cerca-btn{display:inline-block;margin-left:8px;margin-top:8px;background:var(--oro);color:#fff;
+    border:none;border-radius:9px;padding:9px 16px;font-size:.9rem;font-weight:600;cursor:pointer;
+    font-family:-apple-system,'Segoe UI',sans-serif}
+  .cerca-btn:hover{background:var(--teca)}
+  .cerca-sello.k-amigo{background:#a8386b}
+
+  /* el botón de guardar sin conexión */
+  .offline-caja{margin:18px 0 6px}
+  .offline-btn{background:var(--oro);color:#fff;border:none;border-radius:10px;padding:13px 22px;
+    font-size:1rem;font-weight:600;cursor:pointer;font-family:-apple-system,'Segoe UI',sans-serif;
+    box-shadow:0 2px 10px rgba(20,40,70,.18)}
+  .offline-btn:hover{background:var(--teca)}
+  .offline-btn[disabled]{opacity:.6;cursor:default}
+  .offline-estado{margin-top:10px;font-family:-apple-system,'Segoe UI',sans-serif;
+    font-size:.9rem;color:var(--tinta2)}
+
+  /* el sello «lleva décadas abierto» heredaba la caja .leyenda del mapa (padding,
+     borde y sombra) y salía como un botón enorme: aquí se le devuelve su tamaño */
+  .sitios .sello.leyenda{padding:0;border:none;box-shadow:none;background:var(--teca)}
+  .leyenda-sellos i{padding:0;border:none;box-shadow:none}
+
+  /* el tiempo, día a día */
+  .tiempo-rejilla{display:grid;gap:8px;margin:20px 0 14px}
+  .t-dia{display:grid;grid-template-columns:132px 34px 1fr 84px 74px 92px;align-items:center;gap:10px;
+    background:var(--card);border:1px solid var(--linea);border-radius:11px;padding:10px 14px;
+    font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-size:.9rem;color:var(--tinta2)}
+  .t-dia.mojado{border-color:#bcd6e2;background:linear-gradient(90deg,#eef6fa,var(--card) 60%)}
+  html[data-tema="oscuro"] .t-dia.mojado{border-color:#26485c;background:linear-gradient(90deg,#152630,var(--card) 60%)}
+  .t-cuando b{color:var(--tinta);text-transform:capitalize}
+  .t-cuando span{display:block;font-size:.76rem}
+  .t-icono{font-size:1.5rem;text-align:center;line-height:1}
+  .t-cielo{color:var(--tinta)}
+  .t-grados b{color:var(--teca);font-size:1.12rem}
+  .t-grados span{margin-left:7px}
+  .t-lluvia,.t-viento{font-size:.85rem;white-space:nowrap}
+  .t-pie{display:flex;flex-wrap:wrap;gap:6px 20px;font-size:.82rem;color:var(--tinta2);margin-bottom:16px}
+  #tiempoSello.al-dia::before{content:'● ';color:var(--verde)}
+  @media(max-width:680px){
+    .t-dia{grid-template-columns:1fr 34px 74px;grid-template-areas:'cuando icono grados' 'cielo cielo cielo' 'll ll vv';
+      row-gap:4px}
+    .t-cuando{grid-area:cuando} .t-icono{grid-area:icono} .t-grados{grid-area:grados;text-align:right}
+    .t-cielo{grid-area:cielo} .t-lluvia{grid-area:ll} .t-viento{grid-area:vv;text-align:right}
+  }
+
+  /* créditos de fotos en el pie */
+  .creditos{margin-top:16px;font-family:-apple-system,'Segoe UI',sans-serif;font-size:.82rem}
+  .creditos summary{cursor:pointer;color:var(--tinta2)}
+  .creditos ul{margin:10px 0 6px 18px;line-height:1.7}
+  .creditos a{color:var(--mar)}
+
+  @media(max-width:560px){
+    .aviso-sec{padding:20px 16px 4px;border-radius:12px}
+  }
+
+  /* ---------- Copenhague (oct-2026): piezas nuevas ---------- */
+  /* filtros del «¿qué tengo cerca?» */
+  .cerca-filtros{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 10px}
+  .cerca-filtros button{font:600 .8rem -apple-system,'Segoe UI',sans-serif;border:1px solid var(--linea);
+    background:var(--card);color:var(--tinta2);border-radius:999px;padding:6px 11px;cursor:pointer}
+  .cerca-filtros button.activo{background:var(--oro);border-color:var(--oro);color:#fff}
+  /* las tarjetas de planes */
+  /* el sello en las tarjetas de planes: fuera de .sitios no hereda el tamaño (salía a toda página) */
+  .plan-card .sello{display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;
+    color:#fff;margin-left:6px;vertical-align:middle}
+  .plan-card .sello svg{width:10px;height:10px;display:block}
+  .plan-card .sello.navidad{background:#b3122e}
+  .plan-card h4 i.local{font-weight:400;color:var(--tinta2);font-size:.9em}
+  .plan-hor{font-size:.86rem;color:var(--tinta2);margin:6px 0 0}
+  .plan-enl{font-size:.85rem;margin:8px 0 0}
+  .plan-enl a{color:var(--mar);text-decoration:none;font-weight:600}
+  .comer-intro{font-size:.92rem;color:var(--tinta2);margin:0 0 8px}
+  .sitios li a + a{margin-left:2px}
+  /* la caja de las pinzas */
+  .pinzas-caja{background:var(--card);border:2px solid #c2185b;border-radius:14px;padding:16px 20px;
+    margin:18px 0 8px;box-shadow:var(--sombra)}
+  .pinzas-caja h3{font-family:-apple-system,'Segoe UI',sans-serif;color:#c2185b;font-size:1.1rem;margin:0 0 8px}
+  .pinzas-caja p{margin:0 0 10px}
+  html[data-tema="oscuro"] .pinzas-caja{border-color:#f06292}
+  html[data-tema="oscuro"] .pinzas-caja h3{color:#f48fb1}
+  /* hoteles */
+  .hoteles .reco{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.72rem;font-weight:700;
+    background:var(--oro);color:#fff;border-radius:6px;padding:1px 6px;margin-left:4px;white-space:nowrap}
+  .hoteles .flojo{display:block;color:var(--tinta2);font-size:.85rem;margin-top:4px}
+  .hoteles .fuente-precio{color:var(--tinta2)}
+  .precio-cell b{display:block;white-space:nowrap}
+  .precio-cell .tot{display:block;font-size:.72rem;color:var(--tinta2);margin-bottom:4px}
+  .pinzas-caja a,.tabla-abre a,.hoteles td a:not(.booking):not(.hotel),.lista-ver li a,.tip a,.presu-nota a{color:inherit;
+    text-decoration:none;border-bottom:1px dotted var(--mar)}
+  .probar-item .donde{color:var(--tinta2);font-size:.85rem}
+  /* la tabla de hoteles, en el móvil, como tarjetas: cinco columnas no caben en 390 px */
+  @media (max-width:640px){
+    table.h-tarjetas,table.h-tarjetas tbody,table.h-tarjetas tr,table.h-tarjetas td{display:block;width:auto!important;
+      min-width:0!important;max-width:none!important;box-sizing:border-box;white-space:normal!important}
+    table.h-tarjetas thead{display:none}
+    table.h-tarjetas tr{border-bottom:1px solid var(--linea);padding:10px 4px}
+    table.h-tarjetas td{border:none;padding:3px 10px}
+    table.h-tarjetas .precio-cell b,table.h-tarjetas .precio-cell .tot{display:inline;margin-right:6px}
+    table.h-tarjetas .nota-cell{font-size:.85rem;color:var(--tinta2)}
+  }
+</style>

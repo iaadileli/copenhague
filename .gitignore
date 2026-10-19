@@ -1,0 +1,10 @@
+__pycache__/
+node_modules/
+generador/datos-fuente/cand/
+generador/datos-fuente/hojas/
+*.mp3.tmp
+generador/datos-fuente/capturas/
+.ultima-actualizacion-tiempo
+generador/datos-fuente/teselas/
+.venv/
+generador/datos-fuente/hojas2/

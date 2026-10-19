@@ -1,0 +1,1129 @@
+[
+  {
+    "nombre": "Hart Bageri (Gammel Mønt)",
+    "tipo": "panaderia",
+    "zona": "Indre By",
+    "direccion": "Gammel Mønt 4, 1117 København K",
+    "lat": 55.68122,
+    "lon": 12.58162,
+    "que_es": "La panadería de Richard Hart (ex jefe de pan de Tartine) en alianza con René Redzepi de Noma: masa madre con harina danesa recién molida. Tiene una decena de locales; este es el más céntrico para ir a pie.",
+    "que_pedir": "Cardamom bun (kardemommebolle) y croissant de drømmekage; de la carta: croissant de cardamomo, spandauer, cookie de chocolate; pan City Loaf o Everyday Rye (rugbrød).",
+    "precio": "€€",
+    "precio_txt": "Carta oficial de pre-pedido: croissant 34 DKK ≈ 4,56 €; croissant de cardamomo 42 DKK ≈ 5,63 €; spandauer 38 DKK ≈ 5,09 €; bollo 'Bun' 16 DKK ≈ 2,14 €; City Loaf 59 DKK ≈ 7,91 €; Everyday Rye 50 DKK ≈ 6,70 €. El cardamom bun no aparece con precio.",
+    "horario": {
+      "vie 4": "08:00–18:00",
+      "sáb 5": "08:00–18:00",
+      "dom 6": "08:00–18:00",
+      "lun 7": "08:00–18:00",
+      "mar 8": "08:00–18:00"
+    },
+    "web": "https://hartbageri.com · Instagram @hartbageri",
+    "fuentes": [
+      "https://hartbageri.com/locations",
+      "https://hartbageri.com/pre-order?shop=reffen",
+      "https://www.falstaff.com/en/bakeries/hart-bakery",
+      "https://www.falstaff.com/en/bakeries/hart-bageri",
+      "https://andershusa.com/seven-bakeries-in-copenhagen-you-have-to-know-these-have-the-best-pastries-and-baked-goods/"
+    ],
+    "premios": "Sede original (Gammel Kongevej 109, Frederiksberg): 92/100 en Falstaff Coffee Guide Nordics 2026.",
+    "nota": 3,
+    "verificado": true,
+    "notas": "Horario sacado de los datos estructurados de la web oficial (diario 08–18). Falstaff da lun–vie 07:30 para Gammel Mønt: si vais muy temprano, confirmad. Otras sedes: Gammel Kongevej 109 (Frederiksberg, la original; oficial L–V 07:30–18, S–D 08–18), Istedgade 61, Høkerboderne 17 (Kødbyen), Store Kongensgade 75 (Marmorkirken), Ravnsborggade 1 (Nørrebro), Galionsvej 41 (Holmen), Islands Brygge 23, Refshalevej 159A y Franciska Clausens Plads 29 (Carlsberg Byen)."
+  },
+  {
+    "nombre": "JUNO the bakery",
+    "tipo": "panaderia",
+    "zona": "Østerbro",
+    "direccion": "Århusgade 48, 2100 København Ø",
+    "lat": 55.70616,
+    "lon": 12.58169,
+    "que_es": "Panadería familiar pequeña en una esquina tranquila de Østerbro, abierta desde 2018 y famosa por las colas. Muchas guías la ponen entre las mejores de la ciudad.",
+    "que_pedir": "Kardemommebolle (bollo de cardamomo a la sueca), croissant de almendra, vanilla bun; de temporada: hindbærsnitter, lemon cake y bollo de crema de manzana. Para llevar: sus galletas de mantequilla (lata de cardamomo 90 DKK).",
+    "precio": "€€",
+    "precio_txt": "Galletas de mantequilla (web oficial): lata 'classic' 90 DKK ≈ 12,06 €, surtido 185 DKK ≈ 24,80 €. Precio de los bollos: sin confirmar.",
+    "horario": {
+      "vie 4": "07:30–18:00",
+      "sáb 5": "07:30–18:00",
+      "dom 6": "07:30–16:00",
+      "lun 7": "CERRADO",
+      "mar 8": "07:30–18:00"
+    },
+    "web": "https://www.junothebakery.com · Instagram @junothebakery",
+    "fuentes": [
+      "https://www.junothebakery.com/",
+      "https://andershusa.com/seven-bakeries-in-copenhagen-you-have-to-know-these-have-the-best-pastries-and-baked-goods/",
+      "https://www.visitcopenhagen.com/copenhagen/eat-drink/coffee-and-bakeries/best-bakeries-and-pastry-shops",
+      "https://www.falstaff.com/en/cafes/juno"
+    ],
+    "premios": "Visit Copenhagen la incluye entre las mejores panaderías (destaca los cardamom rolls). Un blog hotelero dice que Berlingske la nombró la mejor de Copenhague en 2024 y 2025: SIN CONFIRMAR (no he podido abrir el artículo de Berlingske).",
+    "nota": 3,
+    "verificado": true,
+    "notas": "LUNES 7 CERRADA. Domingo 6 cierra a las 16:00. Prolog Kødbyen vende su bollería."
+  },
+  {
+    "nombre": "Andersen & Maillard (Nørrebro, tostadero)",
+    "tipo": "panaderia",
+    "zona": "Nørrebro",
+    "direccion": "Nørrebrogade 62, 2200 København N",
+    "lat": 55.69042,
+    "lon": 12.55503,
+    "que_es": "Café-tostadero-obrador en un antiguo banco, montado en 2018 por ex pasteleros de Noma y tostadores. Sirven café tostado en casa y bollería laminada que empiezan a hornear a las 3 de la madrugada.",
+    "que_pedir": "Croissant glaseado y bollería laminada del día, con un filtro o espresso de su propio tueste.",
+    "precio": "€€",
+    "precio_txt": "Bollería: sin confirmar. Café en grano 250 g desde 129 DKK (web oficial).",
+    "horario": {
+      "vie 4": "07:00–18:00",
+      "sáb 5": "08:00–18:00",
+      "dom 6": "08:00–18:00",
+      "lun 7": "07:00–18:00",
+      "mar 8": "07:00–18:00"
+    },
+    "web": "https://www.andersenmaillard.dk · Instagram @andersenmaillard",
+    "fuentes": [
+      "https://www.andersenmaillard.dk/pages/locations",
+      "https://www.falstaff.com/en/bakeries/andersen-og-maillard"
+    ],
+    "premios": "95/100 en Falstaff Coffee Guide Nordics 2026 (40/40 en café), número 1 de la lista de cafés de Copenhague de Falstaff.",
+    "nota": 3,
+    "verificado": true,
+    "notas": "Sede céntrica más práctica: Ny Østergade 15, 1101 København K (L–V 07–18, fin de semana 08–18; lat 55.681527, lon 12.582235 según OSM). Tercera sede: Antwerpengade 10, Nordhavn (todos los días 07–18)."
+  },
+  {
+    "nombre": "Lille Bakery",
+    "tipo": "panaderia",
+    "zona": "Refshaleøen",
+    "direccion": "Refshalevej 213B, 1432 København K",
+    "lat": 55.69006,
+    "lon": 12.61329,
+    "que_es": "Panadería ecológica en la antigua isla de los astilleros, financiada en su día por Kickstarter y montada por gente que pasó por Noma, 108 y Fäviken. Ambiente de nave industrial, mesas largas y cola de fin de semana.",
+    "que_pedir": "Berliner relleno de crema de vainilla, sausage roll (vuela pronto), cardamom bun, pan de masa madre integral. En Navidad: stollen, galletas navideñas y bollos dorados de Santa Lucía.",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "08:00–17:00",
+      "sáb 5": "08:00–17:00",
+      "dom 6": "08:00–17:00",
+      "lun 7": "CERRADO",
+      "mar 8": "CERRADO"
+    },
+    "web": "https://www.lillegrocery.com · Instagram @lillebakery",
+    "fuentes": [
+      "https://www.lillebakery.com/ (redirige a lillegrocery.com)",
+      "https://www.falstaff.com/en/bakeries/lille-bakery",
+      "https://andershusa.com/seven-bakeries-in-copenhagen-you-have-to-know-these-have-the-best-pastries-and-baked-goods/",
+      "https://www.visitcopenhagen.com/copenhagen/this-is-copenhagen/seasons/cakes-and-christmas-delights"
+    ],
+    "premios": "89/100 en Falstaff Coffee Guide Nordics 2026.",
+    "nota": 3,
+    "verificado": true,
+    "notas": "Abre de miércoles a domingo: LUNES 7 y MARTES 8 CERRADA. La web avisa de cierre de invierno desde el 21-dic-2026 hasta el 20-ene-2027, así que el 4-6 dic está abierta. Falstaff sugiere llegar en el ferry amarillo desde Nyhavn."
+  },
+  {
+    "nombre": "Meyers Bageri Jægersborggade",
+    "tipo": "panaderia",
+    "zona": "Nørrebro",
+    "direccion": "Jægersborggade 9, 2200 København N",
+    "lat": 55.69186,
+    "lon": 12.54493,
+    "que_es": "La primera panadería de Claus Meyer (cofundador de Noma), de 2010, que arrancó la revolución del pan de masa madre en Copenhague. Local diminuto en una calle de tiendas pequeñas.",
+    "que_pedir": "Kanelsnurre (la caracola de canela de la casa, su bollo emblema), Ølandsbrød (su pan insignia), rugbrød 100 % centeno. En Navidad: la galleta-brownie especiada para mojar en gløgg.",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "07:00–18:00",
+      "sáb 5": "07:00–16:00",
+      "dom 6": "07:00–16:00",
+      "lun 7": "07:00–18:00",
+      "mar 8": "07:00–18:00"
+    },
+    "web": "https://meyers.dk/bagerier/noerrebro",
+    "fuentes": [
+      "https://meyers.dk/bagerier/noerrebro",
+      "https://www.falstaff.com/en/cafes/meyers-bageri-jaegersborggade",
+      "https://www.visitcopenhagen.com/copenhagen/this-is-copenhagen/seasons/cakes-and-christmas-delights"
+    ],
+    "premios": "89/100 en Falstaff Coffee Guide Nordics 2026.",
+    "nota": 2,
+    "verificado": true,
+    "notas": "Falstaff: si llevas un tarro te regalan masa madre. Otras sedes: Classensgade 33 (Østerbro) y Amagerbrogade 48 (Amager). Está a 250 m de Coffee Collective Jægersborggade."
+  },
+  {
+    "nombre": "Sankt Peders Bageri",
+    "tipo": "panaderia",
+    "zona": "Indre By",
+    "direccion": "Sankt Peders Stræde 29, 1453 København K",
+    "lat": 55.67913,
+    "lon": 12.56921,
+    "que_es": "La panadería más antigua de Copenhague (desde 1652), en el Barrio Latino, con local protegido, lámparas negras y nueve taburetes. Famosa por su caracola gigante de los miércoles.",
+    "que_pedir": "Onsdagssnegl (la 'caracola del miércoles', una kanelsnegl gigante), kringle y tebirkes.",
+    "precio": "€",
+    "precio_txt": "Sin confirmar (la única cifra que he visto es de 2016, demasiado vieja).",
+    "horario": {
+      "vie 4": "07:30–17:00",
+      "sáb 5": "08:00–16:00",
+      "dom 6": "CERRADO",
+      "lun 7": "07:30–17:00",
+      "mar 8": "07:30–17:00"
+    },
+    "web": "Sin web propia. Facebook: facebook.com/Sanktpedersbageri · Instagram @sct.pedersbageriogkonditori",
+    "fuentes": [
+      "https://www.falstaff.com/en/cafes/skt-peders-bageri",
+      "https://www.visitcopenhagen.com/copenhagen/planning/sankt-peders-bageri-gdk703530",
+      "https://www.thelocal.dk/20210812/the-danish-pastries-you-need-to-know-to-count-yourself-a-copenhagen-local"
+    ],
+    "premios": "86/100 en Falstaff Coffee Guide Nordics 2026.",
+    "nota": 3,
+    "verificado": true,
+    "notas": "EL MIÉRCOLES NO CAE EN EL VIAJE (vie 4–mar 8). Según Falstaff 2026 la onsdagssnegl ya se vende casi todos los días, pero el descuento sigue siendo solo los miércoles. Visit Copenhagen habla de unas 4.000 caracolas cada miércoles. DOMINGO 6 CERRADA. Horario de Falstaff 2026; no hay web oficial para contrastarlo."
+  },
+  {
+    "nombre": "Conditori La Glace",
+    "tipo": "pasteleria",
+    "zona": "Indre By",
+    "direccion": "Skoubogade 3-5, 1158 København K",
+    "lat": 55.67859,
+    "lon": 12.57359,
+    "que_es": "La pastelería más antigua de Copenhague, abierta en 1870 por Nicolaus Henningsen, con salones de época donde se sirve tarta en porciones. En noviembre ya decoran los escaparates para Navidad.",
+    "que_pedir": "Sportskage (la tarta de la casa desde 1891: nata, crocante de nougat, profiteroles caramelizados y base de macaron). En Navidad: cerditos de mazapán (grisebasser), brune kager, finskbrød, klejner, pebernødder y corazones de miel. Buen chocolate caliente.",
+    "precio": "€€€",
+    "precio_txt": "Sportskage por porción: 89 DKK ≈ 11,93 € (web oficial).",
+    "horario": {
+      "vie 4": "08:30–18:00",
+      "sáb 5": "09:00–18:00",
+      "dom 6": "10:00–18:00",
+      "lun 7": "08:30–18:00",
+      "mar 8": "08:30–18:00"
+    },
+    "web": "https://laglace.dk",
+    "fuentes": [
+      "https://laglace.dk/besoeg-la-glace/aabningstider/",
+      "https://laglace.dk/kage/sportskage/",
+      "https://laglace.dk/kage/jul/",
+      "https://www.falstaff.com/en/bakeries/la-glace",
+      "https://lie-studio.dk/blogs/journal/copenhagen-guide-holiday-edition"
+    ],
+    "premios": "Recomendada por Visit Copenhagen (best bakeries and pastry shops) y en la guía navideña de Lié Studio (dic-2025).",
+    "nota": 3,
+    "verificado": true,
+    "notas": "Dejan de servir en mesa 30 minutos antes del cierre. Cerrada 25 y 26 dic y 1 ene; nada de eso afecta al viaje."
+  },
+  {
+    "nombre": "Bageriet BRØD",
+    "tipo": "panaderia",
+    "zona": "Vesterbro",
+    "direccion": "Enghave Plads 7, 1670 København V",
+    "lat": 55.666885,
+    "lon": 12.546866,
+    "que_es": "Panadería de barrio en Vesterbro, del mismo equipo que el colmado Kihoskh. Pan rústico de corteza crujiente y bollería clásica y moderna.",
+    "que_pedir": "Baguette, pan de campo, shortbread de cardamomo y spandauer.",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "sin confirmar",
+      "sáb 5": "sin confirmar",
+      "dom 6": "sin confirmar",
+      "lun 7": "sin confirmar",
+      "mar 8": "sin confirmar"
+    },
+    "web": "Instagram (según Visit Copenhagen); sin web propia localizada",
+    "fuentes": [
+      "https://www.visitcopenhagen.com/copenhagen/planning/bageriet-brod-gdk698614"
+    ],
+    "premios": "Incluida en la lista de mejores panaderías de Visit Copenhagen.",
+    "nota": 1,
+    "verificado": false,
+    "notas": "HORARIO SIN CONFIRMAR: Visit Copenhagen no lo publica y solo lo he visto en directorios secundarios poco fiables (diario desde las 07:00). Hay que mirar su Instagram antes de ir."
+  },
+  {
+    "nombre": "Rug Bakery",
+    "tipo": "panaderia",
+    "zona": "Vesterbro",
+    "direccion": "Tietgensgade 39, 1704 København V",
+    "lat": 55.66988,
+    "lon": 12.56308,
+    "que_es": "Panadería-café dentro de un hotel de lujo junto a Tivoli, con entrada propia desde la calle. El jefe de pan, Gonzalo Guarda, viene de Noma; Rug significa 'centeno'.",
+    "que_pedir": "Wienerbrød y bollería laminada; de noche, pizza fina y vino (Rug Kitchen).",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "07:00–16:00 (panadería)",
+      "sáb 5": "07:00–16:00 (panadería)",
+      "dom 6": "07:00–16:00 (panadería)",
+      "lun 7": "07:00–16:00 (panadería)",
+      "mar 8": "07:00–16:00 (panadería)"
+    },
+    "web": "https://rugbakery.com",
+    "fuentes": [
+      "https://rugbakery.com/",
+      "https://www.falstaff.com/en/cafes/rug-bakery"
+    ],
+    "premios": "92/100 en Falstaff Coffee Guide Nordics 2026 (20/20 en estilo).",
+    "nota": 2,
+    "verificado": true,
+    "notas": "Horario de la web oficial (L–D 07–16). Falstaff da otro horario más largo; me quedo con la web. Rug Kitchen: mar–sáb 17:30–22:00."
+  },
+  {
+    "nombre": "BUKA Bakery (Nytorv)",
+    "tipo": "panaderia",
+    "zona": "Indre By",
+    "direccion": "Nytorv 3, 1450 København K",
+    "lat": 55.67789,
+    "lon": 12.573194,
+    "que_es": "Panadería con cinco locales en el centro; hacen a diario su pan de masa madre y de centeno con harina de los molinos daneses Valsemøllen y Kornby Mølle, en el obrador de Nytorv.",
+    "que_pedir": "Babka (según guías se agota el viernes antes de mediodía), croissants rellenos, caracolas de canela, pan de masa madre y rugbrød.",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "07:00–18:00",
+      "sáb 5": "07:00–18:00",
+      "dom 6": "07:00–18:00",
+      "lun 7": "07:00–18:00",
+      "mar 8": "07:00–18:00"
+    },
+    "web": "https://buka-bakery.com",
+    "fuentes": [
+      "https://buka-bakery.com/",
+      "https://www.falstaff.com/en/bakeries/buka"
+    ],
+    "premios": null,
+    "nota": 2,
+    "verificado": true,
+    "notas": "Qué pedir (babka, croissants rellenos) sale de guías secundarias, no de la web oficial: tomarlo como orientativo. Otras sedes (web oficial): Store Kongensgade 18 (07–18), Frederiksberggade 21 (07–19), Falkoner Allé 26B (07–17:30), Esplanaden 14 (07–17:30). Está a 80 m de La Glace."
+  },
+  {
+    "nombre": "Collective Bakery",
+    "tipo": "panaderia",
+    "zona": "Nørrebro",
+    "direccion": "Nørrebrogade 176, 2200 København N",
+    "lat": 55.69674,
+    "lon": 12.54554,
+    "que_es": "El obrador de Coffee Collective: reinventan clásicos daneses con harina de Kornby Mølle y mantequilla danesa, y se ve trabajar a los panaderos tras un cristal.",
+    "que_pedir": "Trenza de cardamomo, 'lemon wave'; en Navidad, galleta inspirada en el risalamande (vainilla, arroz inflado, chocolate blanco caramelizado, cerezas y almendra).",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "07:00–17:00",
+      "sáb 5": "07:00–16:00",
+      "dom 6": "07:00–16:00",
+      "lun 7": "07:00–17:00",
+      "mar 8": "07:00–17:00"
+    },
+    "web": "https://coffeecollective.dk/pages/coffee-shop/collective-bakery",
+    "fuentes": [
+      "https://coffeecollective.dk/pages/coffee-shop/collective-bakery",
+      "https://www.falstaff.com/en/cafes/collective-bakery-1",
+      "https://www.visitcopenhagen.com/copenhagen/this-is-copenhagen/seasons/cakes-and-christmas-delights"
+    ],
+    "premios": "90/100 en Falstaff Coffee Guide Nordics 2026.",
+    "nota": 2,
+    "verificado": true,
+    "notas": "Se puede encargar por correo (bageri@coffeecollective.dk). A 400 m de Coffee Collective Jægersborggade."
+  },
+  {
+    "nombre": "Mirabelle Spisería",
+    "tipo": "panaderia",
+    "zona": "Nørrebro",
+    "direccion": "Guldbergsgade 29A, 2200 København N",
+    "lat": 55.69236,
+    "lon": 12.55615,
+    "que_es": "La antigua panadería Mirabelle de Christian Puglisi, ahora un local siciliano de todo el día que conserva el mostrador de pan de masa madre y bollería por la mañana.",
+    "que_pedir": "Por la mañana, espresso en la barra con el bollo de masa madre con mantequilla y queso; luego, cocina siciliana.",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "08:30–00:00",
+      "sáb 5": "08:30–00:00",
+      "dom 6": "08:30–00:00",
+      "lun 7": "08:30–00:00",
+      "mar 8": "08:30–00:00"
+    },
+    "web": "https://www.mirabelle-spiseria.dk",
+    "fuentes": [
+      "https://www.falstaff.com/en/restaurants/mirabelle-spiseria",
+      "https://www.visitdenmark.com/denmark/plan-your-trip/mirabelle-spiseria-gdk1136887"
+    ],
+    "premios": "86/100 en Falstaff Restaurant & Bistro Guide Nordics 2026.",
+    "nota": 1,
+    "verificado": true,
+    "notas": "OJO: ya no es la 'Mirabelle panadería' de las guías antiguas; ahora es un restaurante con mostrador de panadería."
+  },
+  {
+    "nombre": "Lagkagehuset Christianshavn (Ole & Steen)",
+    "tipo": "panaderia",
+    "zona": "Christianshavn",
+    "direccion": "Torvegade 45, 1400 København K",
+    "lat": 55.67247,
+    "lon": 12.59168,
+    "que_es": "La primera tienda de la cadena Lagkagehuset (en el extranjero, Ole & Steen), abierta en 1991 por Ole Kristoffersen en un edificio que parece una tarta de capas. Cadena, sí, pero con cola de vecinos y vistas al canal.",
+    "que_pedir": "Kanelstang (barra de canela), Christianshavnerkage; en Navidad: la julebolle de toda la vida (bollo de cardamomo y remonce con glaseado oscuro y nueces), corazones de miel y flødeboller navideñas.",
+    "precio": "€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "06:00–19:30",
+      "sáb 5": "06:00–19:30",
+      "dom 6": "06:00–19:30",
+      "lun 7": "06:00–19:30",
+      "mar 8": "06:00–19:30"
+    },
+    "web": "https://lagkagehuset.dk",
+    "fuentes": [
+      "https://www.falstaff.com/en/cafes/lagkagehuset-christianshavn",
+      "https://lagkagehuset.dk/jul"
+    ],
+    "premios": "85/100 en Falstaff Coffee Guide Nordics 2026.",
+    "nota": 2,
+    "verificado": true,
+    "notas": "Se coge número y se pide en el mostrador. A pie de la estación de metro Christianshavn. Los productos navideños son de la página 'Jul' de su web (temporada 2025); pueden cambiar en 2026."
+  },
+  {
+    "nombre": "Leckerbaer",
+    "tipo": "pasteleria",
+    "zona": "Østerbro",
+    "direccion": "Ryesgade 118, 2100 København Ø",
+    "lat": 55.69774,
+    "lon": 12.57686,
+    "que_es": "Pastelería de Jakob y Gabi Bär Mogensen, formados en cocinas Michelin, que convierten las galletas danesas en miniaturas pintadas a mano. Tiene un café tranquilo en Østerbro.",
+    "que_pedir": "Småkager (galletitas con coberturas como glaseado de frambuesa, merengue de maracuyá o grosella negra con caramelo salado), mini tartaletas, macarons; para llevar, caja de vaniljekranse.",
+    "precio": "€€",
+    "precio_txt": "Tienda online: caja de vaniljekranse 75 DKK ≈ 10,05 €; lata de butter cookies desde 95 DKK ≈ 12,73 €.",
+    "horario": {
+      "vie 4": "10:00–16:45",
+      "sáb 5": "10:00–15:30",
+      "dom 6": "10:30–15:00",
+      "lun 7": "CERRADO",
+      "mar 8": "10:00–16:45"
+    },
+    "web": "https://leckerbaer.dk",
+    "fuentes": [
+      "https://leckerbaer.dk/",
+      "https://www.falstaff.com/en/cafes/leckerbaer"
+    ],
+    "premios": "89/100 en Falstaff Coffee Guide Nordics 2026 (30/30 en comida).",
+    "nota": 2,
+    "verificado": true,
+    "notas": "Horario de la web oficial (Falstaff da otro un poco distinto). LUNES 7 CERRADA. Cierre por Navidad del 23 al 29 dic (no afecta)."
+  },
+  {
+    "nombre": "Albatross & Venner (Torvehallerne)",
+    "tipo": "panaderia",
+    "zona": "Indre By",
+    "direccion": "Torvehallerne, hal 2, Linnésgade 17, 1361 København K",
+    "lat": 55.68364,
+    "lon": 12.56989,
+    "que_es": "Panadería 100 % ecológica dentro del mercado Torvehallerne, donde ves a los panaderos haciendo croissants y pan a la vista. Producto sobre todo de productores locales.",
+    "que_pedir": "Croissants, pan del día y bollería dulce y salada.",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "07:30–19:00",
+      "sáb 5": "08:00–18:00",
+      "dom 6": "08:00–18:00",
+      "lun 7": "07:30–19:00",
+      "mar 8": "07:30–19:00"
+    },
+    "web": "https://www.albatrossogvenner.dk",
+    "fuentes": [
+      "https://www.albatrossogvenner.dk/",
+      "https://www.falstaff.com/en/bakeries/albatross-venner"
+    ],
+    "premios": null,
+    "nota": 1,
+    "verificado": true,
+    "notas": "Dentro de Torvehallerne, junto a Coffee Collective Torvehallerne: se combinan bien."
+  },
+  {
+    "nombre": "Københavns Bageri",
+    "tipo": "panaderia",
+    "zona": "Vesterbro (Carlsberg Byen)",
+    "direccion": "Flaskehalsen 22, 1799 København V",
+    "lat": 55.66475,
+    "lon": 12.53564,
+    "que_es": "Obrador de 2023 de dos ex panaderos de Noma (pasaron por Alice y Benji) en el antiguo recinto de la cervecera Carlsberg. Clásicos daneses afinados.",
+    "que_pedir": "Kringle hecha con masa de croissant (vainilla, ciruelas pasas francesas, brandy, cardamomo y frutos secos); en Navidad, kringle con especias navideñas. Rugbrød.",
+    "precio": "€€",
+    "precio_txt": "En 2023 (TV 2 Kosmopol): porción de kringle 40 DKK ≈ 5,36 €, media 150 DKK ≈ 20,11 €, entera 300 DKK ≈ 40,21 €; croissant 30 DKK ≈ 4,02 €; kardemommesnurre 30 DKK ≈ 4,02 €. Precios de 2023: probablemente más altos en 2026.",
+    "horario": {
+      "vie 4": "07:00–18:00",
+      "sáb 5": "08:00–18:00",
+      "dom 6": "08:00–18:00",
+      "lun 7": "07:00–18:00",
+      "mar 8": "07:00–18:00"
+    },
+    "web": "https://www.earnest-eats.dk (grupo propietario)",
+    "fuentes": [
+      "https://www.falstaff.com/en/cafes/kobenhavns-bageri",
+      "https://www.tv2kosmopol.dk/tv-2/300-kroner-for-en-kringle-det-synes-jeg-er-utroligt-gennemsnitligt-for-koebenhavn-siger-medejer",
+      "https://www.visitcopenhagen.com/copenhagen/this-is-copenhagen/seasons/cakes-and-christmas-delights"
+    ],
+    "premios": "88/100 en Falstaff Coffee Guide Nordics 2026.",
+    "nota": 2,
+    "verificado": true,
+    "notas": "Horario de Falstaff 2026 (no hay web propia para contrastar). Algo apartada del centro: combinar con Hart Carlsberg Byen o Original Coffee Carlsberg Byen."
+  },
+  {
+    "nombre": "Flere Fugle",
+    "tipo": "panaderia",
+    "zona": "Nordvest (fuera del centro)",
+    "direccion": "Rentemestervej 57, 2400 København NV",
+    "lat": 55.70756,
+    "lon": 12.52471,
+    "que_es": "Antiguo garaje en Nordvest convertido en panadería de día y pizzería con vino natural de noche; lo montaron en 2022 dos profesores y una terapeuta ocupacional sin pasado panadero.",
+    "que_pedir": "Masa madre y bollería laminada (snurrer); de noche, pizza de masa madre.",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "07:30–22:00",
+      "sáb 5": "08:00–22:00",
+      "dom 6": "08:00–20:45",
+      "lun 7": "07:30–21:00",
+      "mar 8": "07:30–21:00"
+    },
+    "web": "https://www.flerefugle.dk",
+    "fuentes": [
+      "https://www.falstaff.com/en/cafes/flere-fugle",
+      "https://www.flerefugle.dk/"
+    ],
+    "premios": "91/100 en Falstaff Coffee Guide Nordics 2026.",
+    "nota": 1,
+    "verificado": true,
+    "notas": "Horario de Falstaff 2026. Lejos del centro; solo merece la pena si vais a Nordvest (al lado está Kaffedepartementet)."
+  },
+  {
+    "nombre": "Andersen Bakery (Islands Brygge)",
+    "tipo": "panaderia",
+    "zona": "Islands Brygge",
+    "direccion": "Thorshavnsgade 26, 2300 København S",
+    "lat": 55.66714,
+    "lon": 12.57833,
+    "que_es": "Historia bonita: el panadero japonés Shunsuke Takaki se enamoró del wienerbrød en Copenhague en 1959, lo llevó a Japón y su familia volvió en 2017 a abrir aquí. Se ve a los panaderos tras el cristal.",
+    "que_pedir": "Wienerbrød clásico (kanelsnegl, spandauer) y tartas.",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "06:30–19:00",
+      "sáb 5": "06:30–19:00",
+      "dom 6": "06:30–19:00",
+      "lun 7": "06:30–19:00",
+      "mar 8": "06:30–19:00"
+    },
+    "web": "https://andersenbakery.dk",
+    "fuentes": [
+      "https://andersenbakery.dk/",
+      "https://www.falstaff.com/en/cafes/andersen-bakery",
+      "https://www.visitcopenhagen.com/copenhagen/eat-drink/coffee-and-bakeries/best-bakeries-and-pastry-shops"
+    ],
+    "premios": "91/100 en Falstaff Coffee Guide Nordics 2026 (30/30 en comida). Visit Copenhagen la llama 'award-winning'.",
+    "nota": 2,
+    "verificado": true,
+    "notas": "Otra sede: Ørestads Boulevard 49a (07–18 todos los días)."
+  },
+  {
+    "nombre": "Bageriet Benji",
+    "tipo": "panaderia",
+    "zona": "Nørrebro",
+    "direccion": "Fælledvej 23, 2200 København N",
+    "lat": 55.68998,
+    "lon": 12.56033,
+    "que_es": "La panadería de Rasmus Kristensen, ex maestro panadero de Noma, abierta en 2021 y bautizada con el nombre de su hijo. Ambiente de barrio, técnica de primera.",
+    "que_pedir": "Croissant de almendra (Falstaff dice que justifica la visita) y bollo de cardamomo.",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "07:00–17:00",
+      "sáb 5": "07:00–17:00",
+      "dom 6": "07:00–15:00",
+      "lun 7": "CERRADO",
+      "mar 8": "CERRADO"
+    },
+    "web": "https://www.earnest-eats.dk",
+    "fuentes": [
+      "https://www.falstaff.com/en/cafes/bageriet-benji"
+    ],
+    "premios": "89/100 en Falstaff Coffee Guide Nordics 2026.",
+    "nota": 2,
+    "verificado": true,
+    "notas": "LUNES 7 y MARTES 8 CERRADA. Horario de Falstaff 2026 (sin web propia para contrastar)."
+  },
+  {
+    "nombre": "Kong Hans Bakery",
+    "tipo": "panaderia",
+    "zona": "Indre By",
+    "direccion": "Øster Farimagsgade 18, 2100 København Ø",
+    "lat": 55.690693,
+    "lon": 12.575768,
+    "que_es": "La panadería del restaurante con estrella Kong Hans Kælder. Pastelería danesa clásica hecha con nivel de restaurante.",
+    "que_pedir": "Drømmekage, kartoffelkage, bollo de sal y pimienta y BMO (bolle med ost) con Comté.",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "07:30–18:00",
+      "sáb 5": "07:30–18:00",
+      "dom 6": "07:30–18:00",
+      "lun 7": "07:30–18:00",
+      "mar 8": "07:30–18:00"
+    },
+    "web": "https://konghansbakery.dk",
+    "fuentes": [
+      "https://konghansbakery.dk/",
+      "https://andershusa.com/seven-bakeries-in-copenhagen-you-have-to-know-these-have-the-best-pastries-and-baked-goods/"
+    ],
+    "premios": null,
+    "nota": 2,
+    "verificado": true,
+    "notas": "La web oficial menciona además un punto 'Hole in the Wall' con horario 08:00–15:00 todos los días; Anders Husa da como segunda dirección Vingårdstræde 6 (junto al restaurante). Cerca de Rosenborg y del Jardín Botánico."
+  },
+  {
+    "nombre": "Sinne Gas Bageri",
+    "tipo": "panaderia",
+    "zona": "Østerbro",
+    "direccion": "Ryesgade 63, 2100 København Ø",
+    "lat": 55.69459,
+    "lon": 12.57054,
+    "que_es": "Panadería de autoservicio, sin redes sociales, muy de vecinos. Visit Copenhagen la cita como joya escondida.",
+    "que_pedir": "Brunsviger y BMO (bolle med ost).",
+    "precio": "€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "08:00–17:00",
+      "sáb 5": "08:00–14:00",
+      "dom 6": "08:00–14:00",
+      "lun 7": "08:00–17:00",
+      "mar 8": "08:00–17:00"
+    },
+    "web": "https://sinnegasbageri.dk",
+    "fuentes": [
+      "https://sinnegasbageri.dk/",
+      "https://andershusa.com/seven-bakeries-in-copenhagen-you-have-to-know-these-have-the-best-pastries-and-baked-goods/",
+      "https://www.visitcopenhagen.com/copenhagen/eat-drink/coffee-and-bakeries/best-bakeries-and-pastry-shops"
+    ],
+    "premios": null,
+    "nota": 1,
+    "verificado": true,
+    "notas": "Fin de semana cierra a las 14:00."
+  },
+  {
+    "nombre": "Riviera",
+    "tipo": "panaderia",
+    "zona": "Indre By",
+    "direccion": "Nansensgade 64, 1366 København K",
+    "lat": 55.68361,
+    "lon": 12.56546,
+    "que_es": "Café-panadería de barrio en Nansensgade, a un paso de los lagos y de Torvehallerne. Bollería y desayunos.",
+    "que_pedir": "Cardamom bun, spandauer de manzana de temporada y tortitas de suero de mantequilla.",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "08:00–16:00",
+      "sáb 5": "09:00–16:00",
+      "dom 6": "09:00–16:00",
+      "lun 7": "08:00–16:00",
+      "mar 8": "08:00–16:00"
+    },
+    "web": "https://framacph.com",
+    "fuentes": [
+      "https://www.falstaff.com/en/cafes/riviera-1",
+      "https://andershusa.com/seven-bakeries-in-copenhagen-you-have-to-know-these-have-the-best-pastries-and-baked-goods/"
+    ],
+    "premios": null,
+    "nota": 1,
+    "verificado": true,
+    "notas": "Horario de Falstaff (sin web propia contrastada)."
+  },
+  {
+    "nombre": "Coffee Collective Torvehallerne",
+    "tipo": "cafe",
+    "zona": "Indre By",
+    "direccion": "Vendersgade 6D (Torvehallerne), 1363 København K",
+    "lat": 55.683603,
+    "lon": 12.569277,
+    "que_es": "El tostador pionero del café de especialidad en Copenhague (B Corp, comercio directo), con baristas campeones del mundo. Este puesto está dentro del mercado Torvehallerne.",
+    "que_pedir": "Un filtro o espresso de tueste nórdico claro, con un pain suisse o caracola de su obrador (Collective Bakery).",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "07:00–20:00",
+      "sáb 5": "08:00–19:00",
+      "dom 6": "08:00–19:00",
+      "lun 7": "07:00–20:00",
+      "mar 8": "07:00–20:00"
+    },
+    "web": "https://coffeecollective.dk",
+    "fuentes": [
+      "https://coffeecollective.dk/pages/coffee-shop/torvehallerne",
+      "https://coffeecollective.dk/pages/coffee-shop/jaeggersborggade",
+      "https://www.falstaff.com/en/cafes/coffee-collective"
+    ],
+    "premios": "Jægersborggade: 92/100 en Falstaff Coffee Guide Nordics 2026 (40/40 en café).",
+    "nota": 3,
+    "verificado": true,
+    "notas": "Horario de la web oficial (Falstaff da 19:00 de cierre). La sede histórica y mejor valorada es Jægersborggade 57, Nørrebro (L–V 07–20, S–D 08–19), a 250 m de Meyers. Otras: Kristen Bernikows Gade 2 (centro), Godthåbsvej, Guldsmedgade, Sankt Hans Torv, Trianglen, Carlsberg Byen."
+  },
+  {
+    "nombre": "La Cabra Møntergade",
+    "tipo": "cafe",
+    "zona": "Indre By",
+    "direccion": "Møntergade 3A, 1116 København K",
+    "lat": 55.68159,
+    "lon": 12.57903,
+    "que_es": "Barra pequeña dentro de la tienda de ropa Another Aspect, con el café de La Cabra, el tostador de Aarhus (2012) que ya tiene locales en Nueva York y Bangkok. Pocas mesas, mucho estilo.",
+    "que_pedir": "Filtro del día o espresso.",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "09:00–18:00",
+      "sáb 5": "09:00–17:00",
+      "dom 6": "09:00–17:00",
+      "lun 7": "09:00–18:00",
+      "mar 8": "09:00–18:00"
+    },
+    "web": "https://lacabra.com",
+    "fuentes": [
+      "https://www.falstaff.com/en/cafes/la-cabra-montergade"
+    ],
+    "premios": "92/100 en Falstaff Coffee Guide Nordics 2026 (40/40 en café).",
+    "nota": 2,
+    "verificado": true,
+    "notas": "Horario de Falstaff 2026. Otra sede con más sitio y bollería propia: Århusgade 118, Nordhavn (Falstaff: L–M 07:30–18, X–V hasta 21, S–D 08–18)."
+  },
+  {
+    "nombre": "Prolog Coffee Bar Kødbyen",
+    "tipo": "cafe",
+    "zona": "Vesterbro",
+    "direccion": "Høkerboderne 16, 1712 København V",
+    "lat": 55.66829,
+    "lon": 12.55749,
+    "que_es": "Antigua librería del barrio de los mataderos (Kødbyen) convertida en barra de café; la lleva Jonas Gehl, dos veces campeón danés de baristas. Tuestan en Refshaleøen.",
+    "que_pedir": "Filtro preciso o espresso, con un bollo de Juno (lo venden aquí: buen plan B para el lunes, cuando Juno cierra).",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "07:00–18:00",
+      "sáb 5": "08:00–18:00",
+      "dom 6": "08:00–18:00",
+      "lun 7": "07:00–18:00",
+      "mar 8": "07:00–18:00"
+    },
+    "web": "https://www.prologcoffee.com",
+    "fuentes": [
+      "https://www.prologcoffee.com/pages/prolog-coffee-bars",
+      "https://www.falstaff.com/en/cafes/prolog-coffee-bar-kodbyen"
+    ],
+    "premios": "94/100 en Falstaff Coffee Guide Nordics 2026 (40/40 en café).",
+    "nota": 3,
+    "verificado": true,
+    "notas": "Otras barras (web oficial): Randersgade 45 (Østerbro), Papirøen 87 (L–V 07–18, S–D 08–18) y Marguerite Vibys Plads 8 (Frederiksberg, L–V 08–17, S–D 09–17). Que la bollería sea de Juno lo dice Falstaff."
+  },
+  {
+    "nombre": "April Store (April Coffee)",
+    "tipo": "cafe",
+    "zona": "Indre By",
+    "direccion": "Pilestræde 39, 1112 København K",
+    "lat": 55.681052,
+    "lon": 12.579515,
+    "que_es": "La casa de April, tostador de Copenhague desde 2016: carta de temporada según los cafés que llegan de sus productores, cafés raros y su material de preparación.",
+    "que_pedir": "Su selección de filtro o el menú de cata; al lado (Pilestræde 37) está su SP Coffee Shop, más sencilla y con algo de comer.",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "09:00–18:00",
+      "sáb 5": "09:00–18:00",
+      "dom 6": "09:00–18:00",
+      "lun 7": "09:00–18:00",
+      "mar 8": "09:00–18:00"
+    },
+    "web": "https://www.aprilcoffeeroasters.com",
+    "fuentes": [
+      "https://www.aprilcoffeeroasters.com/shops/april-store",
+      "https://www.aprilcoffeeroasters.com/shops/spcoffeeshop"
+    ],
+    "premios": null,
+    "nota": 2,
+    "verificado": true,
+    "notas": "OJO: muchas guías aún la sitúan en Frederiksberg; la web oficial la pone ahora en Pilestræde 39, en pleno centro. El tostadero está en Solrød (fuera de Copenhague)."
+  },
+  {
+    "nombre": "Darcy's Kaffe",
+    "tipo": "cafe",
+    "zona": "Nørrebro",
+    "direccion": "Rantzausgade 2, 2200 København N",
+    "lat": 55.68535,
+    "lon": 12.55318,
+    "que_es": "Café de esquina del londinense Darcy Millar, con ventanales del suelo al techo, lámparas desparejadas y pinta de salón de casa. Café de tostadores locales e invitados.",
+    "que_pedir": "Espresso en sus dos versiones: 'comfy' o 'exciting'.",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "07:30–17:00",
+      "sáb 5": "09:00–16:30",
+      "dom 6": "09:00–16:30",
+      "lun 7": "07:30–17:00",
+      "mar 8": "07:30–17:00"
+    },
+    "web": "https://www.darcyskaffe.dk",
+    "fuentes": [
+      "https://www.darcyskaffe.dk/",
+      "https://www.falstaff.com/en/cafes/darcys-kaffe"
+    ],
+    "premios": "91/100 en Falstaff Coffee Guide Nordics 2026.",
+    "nota": 2,
+    "verificado": true,
+    "notas": "Segunda sede: Darcy's & CC, Refshalevej 173A (Refshaleøen), mié/vie/sáb/dom 11–18, jue 11–21 (cerrada lun y mar)."
+  },
+  {
+    "nombre": "Original Coffee ILLUM Rooftop",
+    "tipo": "cafe",
+    "zona": "Indre By",
+    "direccion": "Østergade 52 (ILLUM, 4.ª planta), 1100 København K",
+    "lat": 55.67927,
+    "lon": 12.58069,
+    "que_es": "El primer café de Original Coffee (2012), en la azotea de los grandes almacenes ILLUM, con vistas sobre Strøget y la Fuente de las Cigüeñas. Hoy tienen unos 18 locales.",
+    "que_pedir": "Café con vistas y algo de su obrador ecológico propio.",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "10:00–20:00",
+      "sáb 5": "10:00–20:00",
+      "dom 6": "10:00–20:00",
+      "lun 7": "10:00–20:00",
+      "mar 8": "10:00–20:00"
+    },
+    "web": "https://originalcoffee.dk/pages/kaffebarer",
+    "fuentes": [
+      "https://www.falstaff.com/en/cafes/original-coffee-illum-rooftop",
+      "https://originalcoffee.dk/pages/kaffebarer"
+    ],
+    "premios": "89/100 en Falstaff Coffee Guide Nordics 2026.",
+    "nota": 2,
+    "verificado": true,
+    "notas": "Horario de Falstaff 2026 (va con el horario de ILLUM; confirmar el día). Otras sedes céntricas: Bredgade, Vandkunsten, Jorcks Passage, Torvehallerne, Overgaden Neden Vandet (Christianshavn) y tres dentro de Tivoli."
+  },
+  {
+    "nombre": "Atelier September (Kronprinsessegade)",
+    "tipo": "cafe",
+    "zona": "Indre By",
+    "direccion": "Kronprinsessegade 62, 1306 København K",
+    "lat": 55.68742,
+    "lon": 12.58498,
+    "que_es": "Café de desayunos de Frederik Bille Brahe, abierto en 2013 en una antigua galería; su tostada de aguacate sobre rugbrød es probablemente el desayuno más fotografiado de Copenhague.",
+    "que_pedir": "Avokadomad (aguacate en láminas finas sobre centeno con chile y limón) y un café.",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "07:30–18:00 (cocina hasta 15:00)",
+      "sáb 5": "08:00–17:00 (cocina hasta 15:00)",
+      "dom 6": "08:00–17:00 (cocina hasta 15:00)",
+      "lun 7": "07:30–18:00 (cocina hasta 15:00)",
+      "mar 8": "07:30–18:00 (cocina hasta 15:00)"
+    },
+    "web": "https://cafeatelierseptember.com",
+    "fuentes": [
+      "https://cafeatelierseptember.com/",
+      "https://www.falstaff.com/en/cafes/atelier-september"
+    ],
+    "premios": "91/100 en Falstaff Coffee Guide Nordics 2026.",
+    "nota": 2,
+    "verificado": true,
+    "notas": "Junto al jardín de Rosenborg (Kongens Have). Otras sedes: Gammel Kongevej 100 (Frederiksberg) y Århusgade 128 (Nordhavn), mismo horario. Cierra solo del 24 al 26 dic."
+  },
+  {
+    "nombre": "Democratic Coffee",
+    "tipo": "cafe",
+    "zona": "Indre By",
+    "direccion": "Krystalgade 15 (Biblioteca Central), 1172 København K",
+    "lat": 55.68088,
+    "lon": 12.57365,
+    "que_es": "Café dentro de la biblioteca central, abierto en 2011 por Oliver Oxfeldt, que aprendió a hornear con YouTube. Su croissant de almendra tiene fama en toda la ciudad.",
+    "que_pedir": "Croissant de almendra (croissant del día anterior bañado en almíbar, relleno de frangipane y rehorneado) con café de tueste nórdico.",
+    "precio": "€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "07:30–17:00",
+      "sáb 5": "08:30–16:30",
+      "dom 6": "08:30–16:30",
+      "lun 7": "07:30–17:00",
+      "mar 8": "07:30–17:00"
+    },
+    "web": "Sin web propia localizada (democratic.dk es otra empresa)",
+    "fuentes": [
+      "https://www.falstaff.com/en/cafes/democratic-coffee"
+    ],
+    "premios": "90/100 en Falstaff Coffee Guide Nordics 2026.",
+    "nota": 2,
+    "verificado": true,
+    "notas": "Horario de Falstaff 2026; no hay web oficial para contrastar. Está en pleno Barrio Latino, a 5 min de Sankt Peders Bageri."
+  },
+  {
+    "nombre": "The Artisan",
+    "tipo": "cafe",
+    "zona": "Nørrebro",
+    "direccion": "Sortedam Dossering 45A, 2200 København N",
+    "lat": 55.69195,
+    "lon": 12.56876,
+    "que_es": "Café junto a los lagos del peruano Jose Antonio, que compra el grano a pequeñas fincas de su país. Mucho cuidado con el filtro y terraza delante del agua.",
+    "que_pedir": "Filtro peruano; en invierno, sus sabores de temporada (gingerbread, pistacho).",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "08:00–18:00",
+      "sáb 5": "09:00–18:00",
+      "dom 6": "09:00–17:00",
+      "lun 7": "08:00–18:00",
+      "mar 8": "08:00–18:00"
+    },
+    "web": "https://theartisan.dk",
+    "fuentes": [
+      "https://www.falstaff.com/en/cafes/the-artisan"
+    ],
+    "premios": "95/100 en Falstaff Coffee Guide Nordics 2026 (empatado con Andersen & Maillard en lo más alto).",
+    "nota": 2,
+    "verificado": true,
+    "notas": "Horario de Falstaff 2026 (sin web oficial contrastada). Buen alto en un paseo por los lagos."
+  },
+  {
+    "nombre": "Social Brew",
+    "tipo": "cafe",
+    "zona": "Vesterbro",
+    "direccion": "Vester Farimagsgade 3, 1606 København V",
+    "lat": 55.67492,
+    "lon": 12.56182,
+    "que_es": "Café insignia de un tostador, con barra de café, cocina y obrador; por él pasan unas 600 personas al día. Céntrico, junto a Tivoli y la Estación Central.",
+    "que_pedir": "Café de la casa y brunch (muchas opciones veganas).",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "sin confirmar (Falstaff dice que abre hasta las 20:00 de lunes a viernes)",
+      "sáb 5": "sin confirmar (Falstaff dice que abre hasta las 20:00 de lunes a viernes)",
+      "dom 6": "sin confirmar (Falstaff dice que abre hasta las 20:00 de lunes a viernes)",
+      "lun 7": "sin confirmar (Falstaff dice que abre hasta las 20:00 de lunes a viernes)",
+      "mar 8": "sin confirmar (Falstaff dice que abre hasta las 20:00 de lunes a viernes)"
+    },
+    "web": "https://www.socialbrew.dk",
+    "fuentes": [
+      "https://www.falstaff.com/en/cafes/social-brew"
+    ],
+    "premios": "91/100 en Falstaff Coffee Guide Nordics 2026.",
+    "nota": 1,
+    "verificado": false,
+    "notas": "Horario concreto no publicado en Falstaff; la web oficial no la he revisado. Útil si se llega o se sale por la Estación Central."
+  },
+  {
+    "nombre": "Kaffedepartementet",
+    "tipo": "cafe",
+    "zona": "Nordvest (fuera del centro)",
+    "direccion": "Rentemestervej 64, 2400 København NV",
+    "lat": 55.70769,
+    "lon": 12.52495,
+    "que_es": "Tostador en un antiguo almacén, con veinte años de oficio; compran solo en las tierras altas de Kenia y Etiopía y tuestan dos veces por semana.",
+    "que_pedir": "Café keniano o etíope con un tebirkes, su acompañamiento estrella.",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "08:00–18:00",
+      "sáb 5": "08:00–18:00",
+      "dom 6": "08:00–18:00",
+      "lun 7": "08:00–18:00",
+      "mar 8": "08:00–18:00"
+    },
+    "web": "https://www.kaffedep.com",
+    "fuentes": [
+      "https://www.falstaff.com/en/cafes/kaffedepartementet"
+    ],
+    "premios": "89/100 en Falstaff Coffee Guide Nordics 2026.",
+    "nota": 1,
+    "verificado": true,
+    "notas": "Enfrente de Flere Fugle. Solo si vais a Nordvest."
+  },
+  {
+    "nombre": "Paludan Bog & Café",
+    "tipo": "cafe",
+    "zona": "Indre By",
+    "direccion": "Fiolstræde 10-12, 1171 København K",
+    "lat": 55.68167,
+    "lon": 12.57268,
+    "que_es": "Café-librería de viejo en el Barrio Latino, con estanterías antiguas que le dan aire de biblioteca; muy de estudiantes. Puedes llevar tu libro o coger uno de sus estantes.",
+    "que_pedir": "Un café largo entre libros y comida sencilla y barata.",
+    "precio": "€",
+    "precio_txt": "Sin confirmar (Visit Copenhagen dice que la comida es barata y hay descuento para estudiantes).",
+    "horario": {
+      "vie 4": "09:00–22:00",
+      "sáb 5": "10:00–22:00",
+      "dom 6": "10:00–22:00",
+      "lun 7": "09:00–22:00",
+      "mar 8": "09:00–22:00"
+    },
+    "web": "https://www.paludan-cafe.dk",
+    "fuentes": [
+      "https://www.falstaff.com/en/cafes/paludan-bog-cafe",
+      "https://www.visitcopenhagen.com/copenhagen/planning/paludan-bogcafe-gdk695540"
+    ],
+    "premios": null,
+    "nota": 2,
+    "verificado": true,
+    "notas": "Horario de Falstaff 2026 (In Your Pocket da el sábado hasta las 23:00). Suele llenarse: en hora punta puede haber que esperar."
+  },
+  {
+    "nombre": "Granola",
+    "tipo": "cafe",
+    "zona": "Frederiksberg (Værnedamsvej)",
+    "direccion": "Værnedamsvej 5, 1819 Frederiksberg C",
+    "lat": 55.67343,
+    "lon": 12.54979,
+    "que_es": "Bistró retro de todo el día con suelo de terrazo hecho a mano por su dueño, ex escenógrafo de cine. Desayunos por la mañana y clásicos de bistró por la noche, en Værnedamsvej.",
+    "que_pedir": "Desayuno (huevos revueltos, platos dulces); en diciembre, para entrar en calor en un paseo navideño por Værnedamsvej.",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "08:00–00:00",
+      "sáb 5": "09:00–00:00",
+      "dom 6": "09:00–16:00",
+      "lun 7": "08:00–23:00",
+      "mar 8": "08:00–23:00"
+    },
+    "web": "https://www.granola.dk",
+    "fuentes": [
+      "https://www.falstaff.com/en/cafes/granola-1",
+      "https://lie-studio.dk/blogs/journal/copenhagen-guide-holiday-edition"
+    ],
+    "premios": "84/100 en Falstaff Restaurant & Bistro Guide Nordics 2026.",
+    "nota": 2,
+    "verificado": true,
+    "notas": "Lié Studio (dic-2025) recomienda la calle Værnedamsvej como paseo navideño."
+  },
+  {
+    "nombre": "Kafeteria SMK",
+    "tipo": "cafe",
+    "zona": "Indre By",
+    "direccion": "Sølvgade 48 (Statens Museum for Kunst), 1307 København K",
+    "lat": 55.68852,
+    "lon": 12.57839,
+    "que_es": "La cafetería del Museo Nacional de Arte, con desayunos, brunch y platos calientes en un espacio luminoso.",
+    "que_pedir": "Brunch o un café con algo dulce tras ver el museo.",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "10:00–18:00",
+      "sáb 5": "10:00–18:00",
+      "dom 6": "10:00–18:00",
+      "lun 7": "CERRADO",
+      "mar 8": "10:00–18:00"
+    },
+    "web": "https://www.smk.dk",
+    "fuentes": [
+      "https://www.falstaff.com/en/cafes/kafeteria-smk"
+    ],
+    "premios": null,
+    "nota": 1,
+    "verificado": true,
+    "notas": "LUNES 7 CERRADA (como el museo). Horario de Falstaff; confirmar en smk.dk."
+  },
+  {
+    "nombre": "Sonny (Rådhusstræde)",
+    "tipo": "cafe",
+    "zona": "Indre By",
+    "direccion": "Rådhusstræde 5, 1466 København K",
+    "lat": 55.67696,
+    "lon": 12.57429,
+    "que_es": "Café de desayunos y platos sencillos fríos y calientes, cerca de la plaza del Ayuntamiento. Lié Studio lo recomienda como parada caliente tras un paseo de invierno.",
+    "que_pedir": "Desayuno y café (sin plato estrella confirmado).",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "07:30–17:00",
+      "sáb 5": "08:30–17:00",
+      "dom 6": "08:30–16:00",
+      "lun 7": "07:30–16:00",
+      "mar 8": "07:30–17:00"
+    },
+    "web": "https://www.sonnycph.dk",
+    "fuentes": [
+      "https://www.falstaff.com/en/cafes/sonny-cph",
+      "https://lie-studio.dk/blogs/journal/copenhagen-guide-holiday-edition"
+    ],
+    "premios": null,
+    "nota": 1,
+    "verificado": true,
+    "notas": "La guía de Lié cita la sede de Frederiksberg Allé 12 (Frederiksberg)."
+  },
+  {
+    "nombre": "Café Europa 1989",
+    "tipo": "cafe",
+    "zona": "Indre By",
+    "direccion": "Amagertorv 1, 1160 København K",
+    "lat": 55.67867,
+    "lon": 12.57929,
+    "que_es": "Café-brasserie clásico en plena Amagertorv (Strøget), con tueste propio, desayuno y brunch. Buen sitio para sentarse a mirar el ajetreo de la calle peatonal.",
+    "que_pedir": "Café y desayuno/brunch.",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "07:45–00:00",
+      "sáb 5": "07:45–00:00",
+      "dom 6": "08:45–22:00",
+      "lun 7": "07:45–23:00",
+      "mar 8": "07:45–23:00"
+    },
+    "web": "https://europa1989.dk",
+    "fuentes": [
+      "https://www.falstaff.com/en/cafes/cafe-europa-1989"
+    ],
+    "premios": null,
+    "nota": 1,
+    "verificado": true,
+    "notas": "Lo pongo como alternativa al histórico Café Norden de enfrente, que CERRÓ el 30 de noviembre (según TV 2 Kosmopol, tras 28 años; casi seguro en 2025)."
+  },
+  {
+    "nombre": "Hotel Sanders (lobby y patio)",
+    "tipo": "cafe",
+    "zona": "Indre By (junto a Kongens Nytorv)",
+    "direccion": "Tordenskjoldsgade 15, 1055 København K",
+    "lat": 55.678434,
+    "lon": 12.587561,
+    "que_es": "Hotel boutique junto al Teatro Real cuyo lobby funciona como salón con chimenea. En la guía navideña de Lié Studio sale como uno de los mejores gløgg de la ciudad.",
+    "que_pedir": "Gløgg junto a la chimenea.",
+    "precio": "€€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "sin confirmar",
+      "sáb 5": "sin confirmar",
+      "dom 6": "sin confirmar",
+      "lun 7": "sin confirmar",
+      "mar 8": "sin confirmar"
+    },
+    "web": "Web oficial sin revisar",
+    "fuentes": [
+      "https://lie-studio.dk/blogs/journal/copenhagen-guide-holiday-edition",
+      "https://www.falstaff.com/en/listings/the-best-cafes-in-copenhagen"
+    ],
+    "premios": "Incluido en la lista de cafés de Copenhague de Falstaff (sin puntuación visible).",
+    "nota": 1,
+    "verificado": false,
+    "notas": "Horario del lobby/bar y si sirven gløgg en diciembre de 2026: SIN CONFIRMAR. Plan bonito para después del Teatro Real."
+  },
+  {
+    "nombre": "Flindt & Ørsted (Ørstedsparken)",
+    "tipo": "cafe",
+    "zona": "Indre By",
+    "direccion": "Ørstedsparken (Nørre Farimagsgade 6 según Lié), 1364 København K",
+    "lat": 55.680921,
+    "lon": 12.5663335,
+    "que_es": "Café dentro del parque Ørsted, con cocina de temporada y ecológica. Lié Studio destaca sus æbleskiver caseras en Navidad.",
+    "que_pedir": "Æbleskiver con gløgg o con un chocolate caliente grande con nata.",
+    "precio": "€€",
+    "precio_txt": "Sin confirmar.",
+    "horario": {
+      "vie 4": "sin confirmar",
+      "sáb 5": "sin confirmar",
+      "dom 6": "sin confirmar",
+      "lun 7": "sin confirmar",
+      "mar 8": "sin confirmar"
+    },
+    "web": "Sin web localizada",
+    "fuentes": [
+      "https://lie-studio.dk/blogs/journal/copenhagen-guide-holiday-edition"
+    ],
+    "premios": null,
+    "nota": 1,
+    "verificado": false,
+    "notas": "Coordenadas = centro del parque (OSM), no la puerta del café. Horario de invierno y si tendrán æbleskiver en 2026: SIN CONFIRMAR. Está a unos 350 m de Torvehallerne."
+  }
+]
