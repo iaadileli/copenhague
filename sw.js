@@ -1,4 +1,4 @@
-const CACHE = 'cph2026-v1';
+const CACHE = 'cph2026-v2';
 // la lista de ficheros la reescribe generador/recursos-sw.py con lo que hay en img/
 const RECURSOS = [
   './',

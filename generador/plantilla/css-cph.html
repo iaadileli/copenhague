@@ -75,11 +75,10 @@
   /* alguna foto viene pequeña de origen: a todo lo ancho se ve blanda */
   .banner.pequeno{max-width:660px;margin-left:auto;margin-right:auto}
 
-  /* el hero: la fuente Bartholdi a pleno sol en la place des Terreaux (28-sep-2026; Adil
-     quería luz: antes Saint-Georges de noche, y antes un mar de tejados). La foto es clara,
-     así que arriba casi no se toca y abajo el degradado sube para que se lea el texto */
+  /* el hero: Nyhavn al atardecer, la eligió Adil (20-oct-2026; antes Nyhavn a pleno sol).
+     El cielo es claro, así que arriba casi no se toca y abajo el degradado sube para que se lea el texto */
   header.hero{background:linear-gradient(180deg,rgba(10,20,35,.08) 0%,rgba(10,20,35,.42) 40%,rgba(10,20,35,.82) 100%),
-    url('img/portada-hero.jpg') center 40%/cover no-repeat}
+    url('img/portada-hero.jpg') 33% 40%/cover no-repeat}  /* 33%: en móvil, que se vea el sol al fondo del canal */
   /* con fondo claro, la fecha y el subtítulo necesitan sombra igual que el título */
   .hero .fechas,.hero .sub{text-shadow:0 1px 10px rgba(0,0,0,.75),0 0 2px rgba(0,0,0,.6)}
 

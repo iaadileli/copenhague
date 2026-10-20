@@ -12,7 +12,9 @@ UA = 'guia-viaje-copenhague/1.0 (uso personal)'
 # destino -> (fichero de candidatos, clave, índice elegido, ancho que se pide)
 ELEGIDAS = {
  # oct-2026, tras mirar las hojas de contacto de fotos1.json (fotos-candidatas.py)
- 'portada-hero': ('fotos1.json', 'nyhavn',         6, 2400),  # Nyhavn a pleno sol: Adil quiere luz
+ # 20-oct-2026: Adil eligió él mismo Nyhavn al atardecer (no estaba entre las candidatas:
+ # va por título directo; antes, Nyhavn a pleno sol = fotos1 nyhavn 6)
+ 'portada-hero': ('File:2018 - Nyhavn on sunset.jpg', None, None, 2400),
  'tivoli':       ('fotos1.json', 'tivoli',         8, 1600),  # el árbol grande y el arco, de noche
  'indre':        ('fotos1.json', 'navidad',        0, 1600),  # d'Angleterre con su decoración, Kongens Nytorv
  'nyhavn':       ('fotos1.json', 'nyhavn',        13, 1600),
@@ -80,7 +82,8 @@ RUTA_CRED = 'generador/datos-fuente/creditos.json'
 creditos = json.load(open(RUTA_CRED)) if SOLO and os.path.exists(RUTA_CRED) else {}
 for destino, (fich, clave, idx, ancho) in ELEGIDAS.items():
     if SOLO and destino not in SOLO: continue
-    c = json.load(open('generador/datos-fuente/' + fich))[clave][idx]
+    c = ({'t': fich} if fich.startswith('File:')
+         else json.load(open('generador/datos-fuente/' + fich))[clave][idx])
     url, ancho_original, lic, autor = thumb(c['t'], ancho)
     ruta = 'img/%s.jpg' % destino
     baja(url, ruta)
