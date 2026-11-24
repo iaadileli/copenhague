@@ -131,7 +131,7 @@ function avisaNueva(reg){
     // Sin conexi\u00f3n NO se borra: se quedar\u00edan sin gu\u00eda hasta volver a tener datos.
     if (window.caches && caches.keys && navigator.onLine !== false) {
       caches.keys()
-        .then(function(ks){ return Promise.all(ks.map(function(k){ return caches.delete(k); })); })
+        .then(function(ks){ return Promise.all(ks.filter(function(k){ return k.indexOf('cph2026-') === 0; }).map(function(k){ return caches.delete(k); })); })
         .then(function(){ setTimeout(recarga, 300); })
         .catch(function(){ setTimeout(recarga, 300); });
     } else {
